@@ -28,31 +28,8 @@ var ourBeersSlider = (function() {
         return true;
     };
 
-    var initBeersSlider = function() {
-        $sliderElem.cycle();
-
-        return true;
-    };
-
-    var destroyBeersSlider = function() {
-        $sliderElem.cycle('destroy');
-
-        return true;
-    };
-
     var manageBreakPointEvents = function() {
-        $(window).bind('enterBreakpoint992', function() { // >= 992
-            destroyBeersSlider();
-        });
 
-        $(window).bind('exitBreakpoint992', function() { // < 992
-            initBeersSlider();
-        });
-
-        // init slider if starting window is < 992
-        if (window.innerWidth < 992) {
-            initBeersSlider();
-        }
 
         return true;
     };
