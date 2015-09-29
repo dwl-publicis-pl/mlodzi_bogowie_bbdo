@@ -14,18 +14,34 @@ $(function() {
 });
 
 /**
- * kalkulator 1 s
+ * kalkulator 1
  */
 var monthlySavingsCalculator = (function() {
     var calcForm = '#mscCalc';
     var $calcElem = $(calcForm);
+    var retirementLength = 20,
+        savings = 1500,
+        startSaveUp = 20,
+        monthlySaveUp = 0;
 
     var init = function() {
         if ($calcElem.length > 0) {
-            console.log('x');
+            initListeners();
         }
 
         return true;
+    };
+    
+    var initListeners = function() {
+        var retirementLengthValue = $('input[name="retirementLength"]');
+        /*var range = $('.input-range'),
+            value = $('.range-value');
+            
+        value.html(range.attr('value'));
+        
+        range.on('input', function(){
+            value.html(this.value);
+        });*/ 
     };
 
     return {
