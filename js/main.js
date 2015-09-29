@@ -16,20 +16,14 @@ $(function() {
 /**
  * kalkulator 1
  */
-var ourBeersSlider = (function() {
-    var sliderElemClass = '.nasze-piwa-tabs';
-    var $sliderElem = $(sliderElemClass);
+var monthlySavingsCalculator = (function() {
+    var calcForm = '#mscCalc';
+    var $calcElem = $(calcForm);
 
     var init = function() {
-        if ($sliderElem.length > 0) {
-            manageBreakPointEvents();
+        if ($calcElem.length > 0) {
+            console.log('x');
         }
-
-        return true;
-    };
-
-    var manageBreakPointEvents = function() {
-
 
         return true;
     };
