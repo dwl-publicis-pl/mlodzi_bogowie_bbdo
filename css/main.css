@@ -1,0 +1,608 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+body, html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a, a:visited {
+    color: #c70000;
+    text-decoration: none;
+}
+
+a:hover {
+    
+}
+
+b, strong {
+    font-size: 700;
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
+
+.jumbotron video {
+    /* temporary */
+    width: 100%;
+    object-fit: fill;
+    height: 400px;
+}
+
+.jumbotron a,
+.jumbotron a:visited {
+    color: #fff;
+}
+
+.btn {
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: none;
+    border: 2px solid #c80d0d;
+    border-radius: 0;
+    box-shadow: none;
+    color: #c80d0d;
+    font-size: 1.133rem;
+    font-weight: 700;
+    padding: 14px 55px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: none;
+    border-color: #c80d0d;
+    color: #c80d0d;
+}
+
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+    border-color: #fff;
+    color: #fff;
+}
+
+.jumbotron-ubezpieczenie-na-zycie {
+    background: url('../img/kv-ubezpieczenie-na-zycie.jpg') no-repeat;
+    background-size: cover;
+}
+
+.jumbotron-title {
+    font-size: 4.133rem;
+    letter-spacing: 10px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.jumbotron-style-1 {
+    font-family: 'Nanum Brush Script', sans-serif;
+    font-size: 5.333rem;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.jumbotron-bar [class*="col-"] {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.bg-red-light {
+    background-color: rgba(233, 63, 63, .7);
+}
+
+.bg-red {
+    background-color: rgba(200, 13, 13, .7);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 span {
+  display: inline-block;
+  position: relative;  
+}
+
+header h1 span:before,
+header h1 span:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    top: 0;
+    width: 2000px;
+    bottom: 0;
+    margin: auto;
+}
+
+header h1 span:before {
+    right: 100%;
+    margin-right: 55px;
+}
+
+header h1 span:after {
+    left: 100%;
+    margin-left: 55px;
+}
+
+header h1 + hr {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bababa+0,bababa+40,0a0e0a+40,000000+60,bababa+60,bababa+100 */
+    background: #bababa; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JhYmFiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2JhYmFiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzBhMGUwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2JhYmFiYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiYWJhYmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #bababa 0%, #bababa 40%, #0a0e0a 40%, #000000 60%, #bababa 60%, #bababa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bababa), color-stop(40%,#bababa), color-stop(40%,#0a0e0a), color-stop(60%,#000000), color-stop(60%,#bababa), color-stop(100%,#bababa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #bababa 0%,#bababa 40%,#0a0e0a 40%,#000000 60%,#bababa 60%,#bababa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #bababa 0%,#bababa 40%,#0a0e0a 40%,#000000 60%,#bababa 60%,#bababa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #bababa 0%,#bababa 40%,#0a0e0a 40%,#000000 60%,#bababa 60%,#bababa 100%); /* IE10+ */
+    background: linear-gradient(to right,  #bababa 0%,#bababa 40%,#0a0e0a 40%,#000000 60%,#bababa 60%,#bababa 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bababa', endColorstr='#bababa',GradientType=1 ); /* IE6-8 */
+    border: 0;
+    height: 2px;
+}
+
+header p {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 3rem auto;
+    text-align: center;
+    width: 50%;
+}
+
+.myths-multibox {
+    border-top: 3px solid #c80d0d;
+    margin-bottom: 70px;
+}
+
+.myths-multibox [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.myths-multibox figure {
+    position: relative;
+}
+
+.myths-multibox figure img {
+    width: 100%;
+}
+
+.myths-multibox figcaption {
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.292s ease-out;
+    transition: all 0.292s ease-out;
+}
+
+.myths-multibox figcaption.myth-black {
+    color: #000;
+}
+
+.myth-number {
+    background:
+        url('../img/border-white-1.png') top center,
+        url('../img/border-white-2.png') bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    font-family: 'Nanum Brush Script', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px 20px;
+    position: absolute;
+    transform:
+        rotate(-15.2deg)
+        translate3d(10px, 15px, 0);
+    transform-origin: top right;
+}
+
+.myth-black.myth-number {
+    background-image:
+        url('../img/border-black-1.png'),
+        url('../img/border-black-2.png');
+}
+
+.myths-multibox figure:hover .myth-number {
+    background-position: -190px top, 190px bottom;
+    font-size: 3rem;
+    left: 50%;
+    transform:
+        rotate(0)
+        translate3d(-50%, 0, 0);
+    transform-origin: center center;
+}
+
+.myths-multibox figcaption.myth-title {
+    bottom: 0;
+    text-transform: uppercase;
+    top: auto;
+    transform: translate3d(20px, -20px, 0);
+    transform-origin: left center;
+}
+
+.myth-title a,
+.myth-title a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.myth-black.myth-title a,
+.myth-black.myth-title a:visited {
+    color: #000;
+}
+
+.myth-title a:hover {
+    text-decoration: none;
+}
+
+.myth-title-style-1 {
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+}
+
+.myth-title-style-2 {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.myth-title-style-3 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.myths-multibox figure:hover .myth-title {
+    bottom: 50%;
+    left: 50%;
+    transform:
+        scale(1.6)
+        translate3d(-50%, 50%, 0)
+}
+
+.myth-see-more {
+    height: 0;
+    text-align: center;
+    -webkit-transition: all 0.292s ease-out;
+    transition: all 0.292s ease-out;
+}
+
+.myths-multibox .see-more {
+    border: 3px solid #fff;
+    display: inline-block;
+    clear: both;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: .7rem;
+    height: 0;
+    opacity: 0;
+    text-transform: uppercase;
+    -webkit-transition: all 0.292s ease-out;
+    transition: all 0.292s ease-out;
+}
+
+.myths-multibox .myth-black .see-more {
+    border-color: #000;
+}
+
+.myths-multibox figure:hover .myth-see-more {
+    height: auto;
+    margin-top: 20px;
+}
+
+.myths-multibox figure:hover .see-more {
+    height: auto;
+    opacity: 1;
+    padding: 3px 5px;
+}
+
+.bg-blue-man {
+    background: url('../img/bg-blue-man.jpg') no-repeat right bottom;
+    background-size: cover;
+    margin-bottom: 70px;
+}
+
+.blue-man-content {
+    padding-bottom: 4.6667rem;
+    padding-top: 5.867rem;
+    text-align: center;
+}
+
+.blue-man-line-1 {
+    color: #fff;
+    font-size: 2.867rem;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+
+.blue-man-line-2 {
+    color: #fff7dc;
+    font-size: 5.533rem;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.blue-man-line-2 span {
+    font-family: 'Nanum Brush Script', sans-serif;
+    font-size: 7rem;
+    text-transform: none;
+}
+
+.row-products > [class*='col-'] {
+    border-top: 5px solid #c80d0d;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row-products > [class*='col-']:nth-child(2) {
+    border-color: #eb4343;
+}
+
+.row-products > [class*='col-']:nth-child(3) {
+    border-color: #fe7272;
+}
+
+.row-products figure {
+    color: #fff;
+    position: relative;
+}
+
+.row-products a,
+.row-products a:visited {
+    color: #fff;
+}
+
+.row-products figure > img {
+    width: 100%;
+}
+
+.row-products figcaption {
+    left: 50%;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: .8rem;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+
+footer [class*='col-']:nth-child(1) span {
+    margin: 0 1rem;
+}
+
+footer [class*='col-']:last-child {
+    text-align: right;
+}
+
+.row-calculators {
+    background: url('../img/bg-calcs.jpg') no-repeat bottom left;
+    background-size: cover;
+    margin-top: 70px;
+    padding-bottom: 48px;
+    padding-top: 70px;
+}
+
+.cols-white-table [class*="col-"] {
+    background-color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    text-transform: uppercase;
+}
+
+.cols-white-table a,
+.cols-white-table a:visited {
+    color: #868686;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cols-white-table img {
+    margin-right: 40px;
+}
+
+.row-future {
+    background-color: #e0e0e0;
+    padding-bottom: 40px;
+    padding-top: 50px;
+}
+
+.row-future [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bg-border-top {
+    height: 3px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c80d0d+0,c80d0d+63,eb4343+63,eb4343+100 */
+    background: #c80d0d; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M4MGQwZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2M4MGQwZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYzJSIgc3RvcC1jb2xvcj0iI2ViNDM0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYjQzNDMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #c80d0d 0%, #c80d0d 63%, #eb4343 63%, #eb4343 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c80d0d), color-stop(63%,#c80d0d), color-stop(63%,#eb4343), color-stop(100%,#eb4343)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #c80d0d 0%,#c80d0d 63%,#eb4343 63%,#eb4343 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #c80d0d 0%,#c80d0d 63%,#eb4343 63%,#eb4343 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #c80d0d 0%,#c80d0d 63%,#eb4343 63%,#eb4343 100%); /* IE10+ */
+    background: linear-gradient(to right,  #c80d0d 0%,#c80d0d 63%,#eb4343 63%,#eb4343 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c80d0d', endColorstr='#eb4343',GradientType=1 ); /* IE6-8 */
+}
+
+.bg-border-top-2 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4343+0,eb4343+31,fe7272+31,fe7272+100 */
+    background: #eb4343; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNDM0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMxJSIgc3RvcC1jb2xvcj0iI2ViNDM0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMxJSIgc3RvcC1jb2xvcj0iI2ZlNzI3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZTcyNzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left,  #eb4343 0%, #eb4343 31%, #fe7272 31%, #fe7272 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eb4343), color-stop(31%,#eb4343), color-stop(31%,#fe7272), color-stop(100%,#fe7272)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #eb4343 0%,#eb4343 31%,#fe7272 31%,#fe7272 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #eb4343 0%,#eb4343 31%,#fe7272 31%,#fe7272 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #eb4343 0%,#eb4343 31%,#fe7272 31%,#fe7272 100%); /* IE10+ */
+    background: linear-gradient(to right,  #eb4343 0%,#eb4343 31%,#fe7272 31%,#fe7272 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4343', endColorstr='#fe7272',GradientType=1 ); /* IE6-8 */
+}
+
+.no-column-border [class*="col-"] {
+    border: 0;
+}
+
+/** B3 equal columns */
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+@media (min-width: 480px) {
+  .row-xs-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-xs-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-xs-top {
+    vertical-align: top;
+  }
+  .col-xs-middle {
+    vertical-align: middle;
+  }
+  .col-xs-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-sm-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-sm-top {
+    vertical-align: top;
+  }
+  .col-sm-middle {
+    vertical-align: middle;
+  }
+  .col-sm-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 992px) {
+  .row-md-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-md-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-md-top {
+    vertical-align: top;
+  }
+  .col-md-middle {
+    vertical-align: middle;
+  }
+  .col-md-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-lg-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-lg-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-lg-top {
+    vertical-align: top;
+  }
+  .col-lg-middle {
+    vertical-align: middle;
+  }
+  .col-lg-bottom {
+    vertical-align: bottom;
+  }
+}
+/** B3 equal columns END */
+
+@media (min-width: 992px) {
+    .row-padded {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    .cols-white-table .row-height {
+        border-spacing: 2px 0;
+    }
+}
