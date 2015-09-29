@@ -14,7 +14,7 @@ $(function() {
 });
 
 /**
- * kalkulator 1
+ * kalkulator 1 s
  */
 var monthlySavingsCalculator = (function() {
     var calcForm = '#mscCalc';
