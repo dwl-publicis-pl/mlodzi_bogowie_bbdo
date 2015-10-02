@@ -72,7 +72,7 @@ var monthlySavingsCalculator = (function() {
         retirementLengthValueElement.html(retirementLengthVal);
         monthlySavingsValueElements.html(monthlySavingsVal);
         startSaveUpValueElement.html(startSaveUpVal);
-        
+
         return true;
     }
     
