@@ -20,8 +20,8 @@ var monthlySavingsCalculator = (function() {
     var retirementAge = 67;
     var calcForm = '#mscCalc';
     var $calcElem = $(calcForm);
-    var retirementLengthElement = $('input[name="retirement_length"]');
-    var monthlySavingsElements = $('input[name="monthly_savings"]');
+    var retirementLengthElement = $('select[name="retirement_length"]');
+    var monthlySavingsElements = $('select[name="monthly_savings"]');
     var startSaveUpElement = $('input[name="start_save_up"]');
     var monthlySavingsElement = $('#retirement_saves_result');
     
@@ -44,7 +44,7 @@ var monthlySavingsCalculator = (function() {
     };
     
     var initListeners = function() {
-        $(calcForm + ' input[type="range"]').on('input', function() {
+        $(calcForm + ' input, ' + calcForm + ' select').on('input, change', function() {
             onRangeChange();
         });
         
@@ -77,7 +77,7 @@ var monthlySavingsCalculator = (function() {
     }
     
     var calculateMonthlySavings = function() {
-        //console.log(retirementLengthVal, monthlySavingsVal, startSaveUpVal);
+        console.log(retirementLengthVal, monthlySavingsVal, startSaveUpVal);
         monthlySaveUp = ((retirementLengthVal * monthlySavingsVal * 12) / (saveUpLength * 12)).toFixed(2);
         
         proceedMonthlySavings();
@@ -100,4 +100,3 @@ monthlySavingsCalculator.init();
 /**
  * kalkulator 1 END
  */
- 

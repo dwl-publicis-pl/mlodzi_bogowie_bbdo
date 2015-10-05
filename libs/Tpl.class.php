@@ -76,6 +76,7 @@ class Tpl {
 
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <ul class="nav navbar-nav">
+                            <li<?php $currentPage == 'mit-o-emeryturze-moge-pomyslec-pozniej' ? print ' class="active"' : null; ?>><a href="mit-o-emeryturze-moge-pomyslec-pozniej">Mity</a></li>
                             <li<?php $currentPage == 'kalkulator' ? print ' class="active"' : null; ?>><a href="kalkulator">Kalkulator</a></li>
                             <li<?php $currentPage == 'produkt' ? print ' class="active"' : null; ?>><a href="produkt">Produkt</a></li>
                             <li<?php $currentPage == 'kontakt' ? print ' class="active"' : null; ?>><a href="kontakt">Kontakt</a></li>
