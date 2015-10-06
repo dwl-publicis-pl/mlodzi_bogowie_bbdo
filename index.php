@@ -2,12 +2,13 @@
 require_once('libs/App.class.php');
 
 Tpl::htmlHead();
+Tpl::nav();
 ?>
 
 <div class="jumbotron">
     <video poster="img/poster.png">
-        <source type="video/webm" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.webm"></source>
-        <source type="video/mp4" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4"></source>
+        <source type="video/webm" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" />
+        <source type="video/mp4" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" />
     </video>
 </div>
 

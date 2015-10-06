@@ -46,31 +46,43 @@ class Tpl {
         
         <?php
     }
-    
+
+
+    public function top()
+    {
+        self::nav();
+    }
+
     
     public static function nav()
     {
         $currentPage = App::currentPage();
         ?>
         
-        <nav class="navbar navbar-fixed-top" role="navigation">
+        <nav class="navbar" role="navigation">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Przełącz nawigację</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Przełącz nawigację</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
 
-                    <a class="navbar-brand" href="<?php echo App::APP_URL; ?>" rel="home">Prudential</a>
-                </div>
-                
-                <div id="navbar" class="navbar-collapse collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li<?php $currentPage == 'kontakt' ? print ' class="active"' : null; ?>><a href="kontakt">Kontakt</a></li>
-                    </ul>
-                </div>
+                        <a class="navbar-brand" href="<?php echo App::APP_URL; ?>" rel="home"><img src="img/logo-prudential.png" alt="Prudential"></a>
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li<?php $currentPage == 'mit-o-emeryturze-moge-pomyslec-pozniej' ? print ' class="active"' : null; ?>><a href="mit-o-emeryturze-moge-pomyslec-pozniej">Mity</a></li>
+                            <li<?php $currentPage == 'kalkulator' ? print ' class="active"' : null; ?>><a href="kalkulator">Kalkulator</a></li>
+                            <li<?php $currentPage == 'produkt' ? print ' class="active"' : null; ?>><a href="produkt">Produkt</a></li>
+                            <li<?php $currentPage == 'kontakt' ? print ' class="active"' : null; ?>><a href="kontakt">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div></div>
             </div>
         </nav>
         
