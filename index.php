@@ -5,18 +5,23 @@ Tpl::htmlHead();
 Tpl::nav();
 ?>
 
-<div class="jumbotron">
-    <video poster="img/poster.png">
+<div class="jumbotron border-bottom-rsg">
+    <video poster="img/top-video-placeholder.jpg">
         <source type="video/webm" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" />
         <source type="video/mp4" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" />
     </video>
+
+    <button class="btn btn-link btn-video"><img src="img/btn-play.png" alt="Start"></button>
 </div>
 
 <div class="container-fluid">
-    <div class="row">
+    <header class="row">
         <header>
-            <h1><span>Poznaj <strong>mity</strong> młodych bogów</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt lectus at ligula mattis, vel tincidunt eros vestibulum. Aenean fringilla ipsum eget felis pellentesque faucibus vitae vitae lorem.</p>
+            <h1>Poznaj <strong>mity</strong> młodych bogów</h1>
+            <p>
+                Czasami trzymamy się ich, bo tak jest nam wygodniej. Bo mamy inne, ważniejsze lub pilniejsze sprawy.<br class="hidden-xs hidden-sm">
+                A może warto na chwilę się zatrzymać i przemyśleć swoje przekonania, zanim zmusi nas do tego rzeczywistość?
+            </p>
         </header>
     </div>
     

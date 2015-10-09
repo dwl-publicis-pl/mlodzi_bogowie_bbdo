@@ -24,20 +24,29 @@ var monthlySavingsCalculator = (function() {
     var monthlySavingsElements = $('select[name="monthly_savings"]');
     var startSaveUpElement = $('input[name="start_save_up"]');
     var monthlySavingsElement = $('#retirement_saves_result');
-    
+    var faceImgElement = $('#retirements_saves_face');
+
     var retirementLengthValueElement = $('.retirement_length_value');
     var monthlySavingsValueElements = $('.monthly_savings_value');
     var startSaveUpValueElement = $('.start_save_up_value');
-    
+
     var retirementLengthVal,
         monthlySavingsVal,
         startSaveUpVal,
-        saveUpLength;
-    var monthlySaveUp = 0;
+        saveUpLength,
+        monthlySaveUp = 0,
+        saveUpRangeMin,
+        saveUpRangeMax,
+        faceElements = 7; // num of face alternatives
 
     var init = function() {
         if ($calcElem.length > 0) {
             initListeners();
+
+            saveUpRangeMin = startSaveUpElement.attr('min');
+            saveUpRangeMax = startSaveUpElement.attr('max');
+
+            onRangeChange();
         }
 
         return true;
@@ -57,7 +66,7 @@ var monthlySavingsCalculator = (function() {
         calculateMonthlySavings();
         
         return true;
-    }
+    };
     
     var getValues = function() {
         retirementLengthVal = parseInt(retirementLengthElement.val());
@@ -66,7 +75,7 @@ var monthlySavingsCalculator = (function() {
         saveUpLength = retirementAge - startSaveUpVal;
         
         return true;
-    }
+    };
     
     var showValues = function() {
         retirementLengthValueElement.html(retirementLengthVal);
@@ -74,22 +83,31 @@ var monthlySavingsCalculator = (function() {
         startSaveUpValueElement.html(startSaveUpVal);
 
         return true;
-    }
+    };
     
     var calculateMonthlySavings = function() {
-        console.log(retirementLengthVal, monthlySavingsVal, startSaveUpVal);
-        monthlySaveUp = ((retirementLengthVal * monthlySavingsVal * 12) / (saveUpLength * 12)).toFixed(2);
-        
+        //console.log(retirementLengthVal, monthlySavingsVal, startSaveUpVal);
+        monthlySaveUp = Math.round((retirementLengthVal * monthlySavingsVal * 12) / (saveUpLength * 12));
+
+        setFace();
         proceedMonthlySavings();
         
         return true;
-    }
-    
+    };
+
     var proceedMonthlySavings = function() {
         monthlySavingsElement.html(monthlySaveUp);
         
         return true;
-    }
+    };
+
+    var setFace = function() {
+        var faceValue = Math.max(1, Math.round(((startSaveUpVal - saveUpRangeMin) / (saveUpRangeMax - saveUpRangeMin)) * faceElements));
+
+        faceImgElement.attr('src', faceImgElement.data().srcPattern.replace('%', faceValue));
+
+        return true;
+    };
 
     return {
         init: init

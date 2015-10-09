@@ -34,7 +34,7 @@ class Tpl {
             <meta property="og:description" content="<?php echo $desc; ?>" />
             <meta property="og:image" content="<?php echo App::APP_URL; ?>img/fb-img.png" />
 
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700%7COswald:400,300,700&amp;subset=latin,latin-ext">
+            <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700%7COswald:400,300,700&amp;subset=latin,latin-ext">-->
             <link rel="stylesheet" href="css/bootstrap.min.css">
             <link rel="stylesheet" href="css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="css/main.css">
