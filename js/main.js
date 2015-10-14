@@ -13,6 +13,42 @@ $(function() {
     });
 });
 
+
+$('[data-trigger]').on('click', function(e) {
+    switch ($(this).data().trigger)
+    {
+        case 'startTopVideo':
+            $('#intro-placeholder').addClass('intro-placeholder-hidden');
+            $('#jumbotron-video').addClass('jumbotron-video-full');
+
+            $('html,body').animate({
+                scrollTop: $('#jumbotron-video').offset().top
+            }, 600);
+
+            var v = $('#jumbotron-video').find('video')[0];
+            v.play();
+            $('#jumbotron-video video').prop('controls', true);
+
+            if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
+                //ga('send', 'event', 'video', 'Film na głównej');
+            }
+
+            v.onended = function(e) {
+                $(this).load();
+                $('#jumbotron-video video').prop('controls', false);
+                $('#intro-placeholder').removeClass('intro-placeholder-hidden');
+                $('#jumbotron-video').removeClass('jumbotron-video-full');
+            };
+
+            break;
+
+        default:
+            console.log('no action triggered');
+            break;
+    }
+});
+
+
 /**
  * kalkulator 1
  */
