@@ -116,36 +116,42 @@ Tpl::nav();
     <div class="row row-padded row-margins row-products">
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-1.jpg" alt="">
+                <a href=""><img src="img/produkty/produkt-1.jpg" alt="" class="img-responsive full-width"></a>
                 <figcaption>
                     <img src="img/bulb.png" alt="">
                     <div>
-                        Przyszłość<br>
-                        dzieci
+                        <a href="">
+                            Przyszłość<br>
+                            dzieci
+                        </a>
                     </div>
                 </figcaption>
             </figure>
         </div>
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-2.jpg" alt="">
+                <a href=""><img src="img/produkty/produkt-2.jpg" alt="" class="img-responsive full-width"></a>
                 <figcaption>
                     <img src="img/icon-sun.png" alt="">
                     <div>
-                        Emerytura<br>
-                        bez obaw
+                        <a href="emerytura-bez-obaw">
+                            Emerytura<br>
+                            bez obaw
+                        </a>
                     </div>
                 </figcaption>
             </figure>
         </div>
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-3.jpg" alt="">
+                <a href=""><img src="img/produkty/produkt-3.jpg" alt="" class="img-responsive full-width"></a>
                 <figcaption>
                     <img src="img/icon-hearth.png" alt="">
                     <div>
-                        Ochrona<br>
-                        życia
+                        <a href="">
+                            Ochrona<br>
+                            życia
+                        </a>
                     </div>
                 </figcaption>
             </figure>

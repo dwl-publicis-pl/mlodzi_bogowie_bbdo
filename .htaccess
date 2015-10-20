@@ -1,7 +1,15 @@
-AuthType Basic
-AuthName "Dostep zastrzezony"
-AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
-Require valid-user
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
+RewriteRule ^(.*)$ http://mlodzibogowie.pl/$1 [R=301,L]
+
+RewriteCond %{REMOTE_ADDR} !=212.244.179.218
+RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]
+
+#AuthType Basic
+#AuthName "Dostep zastrzezony"
+#AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
+#Require valid-user
 
 # Apache Server Configs v2.11.0 | MIT License
 # https://github.com/h5bp/server-configs-apache

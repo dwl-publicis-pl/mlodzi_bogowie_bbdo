@@ -155,7 +155,7 @@ Tpl::nav();
         <div class="col-md-6">
             <figure>
                 <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
-                <figcaption class="myth-number">
+                <!--<figcaption class="myth-number">
                     #3 mit
                 </figcaption>
                 <figcaption class="myth-title">
@@ -164,14 +164,14 @@ Tpl::nav();
                         <span class="myth-title-style-2">mogę pracować</span><br>
                         <span class="myth-title-style-3">do śmierci</span>
                     </a>
-                </figcaption>
+                </figcaption>-->
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
                 <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
-                <figcaption class="myth-number">
+                <!--<figcaption class="myth-number">
                     #3 mit
                 </figcaption>
                 <figcaption class="myth-title">
@@ -180,7 +180,7 @@ Tpl::nav();
                         <span class="myth-title-style-2">mogę pracować</span><br>
                         <span class="myth-title-style-3">do śmierci</span>
                     </a>
-                </figcaption>
+                </figcaption>-->
             </figure>
         </div>
     </div>

@@ -77,8 +77,7 @@ class Tpl {
                     <div id="navbar" class="navbar-collapse collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li<?php $currentPage == 'mit-o-emeryturze-moge-pomyslec-pozniej' ? print ' class="active"' : null; ?>><a href="mit-o-emeryturze-moge-pomyslec-pozniej">Mity</a></li>
-                            <li<?php $currentPage == 'kalkulator' ? print ' class="active"' : null; ?>><a href="kalkulator">Kalkulator</a></li>
-                            <li<?php $currentPage == 'produkt' ? print ' class="active"' : null; ?>><a href="produkt">Produkt</a></li>
+                            <li<?php $currentPage == 'produkt' ? print ' class="active"' : null; ?>><a href="emerytura-bez-obaw">Produkt</a></li>
                             <li<?php $currentPage == 'kontakt' ? print ' class="active"' : null; ?>><a href="kontakt">Kontakt</a></li>
                         </ul>
                     </div>
@@ -140,6 +139,9 @@ class Tpl {
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         
