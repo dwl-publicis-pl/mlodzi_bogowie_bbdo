@@ -60,7 +60,7 @@ Tpl::nav();
         </p>
     </header>
 
-    <div id="rNCalc" class="cycle-slideshow" data-cycle-timeout="0" data-cycle-slides="> section" data-cycle-log="false" data-cycle-auto-height="container">
+    <div id="rNCalc" class="calc-selectors cycle-slideshow" data-cycle-timeout="0" data-cycle-slides="> section" data-cycle-log="false" data-cycle-auto-height="container">
         <section class="row">
             <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 rNCalc-column">
                 <div class="row">

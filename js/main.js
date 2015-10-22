@@ -155,11 +155,10 @@ monthlySavingsCalculator.init();
  * kalkulator 1 END
  */
 
+
 /**
- * kalkulator 2
+ * kalkulator 2 (mit 4)
  */
-
-
 var retirementNecessitiesCalculator = (function() {
     var rootElement = '#rNCalc';
     var necessitiesSum = 0;
@@ -188,9 +187,10 @@ var retirementNecessitiesCalculator = (function() {
         nRCalcRetirementValueElement = '#nRCalcRetirementValue',
         rnCalcSumTxtElement = '.rnCalcSumTxt',
         rnCalcRetirementSumTxtElement = '.rnCalcRetirementSumTxt',
-        minCoinTranslate = -21,
-        maxCoinTranslate = 20,
-        coinsSpeed = 0.821; // [s]
+        minCoinTranslate = -17,
+        maxCoinTranslate = 17,
+        coinsSpeed = 0.821, // [s]
+        coinEdgeHeight = 16;
     var coinsAmountExpenses = 0;
     var coinsAmountEarnings = 0;
 
@@ -478,14 +478,14 @@ var retirementNecessitiesCalculator = (function() {
             $(rnCalcRetirementSumTxtElement).addClass('active');
         } else if (percentRetirementToNecessities >= 104) {
             $(rnCalcSumTxtElement).addClass('active').css({
-                    transform: 'translateY(' + (coinsAmountExpenses * 15 + 100) + 'px)'
+                    transform: 'translateY(' + (coinsAmountExpenses * coinEdgeHeight + 100) + 'px)'
                 }
             );
             $(rnCalcRetirementSumTxtElement).addClass('active');
         } else if (percentRetirementToNecessities <= 95) {
             $(rnCalcSumTxtElement).addClass('active');
             $(rnCalcRetirementSumTxtElement).addClass('active').css({
-                    transform: 'translateY(' + (coinsAmountEarnings * 15 + 100) + 'px)'
+                    transform: 'translateY(' + (coinsAmountEarnings * coinEdgeHeight + 100) + 'px)'
                 }
             );
         }
@@ -523,4 +523,185 @@ var retirementNecessitiesCalculator = (function() {
 retirementNecessitiesCalculator.init();
 /**
  * kalkulator 2 END
+ */
+
+
+/**
+ * kalkulator 4 (mit 7)
+ */
+var necessitiesCalculator = (function() {
+    var rootElement = '#nCalc';
+    var necessitiesSum = 0;
+    var btnSelector = '.calc-2-element';
+    var clickedElement,
+        clickedGroup,
+        errorMsg = [];
+    var htmlSumElement = $('#calc-4-sum');
+    var groupsList = [];
+    var checkedGroupsList = [];
+    var coinsInContainer = 13, // max and full stack of coins
+        coinImgSrc = 'img/coin.png',
+        minCoinTranslate = -17,
+        maxCoinTranslate = 17,
+        coinsSpeed = 0.821, // [s]
+        coinEdgeHeight = 16,
+        coinsElement = $('#calc-4-coins');
+    var coinsAmount = 0;
+
+
+    var init = function() {
+        if ($(rootElement).length == 0) {
+            return false;
+        }
+
+        collectListOfGroups();
+
+        $(btnSelector).on('click', function(event) {
+            clickedElement = $(this);
+            clickedGroup = parseInt(clickedElement.data().group);
+
+            if (clickedElement.attr('data-selected') == 'true') {
+                clearGroupSelect();
+            } else {
+                clearGroupSelect();
+                addToSum();
+                setAsSelected();
+            }
+
+            renderHTML();
+        });
+
+        return true;
+    };
+
+    var collectListOfGroups = function() {
+        var group;
+
+        $(rootElement + ' [data-group]').each(function() {
+            group = parseInt($(this).data().group);
+
+            if (groupsList.indexOf(group) === -1) {
+                groupsList.push(group);
+            }
+        });
+
+        return true;
+    };
+
+
+    var clearGroupSelect = function() {
+        var search = $(rootElement).find('[data-group="' + clickedGroup + '"][data-selected="true"]');
+
+        if (search) {
+            $.each(search, function(i, found) {
+                $(found).attr('data-selected', 'false');
+
+                necessitiesSum = necessitiesSum - Math.max(0, parseInt($(found).data().value));
+            });
+        }
+
+        var toRemove = checkedGroupsList.indexOf(clickedGroup);
+
+        if (toRemove > -1) {
+            checkedGroupsList.splice(toRemove, 1);
+        }
+
+        return true;
+    };
+
+    var setAsSelected = function() {
+        clickedElement.attr('data-selected', 'true');
+        checkedGroupsList.push(clickedGroup);
+
+        return true;
+    };
+
+    var addToSum = function() {
+        var value = clickedElement.data().value;
+        value = Math.max(0, parseInt(value));
+        necessitiesSum = necessitiesSum + value;
+
+        return true;
+    };
+
+    var numberStep = function(now, tween) {
+        var target = $(tween.elem),
+            rounded_now = Math.round(now);
+
+        target.prop('number', rounded_now).text(rounded_now);
+    };
+
+    var renderHTML = function() {
+        if (isError()) {
+            return false;
+        }
+
+        htmlSumElement.stop().animateNumber(
+            {
+                number: necessitiesSum,
+                easing: 'easeInQuad',
+                numberStep: numberStep
+            },
+            800
+        );
+
+        var coinsNum = coinsElement.find('> img');
+
+        if (coinsNum.length == 0) {
+            coinsElement.animate({height: (coinEdgeHeight * coinsInContainer * 2.01) + 'px'}, 500);
+
+            var randomHorzTransform;
+            var i = 0;
+
+            for (i = 0; i < coinsInContainer; i++) {
+                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
+                $(coinsElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -moz-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -ms-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -o-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); transform: translateX(calc(' + randomHorzTransform + 'px - 50%));">');
+            }
+
+            var n = 0;
+
+            $(coinsElement).children('img').each(function () {
+                TweenLite.to(this, coinsSpeed, {
+                    delay: (0.1 * n),
+                    opacity: 1,
+                    bottom: (n * coinEdgeHeight),
+                    ease: Power2.easeOut
+                });
+                n++;
+            });
+        }
+
+        return true;
+    };
+
+    var addError = function(msg) {
+        errorMsg.push(msg);
+
+        return true;
+    };
+
+    var isError = function() {
+        if (errorMsg.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    var printErrors = function() {
+        alert(errorMsg.join("\n"));
+        errorMsg = []; //cleaning
+
+        return true;
+    };
+
+    return {
+        init: init,
+        isError: isError
+    };
+})();
+
+necessitiesCalculator.init();
+/**
+ * kalkulator 4 END
  */

@@ -31,7 +31,7 @@ Tpl::nav();
             <div class="myths-rows-insider">
                 <div class="myth-box myth-box-type-a">
                     <figure>
-                        <a href="#"><img src="img/mity/mit-1.jpg" alt="" class="img-responsive"></a>
+                        <a href="mit-panstwo-da-mi-dobra-emeryture"><img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive"></a>
                     </figure>
                 </div>
 
@@ -41,7 +41,7 @@ Tpl::nav();
                     </figure>
 
                     <figure>
-                        <a href="#"><img src="img/mity/mit-4.jpg" alt="" class="img-responsive"></a>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
 
@@ -67,7 +67,7 @@ Tpl::nav();
 
                 <div class="myth-box myth-box-type-e">
                     <figure>
-                        <a href="#"><img src="img/mity/mit-7.jpg" alt="" class="img-responsive"></a>
+                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-w-przyszlosci"><img src="img/mity/mit-7.jpg" alt="O przyszłości dziecka mogę pomyśleć w przyszłości" class="img-responsive"></a>
                     </figure>
                 </div>
 

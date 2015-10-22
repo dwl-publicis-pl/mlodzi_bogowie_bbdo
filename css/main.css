@@ -296,6 +296,10 @@ b, strong {
     width: 100%;
 }
 
+#nCalc .btn-selector {
+    min-height: 58px;
+}
+
 .btn-selector:focus,
 .btn-selector:hover {
     background-color: #e68685;
@@ -986,7 +990,7 @@ input::-moz-focus-inner {
     text-align: right;
 }
 
-#rNCalc form {
+.calc-selectors form {
     margin-top: 50px;
 }
 
@@ -1164,6 +1168,27 @@ input::-moz-focus-inner {
 
 .rnCalc-results-page {
 
+}
+
+#nCalc {
+    margin-bottom: 40px;
+}
+
+.calc-result-col {
+    text-align: center;
+}
+
+#calc-4-coins {
+    position: relative;
+}
+
+#calc-4-coins img {
+    left: 50%;
+}
+
+.nCalc-column > .row {
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 /**
  * B3 equal columns
