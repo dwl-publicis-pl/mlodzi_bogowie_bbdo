@@ -6,9 +6,9 @@ Tpl::nav();
 ?>
 
 <div class="jumbotron border-top">
-    <img src="img/produkty/emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width">
+    <img src="img/produkty/ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width">
 
-    <a href="ochrona-zdrowia" class="btn btn-left">
+    <a href="emerytura-bez-obaw" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
         Następny<br>produkt
     </a>
@@ -22,16 +22,13 @@ Tpl::nav();
 <div class="container-fluid">
     <header class="row">
         <h1>
-            Premiopolisa Emerytura bez Obaw pozwoli <strong>Ci zgromadzić kapitał</strong>, by na przyszłej emeryturze<br class="hidden-xs hidden-sm"> móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.<br>
+            Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, <strong>mogą się<br class="hidden-xs hidden-sm"> przydarzyć każdemu z nas</strong> a tym samym wyłączyć nas z dotychczasowego życia.<br class="hidden-xs hidden-sm">
+            Najważniejsze jest wtedy szybkie i sprawne dostosowanie siebie i rodziny do nowej sytuacji.<br>
             <br>
-            Czym jest Premiopolisa?
+            W Prudentialu wiemy o tym i dlatego oferujemy Ci:
         </h1>
 
         <hr>
-
-        <p>
-            To innowacyjne rozwiązanie, zapewniające:
-        </p>
     </header>
 
     <div class="row">
@@ -39,21 +36,21 @@ Tpl::nav();
             <div class="row main-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height col-md-middle">
-                        <img src="img/icon-progress.png" alt="" class="img-responsive center-block">
+                        <img src="img/icon-hearth-2.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        Możliwość długoterminowego<br class="hidden-xs hidden-sm">
-                        systematycznego oszczędzania
+                        dodatkową kompleksową ochronę ubezpieczeniową zarówno <strong>na wypadek nowotworów,
+                        jak i kilkudziesięciu innych poważnych chorób oraz operacji</strong>
                     </div>
 
                     <div class="col-xs-12 col-md-2 col-md-height col-md-middle">
-                        <img src="img/icon-umbrella.png" alt="" class="img-responsive center-block">
+                        <img src="img/icon-ambulance.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        Ochronę ubezpieczeniową przez cały czas<br class="hidden-xs hidden-sm">
-                        trwania umowy
+                        dodatkową ochronę ubezpieczeniową <strong>na wypadek poważnego uszczerbku na zdrowiu</strong> –
+                        niezależnie od tego, czy jego przyczyną jest wypadek, czy choroba
                     </div>
                 </div>
             </div>
@@ -62,7 +59,7 @@ Tpl::nav();
 
     <header class="row border-top">
         <h1>
-            Co zyskam z Premiopolisą Emerytura bez obaw?
+            Co wyróżnia <strong>naszą ofertę</strong>?
         </h1>
 
         <hr>
@@ -73,15 +70,15 @@ Tpl::nav();
             <div class="row std-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-coins.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-checked.png" alt="" class="img-responsive pull-right">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
-                        <h3>Gwarantowana kwota wypłaty</h3>
+                        <h3>Szeroki zakres chorób</h3>
 
                         <p>
-                            Zawierając umowę, umawiasz się z nami na minimalną kwotę, jaką otrzymasz na koniec umowy. Możesz także skorzystać z gwarancji zwrotu wpłaconych składek – nawet jeśli gwarantowana suma ubezpieczenia
-                            z&nbsp;premiami będzie niższa niż zakładaliśmy, otrzymasz cały kapitał wpłacony na ubezpieczenie.
+                            Ubezpieczenie dodatkowe kompleksowej
+                            ochrony na wypadek poważnego zachorowania obejmuje <strong>aż 54 różne choroby</strong> oraz operacje. Oznacza to, że, gdy będziesz potrzebował pomocy to będziesz mógł na nią liczyć.
                         </p>
                     </div>
 
@@ -90,11 +87,13 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
-                        <h3>Premie roczne i końcowa</h3>
+                        <h3>Szeroki zakres uszczerbków</h3>
 
                         <p>
-                            Co rok oraz na zakończenie umowy możesz otrzymać premie
-                            – dodatkowe kwoty, które powiększą Twoje oszczędności na&nbsp;emeryturę.
+                            Ubezpieczenie dodatkowe na wypadek poważnego <strong>uszczerbku</strong>
+                            obejmuje <strong>aż 29 różnych rodzajów uszczerbku</strong>,
+                            w tym m.in. oparzenia, utratę słuchu i wzroku, jak również
+                            intensywną opiekę lekarską.
                         </p>
                     </div>
                 </div>
@@ -107,11 +106,10 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
-                        <h3>Zabezpieczenie bliskich</h3>
+                        <h3>Konkretna pomoc</h3>
 
                         <p>
-                            Naszą ofertę wyróżnia także to, że zapewniamy Ci ubezpieczenie na życie przez cały czas trwania umowy. Możesz mieć pewność, że gdyby
-                            Ciebie zabrakło, Twoi bliscy otrzymają pieniądze, które pozwolą im utrzymać dotychczasowy poziom życia.
+                            Leczenie jest kosztowne, dlatego możesz się ubezpieczyć nawet na 2 mln zł. Te pieniądze stanowią realną pomoc dla Ciebie i Twoich najbliższych.
                         </p>
                     </div>
 
@@ -120,11 +118,12 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
-                        <h3>Brak podatku</h3>
+                        <h3>Spokojna przyszłość</h3>
 
                         <p>
-                            Pieniądze, które otrzymasz na koniec okresu ubezpieczenia, nie podlegają opodatkowaniu 19-procentowym podatkiem od zysków
-                            kapitałowych (zgodnie z aktualnie obowiązującymi przepisami prawa).
+                            Możesz dodatkowo skorzystać z ubezpieczenia przejęcia opłacania składek – dzięki temu w trudnej
+                            sytuacji życiowej spowodowanej poważnym zachorowaniem lub poważnym uszczerbkiem, będziesz mógł
+                            kontynuować umowę, bo Prudential będzie opłacać składki do końca jej trwania.
                         </p>
                     </div>
                 </div>
@@ -135,10 +134,9 @@ Tpl::nav();
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <div class="btn-near-cta"><strong>Chcesz wiedzieć, ile dokładnie możesz z nami zyskać?</strong></div>
+                <div class="btn-near-cta"><strong>Chcesz poznać szczegóły?</strong></div>
                 <p>
-                    Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.<br class="hidden-xs hidden-sm">
-                    Nasz konsultant pomoże Ci przygotować dokładny plan oszczędnościowy i zadbać o bezpieczną przyszłość.
+                    Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.
                 </p>
 
                 <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami</a>
@@ -146,57 +144,7 @@ Tpl::nav();
         </div>
     </div>
 
-    <header class="row border-top">
-        <h1>
-            Nie czujesz się przekonany?
-        </h1>
-
-        <hr>
-
-        <p>
-            Zerknij na poniższe narzędzia i przekonaj się, że odkładanie myślenia o emeryturze na później naprawdę się nie opłaca.
-        </p>
-    </header>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-            <div class="row std-info-table">
-                <div class="row-height">
-                    <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-bulb.png" alt="" class="img-responsive pull-right">
-                    </div>
-
-                    <div class="col-xs-12 col-md-3 col-md-height col-md-top">
-                        <p class="text-center"><strong>Sprawdź, na co Cię będzie stać<br class="hidden-xs hidden-sm"> na emeryturze</strong></p>
-
-                        <a href="#" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
-                    </div>
-
-                    <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-clock.png" alt="" class="img-responsive pull-right">
-                    </div>
-
-                    <div class="col-xs-12 col-md-3 col-md-height col-md-top">
-                        <p class="text-center"><strong>Oblicz, ile miesięcznie powinieneś odkładać, aby zrealizować swój plan</strong></p>
-
-                        <a href="#" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
-                    </div>
-
-                    <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-umbrella-red.png" alt="" class="img-responsive pull-right">
-                    </div>
-
-                    <div class="col-xs-12 col-md-3 col-md-height col-md-top">
-                        <p class="text-center"><strong>Przekonaj się, jak bardzo odwlekanie decyzji o oszczędzaniu działa na Twoją niekorzyść</strong></p>
-
-                        <a href="#" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-future row-margins">
+    <div class="row row-future">
         <header>
             <h1>Zadbaj o przyszłość</h1>
             <hr>
@@ -211,7 +159,7 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="#"><img src="img/produkty/emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                        <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">
@@ -221,7 +169,7 @@ Tpl::nav();
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowa"><img src="img/produkty/ochrona-zdrowia-wide.jpg" alt="" class="img-responsive full-width"></a>
+                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">

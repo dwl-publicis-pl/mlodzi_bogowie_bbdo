@@ -1,0 +1,179 @@
+<?php
+require_once('libs/App.class.php');
+
+Tpl::htmlHead();
+Tpl::nav();
+?>
+
+
+<div class="jumbotron border-top">
+    <img src="img/mity/mit-emerytura-nie-potrwa-dlugo.jpg" alt="Mit. Emerytura nie potrwa długo." class="img-responsive full-width">
+
+    <a href="#" class="btn btn-left">
+        <img src="img/icon-arrow-left.png" alt="">
+        Następny<br>mit
+    </a>
+
+    <a href="#" class="btn btn-right">
+        <img src="img/icon-arrow-right.png" alt="">
+        Następny<br>mit
+    </a>
+</div>
+
+<div class="container-fluid">
+    <div class="row row-margin">
+        <div class="row-height">
+            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+
+            <div class="col-xs-12 col-md-1 col-lg-1 col-md-height col-md-middle">
+                <img src="img/icon-magnifier.png" alt="" class="headline-image img-responsive">
+            </div>
+
+            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
+                <div class="headline headline-left">
+                    <strong>To mit. Już dziś na emeryturze Polacy żyją średnio
+                    ok. 19 lat*</strong>. A żyjemy coraz dłużej. Niektórzy z nas mogą na
+                    emeryturze spędzić nawet 30 lat! Wystarczy spojrzeć na liczby.
+                </div>
+            </div>
+
+            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
+        </div>
+    </div>
+
+    <div class="row border-top text-center">
+        <div class="sock-container">
+            <img src="img/sock.png" class="img-responsive center-block" alt="">
+
+            <div class="sock-block sock-block-1">
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-xs-9 col-xs-height">
+                            <h2>Coraz <strong>dłużej żyjemy</strong></h2>
+
+                            <p>
+                                Tempo tych zmian może być zaskakujące: wg danych
+                                GUS od połowy XX wieku średnia długość życia w Polsce
+                                wydłużyła się prawie o 30%! To znaczy, że żyjemy
+                                o blisko 20 lat dłużej niż nasi pradziadkowie!
+                            </p>
+                        </div>
+                        <div class="col-xs-3 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sock-block sock-block-2">
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-xs-3 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                        </div>
+                        <div class="col-xs-9 col-xs-height">
+                            <h2>Już dziś blisko <strong>20 lat na emeryturze</strong></h2>
+
+                            <p>
+                                Jak wynika z naszych badań**, zaledwie 10% z nas zdaje sobie z tego sprawę.
+                                Tymczasem wg danych GUS dziś w momencie przejścia na emeryturę Polacy żyją
+                                jeszcze średnio ok. 19 lat (kobiety średnio aż 24 lata!)... a przecież to wciąż tylko średnia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sock-block sock-block-3">
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-xs-9 col-xs-height">
+                            <h2>„Mnie to <strong>nie dotyczy</strong>”</h2>
+
+                            <p>
+                                Według naszych badań prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
+                                co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
+                            </p>
+                        </div>
+                        <div class="col-xs-3 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sock-block sock-block-4">
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-xs-3 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                        </div>
+                        <div class="col-xs-9 col-xs-height">
+                            <h2>Tylko 2 pracujących <strong>na 1 emeryta</strong></h2>
+
+                            <p>
+                                Według danych GUS dziś na każdego emeryta przypadają 3 osoby pracujące, a i tak ich składki emerytalne nie wystarczają
+                                na wypłacane emerytury. A za 35 lat osoby po 65. roku życia mają stanowić ponad 30% społeczeństwa! I na każdą taką osobę nie będą przypadać nawet dwie osoby pracujące.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-filled-red">
+        <div class="col-xs-12">
+            <div class="text-center">
+                <span class="btn-near-cta">Jeżeli nie chcesz przez kilkanaście lat się martwić, to...</span>
+                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-padded-vertical">
+        <header>
+            <h1>Zmierz się z <strong>innymi mitami</strong></h1>
+        </header>
+    </div>
+
+    <div class="row myths-multibox">
+        <div class="col-md-6">
+            <figure>
+                <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
+                <!--<figcaption class="myth-number">
+                    #3 mit
+                </figcaption>
+                <figcaption class="myth-title">
+                    <a href="#">
+                        <span class="myth-title-style-1">Przecież</span><br>
+                        <span class="myth-title-style-2">mogę pracować</span><br>
+                        <span class="myth-title-style-3">do śmierci</span>
+                    </a>
+                </figcaption>-->
+            </figure>
+        </div>
+
+        <div class="col-md-6">
+            <figure>
+                <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
+                <!--<figcaption class="myth-number">
+                    #3 mit
+                </figcaption>
+                <figcaption class="myth-title">
+                    <a href="#">
+                        <span class="myth-title-style-1">Przecież</span><br>
+                        <span class="myth-title-style-2">mogę pracować</span><br>
+                        <span class="myth-title-style-3">do śmierci</span>
+                    </a>
+                </figcaption>-->
+            </figure>
+        </div>
+    </div>
+</div>
+
+<?php
+Tpl::bottom();
+Tpl::htmlFooter();
+?>
+

@@ -11,7 +11,7 @@ Tpl::nav();
 
     <a href="#" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Poprzedni<br>mit
+        Następny<br>mit
     </a>
 
     <a href="#" class="btn btn-right">
@@ -32,7 +32,7 @@ Tpl::nav();
             <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
                 <div class="headline headline-left">
                     <div>
-                        <strong>Niestety nie jest tak dobrze.</strong> Według obecnych prognoz nasze emerytury w przyszłości wyniosą ok. 1/3 ostatniej pensji (nie tej najwyższej w karierze, tylko ostatniej przed przejściem
+                        <strong>Niestety nie jest tak dobrze.</strong> Według obecnych prognoz* nasze emerytury w przyszłości wyniosą ok. 1/3 ostatniej pensji (nie tej najwyższej w karierze, tylko ostatniej przed przejściem
                         na emeryturę). I to pod warunkiem, że wcześniej pracowaliśmy na podstawie umów, od których były odprowadzane składki na ubezpieczenie społeczne i zdrowotne.
                     </div>
 
@@ -58,9 +58,10 @@ Tpl::nav();
                         <p><strong>Emerytura = 1/3 ostatniej pensji</strong></p>
 
                         <p>
-                            Nieważne, ile zarabiamy, zawsze będzie nam mało. Bo wakacje, zachcianki, prezenty, bo coś się zepsuje i trzeba wymienić na nowe.  Każdy lubi żyć na w miarę dobrym poziomie, a do tego trzeba
+                            Nieważne, ile zarabiamy, zawsze będzie nam mało. Bo wakacje, zachcianki, prezenty,
+                            bo coś się zepsuje i trzeba wymienić na nowe. Każdy lubi żyć na w miarę dobrym poziomie, a do tego trzeba
                             środków, czyż nie? Zatem podziel swoją pensję na trzy i pomyśl,
-                            że za tyle będziesz funkcjonować nawet przez 20 lat!
+                            że za tyle będziesz funkcjonować nawet przez 20 lat! 
                         </p>
                     </div>
 
@@ -73,8 +74,9 @@ Tpl::nav();
 
                         <p>
                             Według danych GUS dziś na każdego emeryta przypadają
-                            3 osoby pracujące, a i tak ich składki emerytalne nie wystarczają na wypłacane emerytury. A za 35 lat osoby po
-                            65. roku życia mają stanowić ponad 30% społeczeństwa! I na każdą taką osobę nie będą przypadać nawet dwie osoby pracujące...
+                            3 osoby pracujące, a i tak ich składki emerytalne nie wystarczają na wypłacane
+                            emerytury. A za 35 lat osoby po 65. roku życia mają stanowić ponad 30% społeczeństwa!
+                            I na każdą taką osobę nie będą przypadać nawet dwie osoby pracujące...
                         </p>
                     </div>
                 </div>
@@ -86,204 +88,247 @@ Tpl::nav();
         <h1>Chwila <strong>prawdy</strong></h1>
         <hr>
         <p>
-            Wpisz, ile zarabiasz, aby oblicz swoją przyszłą szacunkową emeryturę.
+            Wpisz, ile zarabiasz, aby obliczyć swoją przyszłą szacunkową emeryturę.
         </p>
     </header>
 
-    <div id="nCalc" class="calc-selectors">
+    <div id="rNCalc" class="calc-selectors cycle-slideshow" data-cycle-timeout="0" data-cycle-slides="> section" data-cycle-log="false" data-cycle-auto-height="container">
         <section class="row">
-            <div class="row-height">
-                <div class="hidden-xs hidden-sm col-md-2"></div>
-                <div class="col-xs-12 col-md-5 col-md-height col-md-top nCalc-column">
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 rNCalc-column">
+                <form>
                     <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            1. Studia
+                        <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                Twoja aktualna pensja
+                                <span>(śmiało, nikt nie patrzy)</span>
+                            </div>
+
+                            <div class="col-md-3 col-md-height">
+                                <input type="text" pattern="\d+" id="rNCalcEarnings" class="input-selector-red full-width" placeholder="wpisz kwotę netto" autocomplete="off" maxlength="8">
+                            </div>
+
+                            <div class="col-md-1 col-md-height">&nbsp;</div>
+
+                            <div class="col-md-2 col-md-height calc-section-label calc-3-retirement-value-container">
+                                Twoja przyszła emerytura
+                            </div>
+
+                            <div class="col-md-3 col-md-height calc-3-retirement-value-container">
+                                <button class="js-retirement-live-value btn btn-selector calc-3-retirement-value" disabled></button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                1. Poziom życia:
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="700" data-selected="false" data-group="7">
-                                    Dzienne
-                                    <span>(państwowe)</span>
+                                    Raczej skromny
+                                    <span>(z naciskiem na „raczej”)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="7">
-                                    Na prywatnej uczelni
-                                    <span>(w Polsce)</span>
+                                    Na spokojnie
+                                    <span>(bez luksusów lecz stabilnie)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="2000" data-selected="false" data-group="7">
-                                    Prestiżowy kierunek
-                                    <span>(za granicą)</span>
+                                    Na bogato
+                                    <span>(w tym czasem kawior na śniadanie)</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            2. Lokum w czasie studiów
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                2. Twoje lokum na emeryturze to:
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="750" data-selected="false" data-group="1">
-                                    Akademik
-                                    <span>(przytulny ;) )</span>
+                                    Małe mieszkanie
+                                    <span>(a raczej... kawalerka)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="1">
-                                    Wynajęte mieszkanie
-                                    <span>(albo chociaż pokój)</span>
+                                    Apartament
+                                    <span>(w wielkim mieście)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="2000" data-selected="false" data-group="1">
-                                    Kawalerka
-                                    <span>(ciasna, ale własna)</span>
+                                    Willa z ogrodem
+                                    <span>(i basenem)</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            3. Nagroda za obronę dyplomu
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                3. Wiadomo – opieka medyczna
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="200" data-selected="false" data-group="6">
-                                    Wspólny wypad na sushi
+                                    Publiczna służba zdrowia
+                                    <span>(szacunek!)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="400" data-selected="false" data-group="6">
-                                    Eleganckie pióro
-                                    <span>(z grawerem)</span>
+                                    Mix: prywatny specjalista
+                                    <span>+ szpital państwowy</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="800" data-selected="false" data-group="6">
-                                    Zasłużone wakacje
-                                    <span>(zagraniczne!)</span>
+                                    Prywatna opieka medyczna
+                                    <span>(i klinika w Szwajcarii)</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            4. Pierwszy samochód
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                4. Zwyczajowo, w&nbsp;miesiącu, przemieszczasz się:
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="150" data-selected="false" data-group="4">
-                                    Tani, (nie)zawodny
+                                    Autobusem, tramwajem, pociągiem
+                                    <span>(komunikacją publiczną)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="4">
-                                    Miejski i sportowy
+                                    Autem z historią i&nbsp;przebiegiem
+                                    <span>(póki daje radę)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1000" data-selected="false" data-group="4">
-                                    Lśniący i komfortowy
+                                    Lśniącym samochodem z&nbsp;salonu
+                                    <span>(po całym kraju)</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            5. Ślub!
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                5. Na prezenty dla wnuków wybierasz:
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="100" data-selected="false" data-group="2">
-                                    Uroczysty obiad z lampką szampana
+                                    To, co aktualnie w promocji w najbliższym sklepie dyskontowym
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="200" data-selected="false" data-group="2">
-                                    Tradycyjnie, w domu panny młodej
+                                    Zdalnie sterowany samochodzik lub grę komputerową
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="2">
-                                    Wystawne przyjęcie w oranżerii
+                                    Tablet
+                                    <span>(smartfon)</span>
                                 </button>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12 calc-section-label">
-                            Wkład we własne mieszkanie
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                6. Na pewno masz jakieś hobby!
+                            </div>
+
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="100" data-selected="false" data-group="5">
-                                    Skromne M1
+                                    Wędkarstwo / szydełkowanie
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="600" data-selected="false" data-group="5">
-                                    Optymalne M2
+                                    Tenis / jazda konna
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1000" data-selected="false" data-group="5">
-                                    Poważne M3
+                                    Kolekcjonowanie młodej, polskiej sztuki
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-xs-12 col-md-4 col-md-height col-md-middle calc-result-col">
-                    <img src="img/txt-suma-przyszlych-potrzeb-twojego-dziecka.png" alt="Suma przyszłych potrzeb Twojego dziecka" class="center-block">
-                    <div class="calc-2-sum-container"><span id="calc-4-sum">0</span> zł</div>
+                    <div class="row">
+                        <div class="row-height">
+                            <div class="col-md-3 col-md-height calc-section-label">
+                                7. Podróżujesz...
+                            </div>
 
-                    <div class="coins-stack" id="calc-4-coins"></div>
-                </div>
+                            <div class="col-md-3 col-md-height">
+                                <button class="btn btn-selector calc-2-element" data-value="350" data-selected="false" data-group="3">
+                                    Po Polsce
+                                    <span>(piękny mamy kraj!)</span>
+                                </button>
+                            </div>
 
-                <div class="hidden-xs hidden-sm col-md-1"></div>
+                            <div class="col-md-3 col-md-height">
+                                <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="3">
+                                    Po Europie
+                                    <span>(stary kontynent czeka)</span>
+                                </button>
+                            </div>
+
+                            <div class="col-md-3 col-md-height">
+                                <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="3">
+                                    Daleko w świat
+                                    <span>(najlepiej dookoła)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p><strong>Czy kwota Twojej emerytury wystarczy na wszystkie potrzeby?</strong></p>
+                            <button class="btn btn-selector btn-selector-submit center-block">Sprawdź</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
 
-        <!--<section class="row rnCalc-results-page">
+        <section class="row rnCalc-results-page">
             <div class="col-xs-12">
                 <button class="btn btn-left btn-red collapse" data-calc-trigger="reset-calc">
                     <img src="img/icon-arrow-left-red.png" alt="">
@@ -318,12 +363,13 @@ Tpl::nav();
                             <div data-rNCalc-result="1">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się raczej marnie</span>.
+                                        Twoja przyszłość <span>rysuje się nieciekawie</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Dbaj o przyjaciół i o dobre wychowanie dzieci, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni.
+                                        Oczywiście możesz także zrezygnować z życia, jakie planujesz wieść na emeryturze, i znacznie ograniczyć wydatki – może
+                                        wtedy jakoś uda się związać koniec z końcem... Ale może lepiej już teraz zrobić plan i zadbać o swoją przyszłość?...
                                     </p>
                                 </div>
                             </div>
@@ -331,12 +377,13 @@ Tpl::nav();
                             <div data-rNCalc-result="2">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się nieźle</span>.
+                                        Ciężkie czasy nadchodzą, a Ty jesteś <span>średnio gotowy</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Może będzie Cię stać na prywatną wizytę u specjalisty, ale marzenia o podróży dookoła świata lepiej sobie odpuścić.
+                                        Jeśli nie chcesz z niczego rezygnować – zaplanuj emeryturę już teraz. Im wcześniej zaczniesz oszczędzać,
+                                        tym większą kwotę zgromadzisz. I może uda się spędzić jesień życia bez ograniczania się tylko do najpotrzebniejszych rzeczy.
                                     </p>
                                 </div>
                             </div>
@@ -344,12 +391,13 @@ Tpl::nav();
                             <div data-rNCalc-result="3">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się całkiem solidnie</span>.
+                                        Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w bardzo ciemnych barwach</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Trzymamy kciuki, żebyś nigdy nie musiał sobie niczego odmawiać. Ale co będzie, jeśli coś pójdzie nie tak? Czy masz
+                                        pewność, że zawsze będziesz dobrze zarabiać? A co, jeśli w przyszłości politycy postanowią przeorganizować
+                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o lepszą przyszłość dla siebie i bliskich.
                                     </p>
                                 </div>
                             </div>
@@ -357,14 +405,14 @@ Tpl::nav();
                     </div>
                 </div>
             </div>
-        </section>-->
+        </section>
     </div>
 
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <span class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w dorosłość?</span>
-                <a href="https://formularz.prudential.pl/lead?lid=46630" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
+                <p class="btn-near-cta">Jeśli nie chcesz żyć za 1/3 pensji, to...</p>
+                <a href="#" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę</a>
             </div>
         </div>
     </div>

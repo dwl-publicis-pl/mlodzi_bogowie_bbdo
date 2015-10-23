@@ -11,7 +11,7 @@ Tpl::nav();
 
     <a href="#" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Poprzedni<br>mit
+        Następny<br>mit
     </a>
 
     <a href="#" class="btn btn-right">
@@ -47,7 +47,7 @@ Tpl::nav();
         <h1>Kosztowna <strong>dorosłość</strong></h1>
         <hr>
         <p>
-            Zabezpieczenie przyszłości dziecka to duże wyzwanie. Policz ile potrzebujesz by ułatwić mu start w dorosłe życie.
+            Zabezpieczenie przyszłości dziecka to duże wyzwanie. Policz ile potrzebujesz by ułatwić mu start w dorosłe życie*.
         </p>
     </header>
 
@@ -65,21 +65,21 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="700" data-selected="false" data-group="7">
+                                <button class="btn btn-selector calc-2-element" data-value="12000" data-selected="false" data-group="7">
                                     Dzienne
                                     <span>(państwowe)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="7">
+                                <button class="btn btn-selector calc-2-element" data-value="36000" data-selected="false" data-group="7">
                                     Na prywatnej uczelni
                                     <span>(w Polsce)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="2000" data-selected="false" data-group="7">
+                                <button class="btn btn-selector calc-2-element" data-value="150000" data-selected="false" data-group="7">
                                     Prestiżowy kierunek
                                     <span>(za granicą)</span>
                                 </button>
@@ -96,21 +96,21 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="750" data-selected="false" data-group="1">
+                                <button class="btn btn-selector calc-2-element" data-value="15000" data-selected="false" data-group="1">
                                     Akademik
                                     <span>(przytulny ;) )</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="1">
+                                <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="1">
                                     Wynajęte mieszkanie
                                     <span>(albo chociaż pokój)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="2000" data-selected="false" data-group="1">
+                                <button class="btn btn-selector calc-2-element" data-value="120000" data-selected="false" data-group="1">
                                     Kawalerka
                                     <span>(ciasna, ale własna)</span>
                                 </button>
@@ -127,20 +127,20 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="200" data-selected="false" data-group="6">
+                                <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="6">
                                     Wspólny wypad na sushi
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="400" data-selected="false" data-group="6">
+                                <button class="btn btn-selector calc-2-element" data-value="1500" data-selected="false" data-group="6">
                                     Eleganckie pióro
                                     <span>(z grawerem)</span>
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="800" data-selected="false" data-group="6">
+                                <button class="btn btn-selector calc-2-element" data-value="5000" data-selected="false" data-group="6">
                                     Zasłużone wakacje
                                     <span>(zagraniczne!)</span>
                                 </button>
@@ -157,20 +157,20 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="150" data-selected="false" data-group="4">
+                                <button class="btn btn-selector calc-2-element" data-value="20000" data-selected="false" data-group="4">
                                     Tani, (nie)zawodny
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="4">
-                                    Miejski i sportowy
+                                <button class="btn btn-selector calc-2-element" data-value="50000" data-selected="false" data-group="4">
+                                    Miejski i&nbsp;sportowy
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="1000" data-selected="false" data-group="4">
-                                    Lśniący i komfortowy
+                                <button class="btn btn-selector calc-2-element" data-value="80000" data-selected="false" data-group="4">
+                                    Lśniący i&nbsp;komfortowy
                                 </button>
                             </div>
                         </div>
@@ -185,19 +185,19 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="100" data-selected="false" data-group="2">
+                                <button class="btn btn-selector calc-2-element" data-value="10000" data-selected="false" data-group="2">
                                     Uroczysty obiad z lampką szampana
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="200" data-selected="false" data-group="2">
+                                <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="2">
                                     Tradycyjnie, w domu panny młodej
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="2">
+                                <button class="btn btn-selector calc-2-element" data-value="60000" data-selected="false" data-group="2">
                                     Wystawne przyjęcie w oranżerii
                                 </button>
                             </div>
@@ -213,19 +213,19 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="100" data-selected="false" data-group="5">
+                                <button class="btn btn-selector calc-2-element" data-value="250000" data-selected="false" data-group="5">
                                     Skromne M1
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="600" data-selected="false" data-group="5">
+                                <button class="btn btn-selector calc-2-element" data-value="450000" data-selected="false" data-group="5">
                                     Optymalne M2
                                 </button>
                             </div>
 
                             <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="1000" data-selected="false" data-group="5">
+                                <button class="btn btn-selector calc-2-element" data-value="650000" data-selected="false" data-group="5">
                                     Poważne M3
                                 </button>
                             </div>
@@ -243,89 +243,13 @@ Tpl::nav();
                 <div class="hidden-xs hidden-sm col-md-1"></div>
             </div>
         </section>
-
-        <!--<section class="row rnCalc-results-page">
-            <div class="col-xs-12">
-                <button class="btn btn-left btn-red collapse" data-calc-trigger="reset-calc">
-                    <img src="img/icon-arrow-left-red.png" alt="">
-                    oblicz<br> jeszcze raz
-                </button>
-
-                <div id="rNCalc-chart">
-                    <div id="rnCalc-chart-img">
-                        <img src="img/calc-chart.png" alt="" class="img-responsive">
-
-                        <div id="nRCalc-results">
-                            <div id="nRCalcExpenses" class="coins-stack">
-                                <div class="rnCalcSumTxt">
-                                    <img src="img/txt-suma-twoich-miesiecznych-wydatkow.png" alt="Suma Twoich miesięcznych wydatków" class="img-responsive">
-                                    <div class="calc-2-sum-container"><span id="calc-2-sum">3000</span> zł</div>
-                                </div>
-                            </div>
-
-                            <div id="nRCalcRetirementValue" class="coins-stack">
-                                <div class="rnCalcRetirementSumTxt">
-                                    <img src="img/txt-twoja-szacunkowa-miesieczna-emerytura.png" alt="Twoja szacunkowa miesięczna emerytura" class="img-responsive">
-                                    <div class="calc-2-sum-container"><span id="calc-2-retirement-value">1000</span> zł</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-6 col-md-offset-3">
-                        <div class="list-unstyled rNCalc-text-info">
-                            <div data-rNCalc-result="1">
-                                <div class="calc-headline">
-                                    <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się raczej marnie</span>.
-                                    </div>
-
-                                    <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-rNCalc-result="2">
-                                <div class="calc-headline">
-                                    <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się nieźle</span>.
-                                    </div>
-
-                                    <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div data-rNCalc-result="3">
-                                <div class="calc-headline">
-                                    <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się całkiem solidnie</span>.
-                                    </div>
-
-                                    <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
     </div>
 
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <span class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w dorosłość?</span>
-                <a href="https://formularz.prudential.pl/lead?lid=46630" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
+                <p class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w dorosłość?</p>
+                <a href="przyszlosc-dziecka" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
             </div>
         </div>
     </div>

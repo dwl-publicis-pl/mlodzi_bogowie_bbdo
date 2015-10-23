@@ -1,10 +1,15 @@
 Options +FollowSymLinks
 RewriteEngine on
+
+RewriteCond %{REMOTE_ADDR} !=212.91.10.71
+RewriteCond %{REMOTE_ADDR} !=94.254.133.13
+RewriteCond %{REMOTE_ADDR} !=212.244.179.218
+RewriteCond %{REMOTE_ADDR} !=80.247.53.97
+RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]
+
 RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
 RewriteRule ^(.*)$ http://mlodzibogowie.pl/$1 [R=301,L]
 
-RewriteCond %{REMOTE_ADDR} !=212.244.179.218
-RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]
 
 #AuthType Basic
 #AuthName "Dostep zastrzezony"

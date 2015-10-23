@@ -1,0 +1,76 @@
+.dropdown-menu {
+	border-radius: 0;
+	padding: 0;
+	border: 0;
+	border-bottom: 5px solid #C6131A;
+}
+
+.menu-mlodzi-bogowie {
+	background: #fff url(../img/bg-menu-mb.jpg) right bottom no-repeat;
+	background-size: auto 100%;
+}
+
+.menu-nasze-rozwiazania {
+	background: #fff url(../img/bg-menu-nr.jpg) right bottom no-repeat;
+	background-size: auto 100%;
+}
+
+ul.menu-col {
+	padding: 30px 20px 30px 50px;
+/* 	list-style-image: url(../img/arr-right-gray.png); */
+	list-style: none;
+}
+
+ul.menu-col li {
+	margin: 20px 0;
+	padding-left: 30px;
+	background: url(../img/arr-right-gray.png) left center no-repeat;
+}
+
+ul.menu-col p, ul.menu-col a {
+	font-size: 1.2rem;
+	margin: 0;
+}
+ul.menu-col a {
+	color: #000;
+	font-weight: bold;
+}
+ul.menu-col a:hover, .nav .open > a {
+	color: #C6131A;
+}
+
+.menu-nasze-rozwiazania .solution {
+	padding: 20px 0;
+}
+.menu-nasze-rozwiazania .solution-1 {
+	padding-top: 40px;
+}
+.menu-nasze-rozwiazania .solution-3 {
+	padding-bottom: 40px;
+}
+.menu-nasze-rozwiazania .solution p {
+	font-size: 1.2rem;
+	margin-left: 120px;
+}
+.menu-nasze-rozwiazania .solution a {
+	display: block;
+	margin-left: 120px;
+	padding-left: 30px;
+	font-size: 2rem;
+	color: #000;
+	background: url(../img/arr-right-gray.png) left center no-repeat;
+}
+.solution-1 {
+	background: url(../img/bg-menu-nr-1.gif) left center no-repeat;
+}
+.solution-2 {
+	background: url(../img/bg-menu-nr-2.gif) left center no-repeat;
+}
+.solution-3 {
+	background: url(../img/bg-menu-nr-3.gif) left center no-repeat;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #eee;
+    border-color: #F2F2F2;
+}

@@ -37,12 +37,12 @@ Tpl::nav();
                     </div>
 
                     <div>
-                        Chyba nie planujesz przeprowadzki na emeryturze do lasu, żeby jeść to, co zerwiesz z&nbsp;drzewa? A do obecnych kosztów życia, takich jak dom czy mieszkanie, jedzenie, komunikacja, rachunki, wyjazdy itp.
-                        dojdą wyższe koszty leków i leczenia, prezenty dla wnuczków...
+                        Chyba nie planujesz przeprowadzki na emeryturze do lasu, żeby jeść to, co zerwiesz z drzewa? A do obecnych kosztów życia, takich jak dom czy mieszkanie, jedzenie, komunikacja, rachunki, wyjazdy itp. dojdą wyższe koszty leków i leczenia, prezenty dla wnuczków...
                     </div>
 
                     <div>
-                        A do dyspozycji będziemy mieć tylko 1/3 ostatniej pensji (lub nawet mniej), bo według prognoz tyle wyniesie nasza przyszła emerytura. Sprawdź poniżej, czy taka suma na wszystko wystarczy.
+                        A do dyspozycji możemy mieć tylko 1/3 ostatniej pensji (lub nawet mniej), bo według
+                        prognoz* tyle wyniesie nasza przyszła emerytura. Sprawdź poniżej, czy taka suma na wszystko wystarczy.
                     </div>
                 </div>
             </div>
@@ -55,8 +55,8 @@ Tpl::nav();
         <h1>Projekt: <strong>emerytura</strong></h1>
         <hr>
         <p>
-            Pewna emerytura wymaga dobrego planowania.<br class="hidden-xs hidden-sm">
-            Sprawdź, na co będzie Cię stać!
+            Pewna emerytura wymaga dobrego planowania.
+            Sprawdź, na co będzie Cię stać**!
         </p>
     </header>
 
@@ -274,11 +274,11 @@ Tpl::nav();
                                 <input type="text" pattern="\d+" id="rNCalcEarnings" class="input-selector-red" placeholder="wpisz kwotę netto" autocomplete="off" maxlength="8">
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-md-4 col-md-height">
                                 <button class="btn btn-selector btn-selector-submit">Sprawdź wyniki</button>
                             </div>
 
-                            <div class="col-md-4 col-md-height"></div>
+                            <div class="col-md-3 col-md-height"></div>
                         </form>
                     </div>
                 </div>
@@ -320,12 +320,13 @@ Tpl::nav();
                             <div data-rNCalc-result="1">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się raczej marnie</span>.
+                                        Twoja przyszłość <span>rysuje się nieciekawie</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Dbaj o przyjaciół i o dobre wychowanie dzieci, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni.
+                                        Oczywiście możesz także zrezygnować z życia, jakie planujesz wieść na emeryturze, i znacznie ograniczyć wydatki – może
+                                        wtedy jakoś uda się związać koniec z końcem... Ale może lepiej już teraz zrobić plan i zadbać o swoją przyszłość?...
                                     </p>
                                 </div>
                             </div>
@@ -333,12 +334,13 @@ Tpl::nav();
                             <div data-rNCalc-result="2">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się nieźle</span>.
+                                        Ciężkie czasy nadchodzą, a Ty jesteś <span>średnio gotowy</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Może będzie Cię stać na prywatną wizytę u specjalisty, ale marzenia o podróży dookoła świata lepiej sobie odpuścić.
+                                        Jeśli nie chcesz z niczego rezygnować – zaplanuj emeryturę już teraz. Im wcześniej zaczniesz oszczędzać,
+                                        tym większą kwotę zgromadzisz. I może uda się spędzić jesień życia bez ograniczania się tylko do najpotrzebniejszych rzeczy.
                                     </p>
                                 </div>
                             </div>
@@ -346,12 +348,13 @@ Tpl::nav();
                             <div data-rNCalc-result="3">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Twoja przyszłość <span>rysuje się całkiem solidnie</span>.
+                                        Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w bardzo ciemnych barwach</span>.
                                     </div>
 
                                     <p>
-                                        Dbaj o przyjaciół, bo możliwe, że okażą się jedynym ratunkiem na emerytalne dni. Pewnie wspomogą
-                                        Cię biletem na tramwaj, żebyś do szpitala nie jechał na gapę, ale czy podzielą się śniadaniem? Obiadem? Może już lepiej teraz zrobić plan oszczędzania na emeryturę?
+                                        Trzymamy kciuki, żebyś nigdy nie musiał sobie niczego odmawiać. Ale co będzie, jeśli coś pójdzie nie tak? Czy masz
+                                        pewność, że zawsze będziesz dobrze zarabiać? A co, jeśli w przyszłości politycy postanowią przeorganizować
+                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o lepszą przyszłość dla siebie i bliskich.
                                     </p>
                                 </div>
                             </div>
@@ -365,8 +368,8 @@ Tpl::nav();
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <span class="btn-near-cta">Czekamy czy działamy?</span>
-                <a href="#" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę</a>
+                <span class="btn-near-cta">Zacznij działać!</span>
+                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę</a>
             </div>
         </div>
     </div>

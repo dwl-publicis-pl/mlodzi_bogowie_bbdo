@@ -50,6 +50,23 @@ $('[data-trigger]').on('click', function(e) {
 
 
 /**
+ * Number.prototype.format(n, x, s, c)
+ * http://stackoverflow.com/a/14428340/1453425
+ *
+ * @param integer n: length of decimal
+ * @param integer x: length of whole part
+ * @param mixed   s: sections delimiter
+ * @param mixed   c: decimal delimiter
+ */
+Number.prototype.format = function(n, x, s, c) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',
+        num = this.toFixed(Math.max(0, ~~n));
+
+    return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
+};
+
+
+/**
  * kalkulator 1
  */
 var monthlySavingsCalculator = (function() {
@@ -166,13 +183,17 @@ var retirementNecessitiesCalculator = (function() {
     var clickedElement,
         clickedGroup,
         errorMsg = [],
-        maxEarningsLength = 8;
+        maxEarningsLength = 8,
+        moneySufix = ' PLN';
     var htmlSumElement = $('#calc-2-sum'),
         htmlRetirementSumElement = $('#calc-2-retirement-value'),
         dataTxtResultSelectorName = 'data-rNCalc-result',
         selectedFinalTextElement,
         backBtnSelector = '.rnCalc-results-page button',
-        btnResetSelector = '[data-calc-trigger="reset-calc"]';
+        btnResetSelector = '[data-calc-trigger="reset-calc"]',
+        isRetirementLiveElement = false,
+        retirementLiveValueContainerSelector = '.calc-3-retirement-value-container';
+        retirementLiveValueSelector = '.js-retirement-live-value';
     var earningsElement = $('#rNCalcEarnings');
     var earningsValue = 0,
         retirementValue = 0,
@@ -201,7 +222,8 @@ var retirementNecessitiesCalculator = (function() {
         }
 
         collectListOfGroups();
-        initEarningsValidator();
+        initEarningsValidatorAndUpdater();
+        findRetirementLiveElement();
 
         $(btnResetSelector).on('click', function(event) {
             event.preventDefault();
@@ -211,6 +233,8 @@ var retirementNecessitiesCalculator = (function() {
 
 
         $(btnSelector).on('click', function(event) {
+            event.preventDefault();
+
             clickedElement = $(this);
 
             if (clickedElement.data().selected == 'true') {
@@ -241,6 +265,48 @@ var retirementNecessitiesCalculator = (function() {
         });
     };
 
+
+    var findRetirementLiveElement = function() {
+        if ($(retirementLiveValueSelector).length > 0) {
+            isRetirementLiveElement = true;
+        }
+
+        return true;
+    };
+
+
+    var numberStep = function(now, tween) {
+        var target = $(tween.elem),
+            rounded_now = Math.round(now);
+
+        target.prop('number', rounded_now).text(rounded_now.format(0, 3, ' ') + moneySufix);
+    };
+
+
+    var updateRetirementLiveValue = function() {
+        if (!isRetirementLiveElement) {
+            return true;
+        }
+
+        if (!$(retirementLiveValueContainerSelector).hasClass('active')) {
+            $(retirementLiveValueContainerSelector).addClass('active');
+        }
+
+        getEarnings();
+        calculateRetirementValue();
+
+
+        $(retirementLiveValueSelector).stop().animateNumber(
+            {
+                number: retirementValue,
+                easing: 'easeInQuad',
+                numberStep: numberStep
+            },
+            800
+        );
+    };
+
+
     var resetCalc = function() {
         var search = $(rootElement).find('[data-selected="true"]');
 
@@ -251,6 +317,11 @@ var retirementNecessitiesCalculator = (function() {
         }
 
         earningsElement.val('');
+
+        if (isRetirementLiveElement) {
+            $(retirementLiveValueContainerSelector).removeClass('active');
+            $(retirementLiveValueSelector).text('');
+        }
 
         toggleBackBtn();
         sectionTransition('prev');
@@ -299,13 +370,15 @@ var retirementNecessitiesCalculator = (function() {
         return true;
     };
 
-    var initEarningsValidator = function() {
+    var initEarningsValidatorAndUpdater = function() {
         earningsElement.on('keyup', function(e) {
             $(this).val($(this).val().replace(/[^0-9]/g, ''));
 
             if ($(this).val().length > maxEarningsLength) {
                 $(this).val($(this).val().substr(0, maxEarningsLength));
             }
+
+            updateRetirementLiveValue();
         });
     };
 
@@ -415,8 +488,8 @@ var retirementNecessitiesCalculator = (function() {
             return false;
         }
 
-        htmlSumElement.html(necessitiesSum);
-        htmlRetirementSumElement.html(retirementValue);
+        htmlSumElement.html(necessitiesSum.format(0, 3, ' '));
+        htmlRetirementSumElement.html(retirementValue.format(0, 3, ' '));
 
 
         if (percentRetirementToNecessities > 95 && percentRetirementToNecessities < 104) {
@@ -628,7 +701,7 @@ var necessitiesCalculator = (function() {
         var target = $(tween.elem),
             rounded_now = Math.round(now);
 
-        target.prop('number', rounded_now).text(rounded_now);
+        target.prop('number', rounded_now).text(rounded_now.format(0, 3, ' '));
     };
 
     var renderHTML = function() {

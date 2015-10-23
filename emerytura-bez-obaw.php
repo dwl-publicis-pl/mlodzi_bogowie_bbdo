@@ -80,8 +80,9 @@ Tpl::nav();
                         <h3>Gwarantowana kwota wypłaty</h3>
 
                         <p>
-                            Zawierając umowę, umawiasz się z nami na minimalną kwotę, jaką otrzymasz na koniec umowy. Możesz także skorzystać z gwarancji zwrotu wpłaconych składek – nawet jeśli gwarantowana suma ubezpieczenia
-                            z&nbsp;premiami będzie niższa niż zakładaliśmy, otrzymasz cały kapitał wpłacony na ubezpieczenie.
+                            Zawierając umowę, umawiasz się z nami na minimalną kwotę, jaką otrzymasz na koniec umowy. Możesz także skorzystać
+                            z gwarancji zwrotu wpłaconych składek – nawet jeśli gwarantowana suma ubezpieczenia z premiami będzie niższa niż
+                            zakładaliśmy, otrzymasz cały kapitał wpłacony na ubezpieczenie.
                         </p>
                     </div>
 
@@ -94,7 +95,7 @@ Tpl::nav();
 
                         <p>
                             Co rok oraz na zakończenie umowy możesz otrzymać premie
-                            – dodatkowe kwoty, które powiększą Twoje oszczędności na&nbsp;emeryturę.
+                            – dodatkowe kwoty, które powiększą Twoje oszczędności na emeryturę.
                         </p>
                     </div>
                 </div>
@@ -110,8 +111,8 @@ Tpl::nav();
                         <h3>Zabezpieczenie bliskich</h3>
 
                         <p>
-                            Naszą ofertę wyróżnia także to, że zapewniamy Ci ubezpieczenie na życie przez cały czas trwania umowy. Możesz mieć pewność, że gdyby
-                            Ciebie zabrakło, Twoi bliscy otrzymają pieniądze, które pozwolą im utrzymać dotychczasowy poziom życia.
+                            Naszą ofertę wyróżnia także to, że zapewniamy Ci ubezpieczenie na życie przez cały czas trwania umowy.
+                            Możesz mieć pewność, że gdyby Ciebie zabrakło, Twoi bliscy otrzymają pieniądze, które pozwolą im utrzymać dotychczasowy poziom życia.
                         </p>
                     </div>
 
@@ -123,8 +124,9 @@ Tpl::nav();
                         <h3>Brak podatku</h3>
 
                         <p>
-                            Pieniądze, które otrzymasz na koniec okresu ubezpieczenia, nie podlegają opodatkowaniu 19-procentowym podatkiem od zysków
-                            kapitałowych (zgodnie z aktualnie obowiązującymi przepisami prawa).
+                            Pieniądze, które otrzymasz na koniec okresu ubezpieczenia, nie podlegają opodatkowaniu
+                            19–procentowym podatkiem od zysków kapitałowych  (zgodnie z aktualnie obowiązującymi przepisami prawa
+                            na dzień 21.10.2015 r.).
                         </p>
                     </div>
                 </div>
@@ -167,9 +169,9 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
-                        <p class="text-center"><strong>Sprawdź, na co Cię będzie stać<br class="hidden-xs hidden-sm"> na emeryturze</strong></p>
+                        <p class="text-center"><strong>Sprawdź, na co będzie Cię stać na emeryturze</strong></p>
 
-                        <a href="#" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
+                        <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
@@ -179,7 +181,7 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Oblicz, ile miesięcznie powinieneś odkładać, aby zrealizować swój plan</strong></p>
 
-                        <a href="#" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
+                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
@@ -187,9 +189,9 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
-                        <p class="text-center"><strong>Przekonaj się, jak bardzo odwlekanie decyzji o oszczędzaniu działa na Twoją niekorzyść</strong></p>
+                        <p class="text-center"><strong>Przekonaj się, jak bardzo odwlekanie decyzji o&nbsp;oszczędzaniu działa na Twoją niekorzyść</strong></p>
 
-                        <a href="#" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
                     </div>
                 </div>
             </div>
@@ -211,7 +213,7 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="#"><img src="img/produkty/emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">
@@ -221,7 +223,7 @@ Tpl::nav();
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowa"><img src="img/produkty/ochrona-zdrowia-wide.jpg" alt="" class="img-responsive full-width"></a>
+                        <a href="ochrona-zdrowa"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">

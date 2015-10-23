@@ -94,8 +94,9 @@ Tpl::nav();
                         <h3>Premie roczne i końcowa</h3>
 
                         <p>
-                            Co rok oraz na zakończenie umowy możesz otrzymać premie
-                            – dodatkowe kwoty, które powiększą oszczędności na przyszłość Twojego dziecka.
+                            Co roku oraz na zakończenie umowy możesz otrzymać premie
+                            – dodatkowe kwoty, które powiększą oszczędności na przyszłość
+                            Twojego dziecka.
                         </p>
                     </div>
                 </div>
@@ -111,9 +112,9 @@ Tpl::nav();
                         <h3>Bezpieczeństwo</h3>
 
                         <p>
-                            Twoje życie i zdrowie też może zostać objęte ubezpieczeniem – w razie poważnej choroby,
-                            niezdolności do pracy, poważnego uszczerbku lub gdyby Ciebie zabrakło – Prudential
-                            przejmie obowiązek regularnego opłacania składek za ubezpieczenie Twojego dziecka aż do końca trwania umowy.
+                            Twoje życie i zdrowie też może zostać objęte ubezpieczeniem – w razie poważnej choroby, niezdolności do
+                            pracy, poważnego uszczerbku lub gdyby Ciebie zabrakło – Prudential przejmie obowiązek regularnego
+                            opłacania składek za ubezpieczenie Twojego dziecka aż do końca trwania umowy.
                         </p>
                     </div>
 
@@ -126,8 +127,9 @@ Tpl::nav();
 
                         <p>
                             Pieniądze, które dziecko otrzyma na koniec okresu ubezpieczenia,
-                            nie podlegają opodatkowaniu 19–procentowym podatkiem od zysków kapitałowych
-                            (zgodnie z aktualnie obowiązującymi przepisami prawa).
+                            nie podlegają opodatkowaniu 19–procentowym podatkiem od zysków
+                            kapitałowych (zgodnie z aktualnie obowiązującymi przepisami prawa
+                            na dzień 21.10.2015 r.).
                         </p>
                     </div>
                 </div>
@@ -155,10 +157,6 @@ Tpl::nav();
         </h1>
 
         <hr>
-
-        <p>
-            Zerknij na poniższe narzędzia i przekonaj się, że odkładanie myślenia o emeryturze na później naprawdę się nie opłaca.
-        </p>
     </header>
 
     <div class="row">
@@ -171,11 +169,11 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-middle">
-                        <p class="text-center"><strong>Policz, ile potrzebujesz, by ułatwić dziecku start w dorosłe życie</strong></p>
+                        <p class="text-center"><strong>Policz, ile potrzebujesz, by ułatwić dziecku start w&nbsp;dorosłe życie</strong></p>
 
-                        <a href="#" class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
+                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-w-przyszlosci" class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
                     </div>
-                    <div class="hidden-xs hidden-sm col-md-5 col-md-height"></div>
+                    <div class="hidden-xs hidden-sm col-md-4 col-md-height"></div>
                 </div>
             </div>
         </div>
@@ -196,7 +194,7 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="#"><img src="img/produkty/emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                        <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">
@@ -206,7 +204,7 @@ Tpl::nav();
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowa"><img src="img/produkty/ochrona-zdrowia-wide.jpg" alt="" class="img-responsive full-width"></a>
+                        <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
                         
                         <!--<figcaption>
                             <img src="img/bulb.png" alt="">
