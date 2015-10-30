@@ -1,20 +1,26 @@
 <?php
+// mit 1
+
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Mit | Państwo da mi dobrą emeryturę.',
+    'desc' => 'Emerytura to 1/3 ostatniej pensji pod warunkiem odprowadzania składek na ubezpieczenie społeczne i zdrowotne. Warto zacząć oszczędzać na emeryturę.'
+]);
 Tpl::nav();
 ?>
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width">
+    <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width hidden-xs hidden-sm">
+    <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture-mobile.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="#" class="btn btn-left">
+    <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>mit
+        Poprzedni<br>mit
     </a>
 
-    <a href="#" class="btn btn-right">
+    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -25,19 +31,19 @@ Tpl::nav();
         <div class="row-height">
             <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle">
+            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
                 <img src="img/icon-one-third-coin.png" alt="" class="headline-image img-responsive">
             </div>
 
             <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
                 <div class="headline headline-left">
                     <div>
-                        <strong>Niestety nie jest tak dobrze.</strong> Według obecnych prognoz* nasze emerytury w przyszłości wyniosą ok. 1/3 ostatniej pensji (nie tej najwyższej w karierze, tylko ostatniej przed przejściem
+                        <strong>Niestety, nie jest tak dobrze.</strong> Według obecnych prognoz<sup><a href="#przypisy">1</a></sup> nasze emerytury w przyszłości wyniosą ok. 1/3 ostatniej pensji (nie tej najwyższej w karierze, tylko ostatniej przed przejściem
                         na emeryturę). I to pod warunkiem, że wcześniej pracowaliśmy na podstawie umów, od których były odprowadzane składki na ubezpieczenie społeczne i zdrowotne.
                     </div>
 
                     <div>
-                        Dziś średnia emerytura to ok. 1500 zł netto, a według prognoz w przyszłości emerytury będą coraz niższe, nie wyższe.
+                        Dziś średnia emerytura to ok. 1500 zł netto<sup><a href="#przypisy">2</a></sup>, a według prognoz w przyszłości emerytury będą coraz niższe, nie wyższe.
                     </div>
                 </div>
             </div>
@@ -47,7 +53,7 @@ Tpl::nav();
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <div class="row main-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height col-md-middle">
@@ -55,11 +61,11 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        <p><strong>Emerytura = 1/3 ostatniej pensji</strong></p>
+                        <h2 class="h2-mod-1">Emerytura = 1/3 ostatniej pensji</h2>
 
                         <p>
                             Nieważne, ile zarabiamy, zawsze będzie nam mało. Bo wakacje, zachcianki, prezenty,
-                            bo coś się zepsuje i trzeba wymienić na nowe. Każdy lubi żyć na w miarę dobrym poziomie, a do tego trzeba
+                            bo coś się zepsuje i trzeba wymienić na nowe. Każdy lubi żyć na w&nbsp;miarę dobrym poziomie, a do tego trzeba
                             środków, czyż nie? Zatem podziel swoją pensję na trzy i pomyśl,
                             że za tyle będziesz funkcjonować nawet przez 20 lat! 
                         </p>
@@ -70,12 +76,12 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        <p><strong>Tylko 2 pracujących na jednego emeryta</strong></p>
+                        <h2 class="h2-mod-1">Tylko 2&nbsp;pracujących na jednego emeryta</h2>
 
                         <p>
                             Według danych GUS dziś na każdego emeryta przypadają
-                            3 osoby pracujące, a i tak ich składki emerytalne nie wystarczają na wypłacane
-                            emerytury. A za 35 lat osoby po 65. roku życia mają stanowić ponad 30% społeczeństwa!
+                            3 osoby pracujące, a&nbsp;i&nbsp;tak ich składki emerytalne nie wystarczają na wypłacane
+                            emerytury. A&nbsp;za 35 lat osoby po 65. roku życia mają stanowić ponad 30% społeczeństwa!
                             I na każdą taką osobę nie będą przypadać nawet dwie osoby pracujące...
                         </p>
                     </div>
@@ -84,15 +90,13 @@ Tpl::nav();
         </div>
     </div>
 
-    <header class="row border-top">
+    <header class="row border-top" id="kalkulator">
         <h1>Chwila <strong>prawdy</strong></h1>
         <hr>
-        <p>
-            Wpisz, ile zarabiasz, aby obliczyć swoją przyszłą szacunkową emeryturę.
-        </p>
+        <p>Wpisz, ile zarabiasz, aby obliczyć swoją przyszłą szacunkową emeryturę:</p>
     </header>
 
-    <div id="rNCalc" class="calc-selectors cycle-slideshow" data-cycle-timeout="0" data-cycle-slides="> section" data-cycle-log="false" data-cycle-auto-height="container">
+    <div id="rNCalc" class="row calc-selectors cycle-slideshow" data-cycle-timeout="0" data-cycle-slides="> section" data-cycle-log="false" data-cycle-auto-height="container">
         <section class="row">
             <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 rNCalc-column">
                 <form>
@@ -110,7 +114,7 @@ Tpl::nav();
                             <div class="col-md-1 col-md-height">&nbsp;</div>
 
                             <div class="col-md-2 col-md-height calc-section-label calc-3-retirement-value-container">
-                                Twoja przyszła emerytura
+                                Twoja przyszła emerytura<sup><a href="#przypisy">3</a></sup>
                             </div>
 
                             <div class="col-md-3 col-md-height calc-3-retirement-value-container">
@@ -118,6 +122,12 @@ Tpl::nav();
                             </div>
                         </div>
                     </div>
+
+                    <header class="row">
+                        <div class="col-xs-12">
+                            <p class="row-no-margins">Wyobraź sobie swoje życie na emeryturze i zaznacz związane z&nbsp;nim potrzeby:</p>
+                        </div>
+                    </header>
 
                     <div class="row">
                         <div class="row-height">
@@ -135,7 +145,7 @@ Tpl::nav();
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1200" data-selected="false" data-group="7">
                                     Na spokojnie
-                                    <span>(bez luksusów lecz stabilnie)</span>
+                                    <span>(bez luksusów, lecz stabilnie)</span>
                                 </button>
                             </div>
 
@@ -180,7 +190,7 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height calc-section-label">
-                                3. Wiadomo – opieka medyczna
+                                3. Wiadomo – opieka medyczna:
                             </div>
 
                             <div class="col-md-3 col-md-height">
@@ -192,8 +202,8 @@ Tpl::nav();
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="400" data-selected="false" data-group="6">
-                                    Mix: prywatny specjalista
-                                    <span>+ szpital państwowy</span>
+                                    Miks: prywatny specjalista
+                                    + szpital państwowy
                                 </button>
                             </div>
 
@@ -209,7 +219,7 @@ Tpl::nav();
                     <div class="row">
                         <div class="row-height">
                             <div class="col-md-3 col-md-height calc-section-label">
-                                4. Zwyczajowo, w&nbsp;miesiącu, przemieszczasz się:
+                                4. Zwyczajowo w&nbsp;miesiącu przemieszczasz się:
                             </div>
 
                             <div class="col-md-3 col-md-height">
@@ -282,7 +292,7 @@ Tpl::nav();
 
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1000" data-selected="false" data-group="5">
-                                    Kolekcjonowanie młodej, polskiej sztuki
+                                    Kolekcjonowanie młodej polskiej sztuki
                                 </button>
                             </div>
                         </div>
@@ -304,7 +314,7 @@ Tpl::nav();
                             <div class="col-md-3 col-md-height">
                                 <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="3">
                                     Po Europie
-                                    <span>(stary kontynent czeka)</span>
+                                    <span>(Stary Kontynent czeka)</span>
                                 </button>
                             </div>
 
@@ -324,13 +334,21 @@ Tpl::nav();
                             <button class="btn btn-selector btn-selector-submit center-block">Sprawdź</button>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2">
+                            <aside class="annotation">
+                                Przedstawione koszty mają charakter jedynie szacunkowy i zostały opracowane na podstawie analiz własnych Prudential.
+                            </aside>
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
 
         <section class="row rnCalc-results-page">
             <div class="col-xs-12">
-                <button class="btn btn-left btn-red collapse" data-calc-trigger="reset-calc">
+                <button class="btn btn-left btn-red collapse hidden-xs hidden-sm" data-calc-trigger="reset-calc">
                     <img src="img/icon-arrow-left-red.png" alt="">
                     oblicz<br> jeszcze raz
                 </button>
@@ -350,6 +368,7 @@ Tpl::nav();
                             <div id="nRCalcRetirementValue" class="coins-stack">
                                 <div class="rnCalcRetirementSumTxt">
                                     <img src="img/txt-twoja-szacunkowa-miesieczna-emerytura.png" alt="Twoja szacunkowa miesięczna emerytura" class="img-responsive">
+                                    <sup class="pull-right"><a href="#przypisy">3</a></sup>
                                     <div class="calc-2-sum-container"><span id="calc-2-retirement-value">1000</span> zł</div>
                                 </div>
                             </div>
@@ -377,7 +396,7 @@ Tpl::nav();
                             <div data-rNCalc-result="2">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Ciężkie czasy nadchodzą, a Ty jesteś <span>średnio gotowy</span>.
+                                        Ciężkie czasy nadchodzą, a&nbsp;Ty jesteś <span>średnio gotowy</span>.
                                     </div>
 
                                     <p>
@@ -391,17 +410,24 @@ Tpl::nav();
                             <div data-rNCalc-result="3">
                                 <div class="calc-headline">
                                     <div class="calc-headline-header">
-                                        Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w bardzo ciemnych barwach</span>.
+                                        Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w&nbsp;bardzo ciemnych barwach</span>.
                                     </div>
 
                                     <p>
                                         Trzymamy kciuki, żebyś nigdy nie musiał sobie niczego odmawiać. Ale co będzie, jeśli coś pójdzie nie tak? Czy masz
-                                        pewność, że zawsze będziesz dobrze zarabiać? A co, jeśli w przyszłości politycy postanowią przeorganizować
-                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o lepszą przyszłość dla siebie i bliskich.
+                                        pewność, że zawsze będziesz dobrze zarabiać? A&nbsp;co, jeśli w przyszłości politycy postanowią przeorganizować
+                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o&nbsp;lepszą przyszłość dla siebie i&nbsp;bliskich.
                                     </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <button class="btn btn-left btn-red collapse visible-xs visible-sm" data-calc-trigger="reset-calc">
+                            <img src="img/icon-arrow-left-red.png" alt="">
+                            oblicz<br> jeszcze raz
+                        </button>
                     </div>
                 </div>
             </div>
@@ -412,7 +438,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <p class="btn-near-cta">Jeśli nie chcesz żyć za 1/3 pensji, to...</p>
-                <a href="#" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę</a>
+                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -426,33 +452,17 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-zle-rzeczy-przydarzaja-sie-innym">
+                    <img src="img/mity/mit-10-wide.jpg" alt="Mit. Złe rzeczy przydarzają się innym" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
+                    <img src="img/mity/mit-2-wide.jpg" alt="Mit. O emeryturze mogę pomyśleć później" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
     </div>
@@ -460,6 +470,13 @@ Tpl::nav();
 
 <?php
 Tpl::bottom();
+Tpl::annotations([
+    1 => 'Wywiad z prezesem ZUS, Z. Derdziukiem, Gazeta Wyborcza, 19 marca 2012 r.',
+    2 => 'GUS, Opracowanie „Emerytury i renty w 2013 r.”',
+    3 => 'Wartość wysokości świadczenia emerytalnego została obliczona w sposób uproszczony przy założeniu, że przewidywana emerytura wyniesie
+            1/3 obecnej miesięcznej pensji netto podanej przez osobę zainteresowaną obliczeniami. Założenie bazuje na prognozach podawanych przez
+            Zakład Ubezpieczeń Społecznych dotyczących relacji emerytury do ostatniej pensji. <a href="http://www.zus.pl/default.asp?id=1&amp;p=1&amp;idk=1916" target="_blank">Źródło</a>.'
+]);
 Tpl::htmlFooter();
 ?>
 

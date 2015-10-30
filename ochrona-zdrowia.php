@@ -1,7 +1,11 @@
 <?php
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Zdrowie młodego boga',
+    'desc' => 'Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, mogą się
+            przydarzyć każdemu z nas a tym samym wyłączyć nas z dotychczasowego życia. Najważniejsze jest wtedy szybkie i sprawne dostosowanie siebie i rodziny do nowej sytuacji.'
+]);
 Tpl::nav();
 ?>
 
@@ -10,7 +14,7 @@ Tpl::nav();
 
     <a href="emerytura-bez-obaw" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>produkt
+        Poprzedni<br>produkt
     </a>
 
     <a href="przyszlosc-dziecka" class="btn btn-right">
@@ -21,12 +25,14 @@ Tpl::nav();
 
 <div class="container-fluid">
     <header class="row">
-        <h1>
-            Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, <strong>mogą się<br class="hidden-xs hidden-sm"> przydarzyć każdemu z nas</strong> a tym samym wyłączyć nas z dotychczasowego życia.<br class="hidden-xs hidden-sm">
-            Najważniejsze jest wtedy szybkie i sprawne dostosowanie siebie i rodziny do nowej sytuacji.<br>
-            <br>
-            W Prudentialu wiemy o tym i dlatego oferujemy Ci:
-        </h1>
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <h1 class="h1-mod-1">
+                Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, <strong>mogą się przydarzyć każdemu z nas</strong>, a&nbsp;tym samym wyłączyć nas z&nbsp;dotychczasowego życia.
+                Najważniejsze jest wtedy szybkie i&nbsp;sprawne dostosowanie siebie i&nbsp;rodziny do nowej sytuacji.<br>
+                <br><br>
+                W Prudentialu wiemy o tym i dlatego oferujemy Ci:
+            </h1>
+        </div>
 
         <hr>
     </header>
@@ -39,7 +45,7 @@ Tpl::nav();
                         <img src="img/icon-hearth-2.png" alt="" class="img-responsive center-block">
                     </div>
 
-                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle main-info-desc">
                         dodatkową kompleksową ochronę ubezpieczeniową zarówno <strong>na wypadek nowotworów,
                         jak i kilkudziesięciu innych poważnych chorób oraz operacji</strong>
                     </div>
@@ -48,7 +54,7 @@ Tpl::nav();
                         <img src="img/icon-ambulance.png" alt="" class="img-responsive center-block">
                     </div>
 
-                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle main-info-desc">
                         dodatkową ochronę ubezpieczeniową <strong>na wypadek poważnego uszczerbku na zdrowiu</strong> –
                         niezależnie od tego, czy jego przyczyną jest wypadek, czy choroba
                     </div>
@@ -70,7 +76,7 @@ Tpl::nav();
             <div class="row std-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-checked.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-checked.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -78,12 +84,13 @@ Tpl::nav();
 
                         <p>
                             Ubezpieczenie dodatkowe kompleksowej
-                            ochrony na wypadek poważnego zachorowania obejmuje <strong>aż 54 różne choroby</strong> oraz operacje. Oznacza to, że, gdy będziesz potrzebował pomocy to będziesz mógł na nią liczyć.
+                            ochrony na wypadek poważnego zachorowania obejmuje <strong>aż 54 różne choroby</strong>
+                            oraz operacje. Oznacza to, że, gdy będziesz potrzebował pomocy, to będziesz mógł na nią liczyć.
                         </p>
                     </div>
 
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-graph.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-graph.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -102,7 +109,7 @@ Tpl::nav();
             <div class="row std-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-hearths.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-hearths.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -114,15 +121,15 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-piggybank.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-piggybank.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
                         <h3>Spokojna przyszłość</h3>
 
                         <p>
-                            Możesz dodatkowo skorzystać z ubezpieczenia przejęcia opłacania składek – dzięki temu w trudnej
-                            sytuacji życiowej spowodowanej poważnym zachorowaniem lub poważnym uszczerbkiem, będziesz mógł
+                            Możesz dodatkowo skorzystać z ubezpieczenia przejęcia opłacania składek – dzięki temu w&nbsp;trudnej
+                            sytuacji życiowej spowodowanej poważnym zachorowaniem lub poważnym uszczerbkiem będziesz mógł
                             kontynuować umowę, bo Prudential będzie opłacać składki do końca jej trwania.
                         </p>
                     </div>
@@ -139,7 +146,7 @@ Tpl::nav();
                     Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.
                 </p>
 
-                <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami</a>
+                <a href="https://formularz.prudential.pl/lead?lid=45916" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -160,21 +167,11 @@ Tpl::nav();
                 <div class="col-md-6">
                     <figure>
                         <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
-                        
-                        <!--<figcaption>
-                            <img src="img/bulb.png" alt="">
-                            <a href="#">Przyszłość dzieci</a>
-                        </figcaption>-->
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="" class="img-responsive full-width"></a>
-                        
-                        <!--<figcaption>
-                            <img src="img/bulb.png" alt="">
-                            <a href="#">Ochrona zdrowa</a>
-                        </figcaption>-->
+                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
                     </figure>
                 </div>
             </div>

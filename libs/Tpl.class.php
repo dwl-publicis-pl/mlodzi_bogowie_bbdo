@@ -1,6 +1,6 @@
 <?php
 class Tpl {
-    public static function htmlHead($bodyClass = null)
+    public static function htmlHead($bodyClass = null, array $options = ['title' => null, 'desc' => ''])
     {
         $currentPage = App::currentPage();
         $bodyClass = null;
@@ -8,12 +8,17 @@ class Tpl {
         if (!empty($bodyClass)) {
             $bodyClass = ' class="' . $bodyClass . '"';
         }
-        
-        switch ($currentPage) {
-            default:
-                $title = 'Młodzi Bogowie';
-                $desc = '';
-            break;
+
+        if (empty($options['title'])) {
+            $title = App::APP_NAME;
+        } else {
+            $title = $options['title'];
+        }
+
+        if (empty($options['desc'])) {
+            $desc = App::APP_DESC;
+        } else {
+            $desc = $options['desc'];
         }
         ?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pl"> <![endif]-->
@@ -36,14 +41,10 @@ class Tpl {
 
             <link rel="stylesheet" href="css/bootstrap.min.css">
             <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="css/yamm.css">
             <link rel="stylesheet" href="css/main.css">
-            <link rel="stylesheet" href="css/main-kk.css">
     
             <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         </head>
-
-        <body<?php echo $bodyClass; ?>>
 
         <body<?php echo $bodyClass; ?>>
             <!-- Google Tag Manager -->
@@ -70,10 +71,10 @@ class Tpl {
         $currentPage = App::currentPage();
         ?>
         
-        <nav class="navbar" role="navigation">
+        <nav class="navbar">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
+                    <div class="col-lg-10 col-lg-offset-1">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Przełącz nawigację</span>
@@ -82,7 +83,7 @@ class Tpl {
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a class="navbar-brand" href="<?php echo App::APP_URL; ?>" rel="home"><img src="img/logo-prudential.png" alt="Prudential"></a>
+                        <a class="navbar-brand" href="<?php echo App::APP_URL; ?>" rel="home"><img src="img/logo-prudential.png" class="img-responsive" alt="Prudential"></a>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse navbar-right yamm">
@@ -94,48 +95,48 @@ class Tpl {
                                       <div class="col-sm-4">
                                           <ul class="menu-col">
                                               <li>
-                                                <a href="mit-panstwo-da-mi-dobra-emeryture">MIT #1</a>
-                                                                        <p>Emeryturę da mi państwo</p>
+                                                <a href="mit-panstwo-da-mi-dobra-emeryture">MIT #1
+                                                <span class="menu-span">Państwo da mi dobrą emeryturę</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">MIT #2</a>
-                                                                        <p>Emerytura to tylko chwila</p>
+                                                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">MIT #2
+                                                <span class="menu-span">O emeryturze mogę pomyśleć później</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-emerytura-nie-potrwa-dlugo">MIT #3</a>
-                                                                        <p>O emeryturze mogę pomyśleć później</p>
+                                                <a href="mit-emerytura-nie-potrwa-dlugo">MIT #3
+                                                <span class="menu-span">Emerytura nie potrwa długo</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">MIT #4</a>
-                                                                        <p>Na emeryturze moje potrzeby będą mniejsze</p>
+                                                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">MIT #4
+                                                <span class="menu-span">Na emeryturze moje potrzeby będą mniejsze</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-nie-stac-mnie-na-oszczedzanie">MIT #5</a>
-                                                                        <p>Nie stać mnie na oszczędzanie</p>
+                                                <a href="mit-nie-stac-mnie-na-oszczedzanie">MIT #5
+                                                <span class="menu-span">Nie stać mnie na oszczędzanie</span></a>
                                               </li>
                                           </ul>
                                       </div>
                                       <div class="col-sm-5">
                                           <ul class="menu-col">
                                               <li>
-                                                <a href="mit-ubezpieczenie-bedzie-strata-pieniedzy-jesli-nic-mi-sie-nie-stanie">MIT #6</a>
-                                                                        <p>Ubezpieczenie będzie stratą pieniędzy, jeśli nic mi się nie stanie</p>
+                                                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">MIT #6
+                                                <span class="menu-span">Ubezpieczenie na życie to strata pieniędzy</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">MIT #7</a>
-                                                                        <p>O przyszłości dziecka mogę pomyśleć jak będzie większe</p>
+                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">MIT #7
+                                                <span class="menu-span">O przyszłości dziecka mogę pomyśleć, jak będzie większe</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">MIT #8</a>
-                                                                        <p>Dziecko – jak dorośnie – od razu utrzyma się samo</p>
+                                                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">MIT #8
+                                                <span class="menu-span">Dziecko, jak dorośnie, od razu utrzyma się samo</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">MIT #9</a>
-                                                                        <p>Zawsze będę zdrowy, tak jak dziś</p>
+                                                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">MIT #9
+                                                <span class="menu-span">Zawsze będę zdrowy tak jak dziś</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-zle-rzeczy-przytrafiaja-sie-innym">MIT #10</a>
-                                                                        <p>Złe rzeczy przydarzają się innym</p>
+                                                <a href="mit-zle-rzeczy-przydarzaja-sie-innym">MIT #10
+                                                <span class="menu-span">Złe rzeczy przydarzają się innym</span></a>
                                               </li>
                                           </ul>
                                       </div>
@@ -151,18 +152,18 @@ class Tpl {
                                       <div class="col-sm-6 col-sm-offset-1">
 
                                               <div class="solution solution-1 clearfix">
-                                                  <a href="przyszlosc-dziecka">Przyszłość dziecka</a>
-                                                  <p>Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</p>
+                                                  <a href="przyszlosc-dziecka"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
+                                                  <span class="menu-span">Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
                                               </div>
 
                                               <div class="solution solution-2 clearfix">
-                                                  <a href="emerytura-bez-obaw">Emerytura bez obaw</a>
-                                                  <p>Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</p>
+                                                  <a href="emerytura-bez-obaw"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
+                                                  <span class="menu-span">Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
                                               </div>
 
                                               <div class="solution solution-3 clearfix">
-                                                  <a href="ochrona-zdrowia">Ochrona zdrowia</a>
-                                                  <p>Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</p>
+                                                  <a href="ochrona-zdrowia"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
+                                                  <span class="menu-span">Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</span></a>
                                               </div>
                                       </div>
                                     </div>
@@ -170,7 +171,7 @@ class Tpl {
                                 </ul>
                               </li>
 
-                            <li<?php $currentPage == 'kontakt' ? print ' class="active"' : null; ?>><a href="kontakt">Kontakt</a></li>
+                            <li><a href="https://formularz.prudential.pl/lead?lid=45649" target="_blank">Kontakt</a></li>
                         </ul>
                     </div>
                 </div></div>
@@ -195,6 +196,35 @@ class Tpl {
         
         <?php
     }
+
+
+    public static function annotations(array $list)
+    {
+        if (count($list) == 0) {
+            return true;
+        }
+        ?>
+
+        <div class="container-fluid annotations-list" id="przypisy">
+            <div class="col-xs-12">
+                <div class="annotations-title">Źródła</div>
+
+                <hr>
+
+                <ul class="list-unstyled">
+                    <?php
+                    foreach ($list as $number => $txt) {
+                        ?>
+                        <li><sup><?php echo $number; ?></sup> <?php echo $txt; ?></li>
+                        <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+
+        <?php
+    }
     
     
     public static function footer()
@@ -204,8 +234,7 @@ class Tpl {
         <footer class="row row-padded">
             <div class="row-height">
                 <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                    Copyright © 2015 Prudential <span>|</span>
-                    <a href="#">Polityka cookies</a>
+                    Copyright © 2015 Prudential
                 </div>
                 
                 <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
@@ -256,7 +285,7 @@ class Tpl {
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         
-        <!--<script>
+        <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -264,7 +293,7 @@ class Tpl {
 
             ga('create', 'UA-69104129-1', 'auto');
             ga('send', 'pageview');
-        </script>-->
+        </script>
         
         </body>
         </html>

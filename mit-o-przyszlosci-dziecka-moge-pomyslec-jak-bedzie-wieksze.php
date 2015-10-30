@@ -1,20 +1,25 @@
 <?php
+// mit 7
+
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Mit | O przyszłości dziecka mogę pomyśleć jak będzie większe.',
+    'desc' => 'Start w dorosłość to szok dla dziecka, rodziców i domowego budżetu.'
+]);
 Tpl::nav();
 ?>
 
-
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-przyszlosc-dziecka.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć w przyszłości." class="img-responsive full-width">
+    <img src="img/mity/mit-przyszlosc-dziecka.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe." class="img-responsive full-width hidden-xs hidden-sm">
+    <img src="img/mity/mit-przyszlosc-dziecka-mobile.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="#" class="btn btn-left">
+    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>mit
+        Poprzedni<br>mit
     </a>
 
-    <a href="#" class="btn btn-right">
+    <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -25,7 +30,7 @@ Tpl::nav();
         <div class="row-height">
             <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle">
+            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
                 <img src="img/icon-clock-2.png" alt="" class="headline-image img-responsive">
             </div>
 
@@ -43,42 +48,42 @@ Tpl::nav();
         </div>
     </div>
 
-    <header class="row border-top">
+    <header class="row border-top" id="kalkulator">
         <h1>Kosztowna <strong>dorosłość</strong></h1>
         <hr>
         <p>
-            Zabezpieczenie przyszłości dziecka to duże wyzwanie. Policz ile potrzebujesz by ułatwić mu start w dorosłe życie*.
+            Zabezpieczenie przyszłości dziecka to duże wyzwanie. Policz, ile potrzebujesz, by ułatwić mu start w dorosłe życie<sup><a href="#przypisy">1</a></sup>.
         </p>
     </header>
 
     <div id="nCalc" class="calc-selectors">
         <section class="row">
             <div class="row-height">
-                <div class="hidden-xs hidden-sm col-md-2"></div>
-                <div class="col-xs-12 col-md-5 col-md-height col-md-top nCalc-column">
+                <div class="hidden-xs hidden-sm col-md-1"></div>
+                <div class="col-xs-12 col-md-6 col-md-height col-md-top nCalc-column">
                     <div class="row">
                         <div class="col-xs-12 calc-section-label">
-                            1. Studia
+                            1. 5-letnie studia
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="12000" data-selected="false" data-group="7">
                                     Dzienne
                                     <span>(państwowe)</span>
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="36000" data-selected="false" data-group="7">
                                     Na prywatnej uczelni
                                     <span>(w Polsce)</span>
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="150000" data-selected="false" data-group="7">
                                     Prestiżowy kierunek
                                     <span>(za granicą)</span>
@@ -89,27 +94,27 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="col-xs-12 calc-section-label">
-                            2. Lokum w czasie studiów
+                            2. Lokum w czasie 5-letnich studiów
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="15000" data-selected="false" data-group="1">
                                     Akademik
                                     <span>(przytulny ;) )</span>
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="1">
                                     Wynajęte mieszkanie
                                     <span>(albo chociaż pokój)</span>
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="120000" data-selected="false" data-group="1">
                                     Kawalerka
                                     <span>(ciasna, ale własna)</span>
@@ -126,20 +131,20 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="6">
                                     Wspólny wypad na sushi
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="1500" data-selected="false" data-group="6">
                                     Eleganckie pióro
                                     <span>(z grawerem)</span>
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="5000" data-selected="false" data-group="6">
                                     Zasłużone wakacje
                                     <span>(zagraniczne!)</span>
@@ -156,19 +161,19 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="20000" data-selected="false" data-group="4">
                                     Tani, (nie)zawodny
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="50000" data-selected="false" data-group="4">
                                     Miejski i&nbsp;sportowy
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="80000" data-selected="false" data-group="4">
                                     Lśniący i&nbsp;komfortowy
                                 </button>
@@ -184,19 +189,19 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="10000" data-selected="false" data-group="2">
                                     Uroczysty obiad z lampką szampana
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="2">
                                     Tradycyjnie, w domu panny młodej
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
+                            <div class="col-sm-3 col-sm-height">
                                 <button class="btn btn-selector calc-2-element" data-value="60000" data-selected="false" data-group="2">
                                     Wystawne przyjęcie w oranżerii
                                 </button>
@@ -206,26 +211,26 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="col-xs-12 calc-section-label">
-                            Wkład we własne mieszkanie
+                            6. Rodzicielski wkład we własne mieszkanie
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="row-height">
-                            <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="250000" data-selected="false" data-group="5">
+                            <div class="col-sm-3 col-sm-height">
+                                <button class="btn btn-selector calc-2-element" data-value="25000" data-selected="false" data-group="5">
                                     Skromne M1
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="450000" data-selected="false" data-group="5">
+                            <div class="col-sm-3 col-sm-height">
+                                <button class="btn btn-selector calc-2-element" data-value="45000" data-selected="false" data-group="5">
                                     Optymalne M2
                                 </button>
                             </div>
 
-                            <div class="col-md-3 col-md-height">
-                                <button class="btn btn-selector calc-2-element" data-value="650000" data-selected="false" data-group="5">
+                            <div class="col-sm-3 col-sm-height">
+                                <button class="btn btn-selector calc-2-element" data-value="65000" data-selected="false" data-group="5">
                                     Poważne M3
                                 </button>
                             </div>
@@ -234,13 +239,12 @@ Tpl::nav();
                 </div>
 
                 <div class="col-xs-12 col-md-4 col-md-height col-md-middle calc-result-col">
-                    <img src="img/txt-suma-przyszlych-potrzeb-twojego-dziecka.png" alt="Suma przyszłych potrzeb Twojego dziecka" class="center-block">
+                    <img src="img/txt-suma-przyszlych-potrzeb-twojego-dziecka.png" alt="Suma przyszłych potrzeb Twojego dziecka" class="img-responsive center-block">
                     <div class="calc-2-sum-container"><span id="calc-4-sum">0</span> zł</div>
 
-                    <div class="coins-stack" id="calc-4-coins"></div>
+                    <div class="coins-stack hidden-xs hidden-sm" id="calc-4-coins"></div>
                 </div>
-
-                <div class="hidden-xs hidden-sm col-md-1"></div>
+                <div class="hidden-xs hidden-sm col-md-1">&nbsp;</div>
             </div>
         </section>
     </div>
@@ -248,8 +252,8 @@ Tpl::nav();
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <p class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w dorosłość?</p>
-                <a href="przyszlosc-dziecka" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
+                <p class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w&nbsp;dorosłość?</p>
+                <a href="przyszlosc-dziecka" class="btn btn-primary btn-white">Zaplanuj dziecku przyszłość <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -263,33 +267,17 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">
+                    <img src="img/mity/mit-6-wide.jpg" alt="Mit. Ubezpieczenie na życie to strata pieniędzy" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">
+                    <img src="img/mity/mit-8-wide.jpg" alt="Mit. Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
     </div>
@@ -297,6 +285,9 @@ Tpl::nav();
 
 <?php
 Tpl::bottom();
+Tpl::annotations([
+    1 => 'Przedstawione koszty mają charakter jedynie szacunkowy i zostały opracowane na podstawie analiz własnych Prudential.'
+]);
 Tpl::htmlFooter();
 ?>
 

@@ -1,20 +1,25 @@
 <?php
+// mit 3
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Mit | Emerytura nie potrwa długo.',
+    'desc' => 'Żyjemy coraz dłużej. Już dziś na emeryturze Polacy żyją około 19 lat. Zacznij oszczędzać na przyszłe dni.'
+]);
 Tpl::nav();
 ?>
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-emerytura-nie-potrwa-dlugo.jpg" alt="Mit. Emerytura nie potrwa długo." class="img-responsive full-width">
+    <img src="img/mity/mit-emerytura-nie-potrwa-dlugo.jpg" alt="Mit. Emerytura nie potrwa długo." class="img-responsive full-width hidden-xs hidden-sm">
+    <img src="img/mity/mit-emerytura-nie-potrwa-dlugo-mobile.jpg" alt="Mit. Emerytura nie potrwa długo." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="#" class="btn btn-left">
+    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>mit
+        Poprzedni<br>mit
     </a>
 
-    <a href="#" class="btn btn-right">
+    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -25,14 +30,14 @@ Tpl::nav();
         <div class="row-height">
             <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
 
-            <div class="col-xs-12 col-md-1 col-lg-1 col-md-height col-md-middle">
+            <div class="col-xs-12 col-md-1 col-lg-1 col-md-height col-md-middle col-image-top">
                 <img src="img/icon-magnifier.png" alt="" class="headline-image img-responsive">
             </div>
 
             <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
                 <div class="headline headline-left">
                     <strong>To mit. Już dziś na emeryturze Polacy żyją średnio
-                    ok. 19 lat*</strong>. A żyjemy coraz dłużej. Niektórzy z nas mogą na
+                    ok. 19 lat<sup><a href="#przypisy">1</a></sup></strong>. A żyjemy coraz dłużej. Niektórzy z nas mogą na
                     emeryturze spędzić nawet 30 lat! Wystarczy spojrzeć na liczby.
                 </div>
             </div>
@@ -48,7 +53,22 @@ Tpl::nav();
             <div class="sock-block sock-block-1">
                 <div class="row">
                     <div class="row-height">
-                        <div class="col-xs-9 col-xs-height">
+                        <div class="col-xs-3 col-md-3 col-md-push-9 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                        </div>
+
+                        <div class="col-xs-9 col-md-9 col-md-pull-3 col-xs-height">
+                            <h2>Coraz <strong>dłużej żyjemy</strong></h2>
+
+                            <p>
+                                Tempo tych zmian może być zaskakujące: wg danych
+                                GUS od połowy XX wieku średnia długość życia w Polsce
+                                wydłużyła się prawie o&nbsp;30%! To znaczy, że żyjemy
+                                o blisko 20 lat dłużej niż nasi pradziadkowie!
+                            </p>
+                        </div>
+
+                        <!--<div class="col-xs-9 col-xs-height">
                             <h2>Coraz <strong>dłużej żyjemy</strong></h2>
 
                             <p>
@@ -60,7 +80,7 @@ Tpl::nav();
                         </div>
                         <div class="col-xs-3 col-xs-height col-xs-middle">
                             <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -69,13 +89,13 @@ Tpl::nav();
                 <div class="row">
                     <div class="row-height">
                         <div class="col-xs-3 col-xs-height col-xs-middle">
-                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                            <img src="img/icon-sock-heart.png" alt="" class="img-responsive">
                         </div>
                         <div class="col-xs-9 col-xs-height">
-                            <h2>Już dziś blisko <strong>20 lat na emeryturze</strong></h2>
+                            <h2>Już dziś żyjemy blisko <strong>20 lat na emeryturze</strong></h2>
 
                             <p>
-                                Jak wynika z naszych badań**, zaledwie 10% z nas zdaje sobie z tego sprawę.
+                                Jak wynika z naszych badań<sup><a href="#przypisy">2</a></sup>, zaledwie 10% z nas zdaje sobie z tego sprawę.
                                 Tymczasem wg danych GUS dziś w momencie przejścia na emeryturę Polacy żyją
                                 jeszcze średnio ok. 19 lat (kobiety średnio aż 24 lata!)... a przecież to wciąż tylko średnia.
                             </p>
@@ -87,17 +107,30 @@ Tpl::nav();
             <div class="sock-block sock-block-3">
                 <div class="row">
                     <div class="row-height">
-                        <div class="col-xs-9 col-xs-height">
+                        <div class="col-xs-3 col-md-3 col-md-push-9 col-xs-height col-xs-middle">
+                            <img src="img/icon-sock-cake.png" alt="" class="img-responsive">
+                        </div>
+
+                        <div class="col-xs-9 col-md-9 col-md-pull-3 col-xs-height">
                             <h2>„Mnie to <strong>nie dotyczy</strong>”</h2>
 
                             <p>
-                                Według naszych badań prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
+                                Według naszych badań<sup><a href="#przypisy">2</a></sup> prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
+                                co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
+                            </p>
+                        </div>
+
+                        <!--<div class="col-xs-9 col-xs-height">
+                            <h2>„Mnie to <strong>nie dotyczy</strong>”</h2>
+
+                            <p>
+                                Według naszych badań<sup><a href="#przypisy">2</a></sup> prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
                                 co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
                             </p>
                         </div>
                         <div class="col-xs-3 col-xs-height col-xs-middle">
-                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
-                        </div>
+                            <img src="img/icon-sock-cake.png" alt="" class="img-responsive">
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -106,13 +139,13 @@ Tpl::nav();
                 <div class="row">
                     <div class="row-height">
                         <div class="col-xs-3 col-xs-height col-xs-middle">
-                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
+                            <img src="img/icon-sock-people.png" alt="" class="img-responsive">
                         </div>
                         <div class="col-xs-9 col-xs-height">
-                            <h2>Tylko 2 pracujących <strong>na 1 emeryta</strong></h2>
+                            <h2>Tylko 2 pracujących <strong>na 1&nbsp;emeryta</strong></h2>
 
                             <p>
-                                Według danych GUS dziś na każdego emeryta przypadają 3 osoby pracujące, a i tak ich składki emerytalne nie wystarczają
+                                Według danych GUS dziś na każdego emeryta przypadają 3 osoby pracujące, a&nbsp;i&nbsp;tak ich składki emerytalne nie wystarczają
                                 na wypłacane emerytury. A za 35 lat osoby po 65. roku życia mają stanowić ponad 30% społeczeństwa! I na każdą taką osobę nie będą przypadać nawet dwie osoby pracujące.
                             </p>
                         </div>
@@ -125,8 +158,8 @@ Tpl::nav();
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <span class="btn-near-cta">Jeżeli nie chcesz przez kilkanaście lat się martwić, to...</span>
-                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku przyszłość</a>
+                <div class="btn-near-cta">Jeżeli nie chcesz przez kilkanaście lat się martwić, to...</div>
+                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white" target="_blank">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -140,33 +173,17 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
+                    <img src="img/mity/mit-2-wide.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">
+                    <img src="img/mity/mit-4-wide.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
     </div>
@@ -174,6 +191,10 @@ Tpl::nav();
 
 <?php
 Tpl::bottom();
+Tpl::annotations([
+    1 => 'Obliczenia własne Prudential na podstawie opracowania GUS „Trwanie życia w 2014 r.” (Warszawa 2015).',
+    2 => 'Prudential Family Index, badania zrealizowane przez IQS Polska dla Prudential, październik 2015.'
+]);
 Tpl::htmlFooter();
 ?>
 

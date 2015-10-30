@@ -1,20 +1,25 @@
 <?php
+// mit 2
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Mit | O emeryturze mogę pomyśleć później.',
+    'desc' => 'Każdy krok przybliża nas do emerytury. Lepiej zacząć oszczędzać już dziś, by małymi krokami uzbierać na godne życie na emeryturze.'
+]);
 Tpl::nav();
 ?>
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width">
+    <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width hidden-xs hidden-sm">
+    <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej-mobile.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="#" class="btn btn-left">
+    <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>mit
+        Poprzedni<br>mit
     </a>
 
-    <a href="#" class="btn btn-right">
+    <a href="mit-emerytura-nie-potrwa-dlugo" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -25,15 +30,15 @@ Tpl::nav();
         <div class="row-height">
             <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle">
+            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
                 <img src="img/icon-megaphone.png" alt="" class="headline-image img-responsive">
             </div>
 
             <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
                 <div class="headline headline-left">
                     Nie do końca, bo <strong>każdy dzień przybliża Cię do emerytury</strong>, czy tego
-                    chcesz czy nie. Jeśli zaczniesz odkładać już dziś, małymi krokami możesz uzbierać
-                    tyle, by godnie przeżyć na emeryturze nawet 20 lat*. Zobacz poniżej, ile tracisz przez
+                    chcesz, czy nie. Jeśli zaczniesz odkładać już dziś, małymi krokami możesz uzbierać
+                    tyle, by godnie przeżyć na emeryturze nawet 20 lat<sup><a href="#przypisy">1</a></sup>. Zobacz poniżej, ile tracisz przez
                     opóźnianie decyzji o&nbsp;oszczędzaniu.
                 </div>
             </div>
@@ -42,34 +47,48 @@ Tpl::nav();
         </div>
     </div>
 
-    <div class="row row-padded-vertical">
-        <div class="col-xs-12 col-md-5 col-md-offset-1">
-            <article>
-                <h2>Skłonność do <strong>odwlekania</strong></h2>
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="row main-info-table">
+                <div class="row-height">
+                    <div class="col-xs-12 col-md-2 col-md-height col-md-middle">
+                        <img src="img/icon-clock-3.png" alt="" class="img-responsive center-block">
+                    </div>
 
-                <p>To zupełnie normalne, że wolimy odczuwać korzyść tu i teraz. Szczególnie, że codzienne sprawy
-                    i problemy są nam bliższe niż te dalekie i nieokreślone. Pamiętajmy jednak, że nasza percepcja
-                    czasu bywa złudna. Lepiej nie odkładać na później tego, co można rozwiązać dziś. </p>
-            </article>
-        </div>
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
+                        <h2 class="h2-mod-1">Skłonność do <strong>odwlekania</strong></h2>
 
-        <div class="col-xs-12 col-md-5">
-            <article>
-                <h2>Niepotrzebne <strong>ryzyko</strong></h2>
+                        <p>
+                            To zupełnie normalne, że wolimy odczuwać korzyść tu i teraz. Szczególnie, że codzienne sprawy
+                            i problemy są nam bliższe niż te dalekie i nieokreślone. Pamiętajmy jednak, że nasza percepcja
+                            czasu bywa złudna. Lepiej nie odkładać na później tego, co można rozwiązać dziś.
+                        </p>
+                    </div>
 
-                <p>Im wcześniej zaczniesz oszczędzać na emeryturę, tym mniej będzie Cię to kosztowało. Dosłownie i w przenośni. Dosłownie, bo osiągniesz swój cel kosztem mniejszych
-                    wyrzeczeń – regularne odkładanie małych kwot jest mniej dotkliwe dla domowego
-                    budżetu. A w przenośni, bo będziesz spokojny o swoją przyszłość – bez obaw
-                    i wyrzutów sumienia skupisz się na tym, co dziś dla Ciebie najważniejsze</p>
-            </article>
+                    <div class="col-xs-12 col-md-2 col-md-height col-md-middle">
+                        <img src="img/icon-coins-2.png" alt="" class="img-responsive center-block">
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
+                        <h2 class="h2-mod-1">Niepotrzebne <strong>ryzyko</strong></h2>
+
+                        <p>
+                            Im wcześniej zaczniesz oszczędzać na emeryturę, tym mniej będzie Cię to kosztowało. Dosłownie i w przenośni. Dosłownie, bo osiągniesz swój cel kosztem mniejszych
+                            wyrzeczeń – regularne odkładanie małych kwot jest mniej dotkliwe dla domowego
+                            budżetu. A&nbsp;w&nbsp;przenośni, bo będziesz spokojny o&nbsp;swoją przyszłość – bez obaw
+                            i&nbsp;wyrzutów sumienia skupisz się na tym, co dziś dla Ciebie najważniejsze.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="row border-top row-padded-vertical box-calculator">
+    <div class="row border-top row-padded-vertical box-calculator" id="kalkulator">
         <header>
             <h1>Im wcześniej, <strong>tym lepiej</strong></h1>
             <hr>
-            <p>Każdy dzień nieoszczędzania to finansowa strata dla emerytury. Sprawdź, jak bardzo<br class="hidden-xs hidden-sm"> odwlekanie decyzji o oszczędzaniu działa na Twoją niekorzyść.</p>
+            <p>Każdy dzień nieoszczędzania to finansowa strata dla emerytury. Sprawdź, jak bardzo odwlekanie decyzji o&nbsp;oszczędzaniu działa na Twoją niekorzyść.</p>
         </header>
 
         <div class="clearfix"></div>
@@ -97,7 +116,7 @@ Tpl::nav();
                         </div>
 
                         <div class="col-md-3">
-                            <label for="f-msc-ms">Ile dodatkowo chcesz dostawać miesięcznie?</label>
+                            <label for="f-msc-ms">Ile dodatkowo chcesz mieć miesięcznie?</label>
                         </div>
 
                         <div class="col-md-3">
@@ -117,7 +136,7 @@ Tpl::nav();
 
                     <div class="row">
                         <div class="col-md-3">
-                            <label for="f-msc-ss">W jakim wieku planujesz zacząć oszczędać?</label>
+                            <label for="f-msc-ss">W jakim wieku planujesz zacząć oszczędzać?</label>
                         </div>
 
                         <div class="col-md-9">
@@ -131,13 +150,13 @@ Tpl::nav();
 
         <div class="clearfix"></div>
 
-        <div class="col-xs-12 col-md-2 col-md-offset-4">
+        <div class="col-xs-12 col-md-2 col-md-offset-3 col-lg-offset-4">
             <img src="img/faces/face-calc-1.jpg" alt="" class="img-responsive full-width round" id="retirements_saves_face" data-src-pattern="img/faces/face-calc-%.jpg">
         </div>
 
         <div class="col-xs-12 col-md-2 col-md-offset-1">
-            <img src="img/txt-musisz-odkladac-miesiecznie.png" alt="Musisz odkładać miesięcznie" class="img-responsive center-block">
-            <div class="retirement_saves_result_container"><span id="retirement_saves_result">...</span> zł</div>
+            <img src="img/txt-musisz-odkladac-miesiecznie.png" alt="Musisz odkładać miesięcznie" class="img-responsive center-block calc-1-result-txt">
+            <div class="retirement_saves_result_container"><span id="retirement_saves_result">...</span>&nbsp;zł</div>
         </div>
 
         <div class="clearfix"></div>
@@ -145,8 +164,8 @@ Tpl::nav();
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <aside class="annotation">
                 Przedstawione wyliczenia obrazujące potencjalną kwotę miesięczną mają charakter jedynie szacunkowy i zostały opracowane przez Prudential, przy założeniu
-                rzeczywistej stopy zwrotu w wysokości 2% w skali roku, wyrażonej netto, bez uwzględnienia podatku od zysków kapitałowych.
-                Wyliczenia nie są związane z oszczędzaniem w ramach konkretnego produktu oferowanego przez The Prudential Assurance Company Limited Sp. z o.o. Oddział w Polsce.
+                rzeczywistej stopy zwrotu w wysokości 2% w skali roku, wyrażonej netto, bez uwzględnienia podatku od zysków kapitałowych
+                oraz przy założeniu przejścia na emeryturę w wieku 67&nbsp;lat. Wyliczenia nie są związane z&nbsp;oszczędzaniem w ramach konkretnego produktu oferowanego przez The&nbsp;Prudential Assurance Company Limited Sp. z o.o. Oddział w Polsce.
             </aside>
         </div>
     </div>
@@ -154,8 +173,8 @@ Tpl::nav();
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
-                <span class="btn-near-cta">Lepiej zacznij działać!</span>
-                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę</a>
+                <div class="btn-near-cta">Lepiej zacznij działać!</div>
+                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -169,33 +188,17 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-3-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-panstwo-da-mi-dobra-emeryture">
+                    <img src="img/mity/mit-1-wide.jpg" alt="Mit. Państwo da mi dobrą emeryturę" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <img src="img/mity/mit-2-wide.jpg" alt="" class="img-responsive full-width" />
-                <!--<figcaption class="myth-number">
-                    #3 mit
-                </figcaption>
-                <figcaption class="myth-title">
-                    <a href="#">
-                        <span class="myth-title-style-1">Przecież</span><br>
-                        <span class="myth-title-style-2">mogę pracować</span><br>
-                        <span class="myth-title-style-3">do śmierci</span>
-                    </a>
-                </figcaption>-->
+                <a href="mit-emerytura-nie-potrwa-dlugo">
+                    <img src="img/mity/mit-3-wide.jpg" alt="Mit. Emerytura nie potrwa długo" class="img-responsive full-width" />
+                </a>
             </figure>
         </div>
     </div>
@@ -203,5 +206,8 @@ Tpl::nav();
     
 <?php
 Tpl::bottom();
+Tpl::annotations([
+    1 => 'Obliczenia własne Prudential na podstawie opracowania GUS „Trwanie życia w 2014 r.” (Warszawa 2015).'
+]);
 Tpl::htmlFooter();
 ?>

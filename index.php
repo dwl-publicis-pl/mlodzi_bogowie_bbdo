@@ -13,7 +13,9 @@ Tpl::nav();
     </div>
 
     <video poster="img/top-video-placeholder.jpg" preload>
-        <source type="video/mp4" src="video/prudential-mlody-bog.mp4" />
+        <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
     </video>
 </div>
 
@@ -22,12 +24,12 @@ Tpl::nav();
         <h1>Poznaj <strong>mity</strong> młodych bogów</h1>
         <p>
             Czasami trzymamy się ich, bo tak jest nam wygodniej. Bo mamy inne, ważniejsze lub pilniejsze sprawy.
-            A może warto na chwilę się zatrzymać i przemyśleć swoje przekonania, zanim zmusi nas do tego rzeczywistość?
+            A&nbsp;może warto na chwilę się zatrzymać i przemyśleć swoje przekonania, zanim zmusi nas do tego rzeczywistość?
         </p>
     </header>
     
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-10 col-lg-offset-1 myths-rows">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 myths-rows">
             <div class="myths-rows-insider">
                 <div class="myth-box myth-box-type-a">
                     <figure>
@@ -40,7 +42,7 @@ Tpl::nav();
                         <a href="mit-o-emeryturze-moge-pomyslec-pozniej"><img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive"></a>
                     </figure>
 
-                    <figure>
+                    <figure class="hidden-xs hidden-sm">
                         <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
@@ -48,6 +50,12 @@ Tpl::nav();
                 <div class="myth-box myth-box-type-c">
                     <figure>
                         <a href="mit-emerytura-nie-potrwa-dlugo"><img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive"></a>
+                    </figure>
+                </div>
+
+                <div class="myth-box myth-box-type-c visible-xs visible-sm">
+                    <figure>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
 
@@ -61,7 +69,7 @@ Tpl::nav();
 
                 <div class="myth-box myth-box-type-d">
                     <figure>
-                        <a href="mit-ubezpieczenie-bedzie-strata-pieniedzy-jesli-nic-mi-sie-nie-stanie"><img src="img/mity/mit-6.jpg" alt="Ubezpieczenie będzie stratą pieniędzy jeśli nic mi się nie stanie" class="img-responsive"></a>
+                        <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"><img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive"></a>
                     </figure>
                 </div>
 
@@ -87,7 +95,7 @@ Tpl::nav();
 
                 <div class="myth-box myth-box-type-g">
                     <figure>
-                        <a href="mit-zle-rzeczy-przytrafiaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przytrafiają się innym" class="img-responsive"></a>
+                        <a href="mit-zle-rzeczy-przydarzaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive"></a>
                     </figure>
                 </div>
             </div>
@@ -113,7 +121,7 @@ Tpl::nav();
         <header>
             <h1>Zadbaj o przyszłość</h1>
             <hr>
-            <p>Wskaż, co jest dla Ciebie ważne, a my pomożemy Ci zadbać o przyszłość Twoją i Twoich bliskich.</p>
+            <p>Wskaż, co jest dla Ciebie ważne, a&nbsp;my pomożemy Ci zadbać o&nbsp;przyszłość Twoją i&nbsp;Twoich bliskich.</p>
         </header>
     </div>
     
@@ -174,7 +182,7 @@ Tpl::nav();
             <div class="text-center">
                 <span class="btn-near-cta">Zrób pierwszy krok!</span>
                 <p>Umów się z naszym Konsultantem. Pomożemy Ci wybrać rozwiązanie dopasowane do Twoich potrzeb i celów.</p>
-                <a href="#" class="btn btn-primary btn-white">Skontaktuj się z nami</a>
+                <a href="https://formularz.prudential.pl/lead?lid=45397" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

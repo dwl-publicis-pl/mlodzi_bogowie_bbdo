@@ -1,19 +1,22 @@
 <?php
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
+Tpl::htmlHead(null, [
+    'title' => 'Prudential | Młody bóg na emeryturze',
+    'desc' => 'Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.'
+]);
 Tpl::nav();
 ?>
 
 <div class="jumbotron border-top">
     <img src="img/produkty/emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width">
 
-    <a href="ochrona-zdrowia" class="btn btn-left">
+    <a href="przyszlosc-dziecka" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
-        Następny<br>produkt
+        Poprzedni<br>produkt
     </a>
 
-    <a href="przyszlosc-dziecka" class="btn btn-right">
+    <a href="ochrona-zdrowia" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>produkt
     </a>
@@ -21,15 +24,18 @@ Tpl::nav();
 
 <div class="container-fluid">
     <header class="row">
-        <h1>
-            Premiopolisa Emerytura bez Obaw pozwoli <strong>Ci zgromadzić kapitał</strong>, by na przyszłej emeryturze<br class="hidden-xs hidden-sm"> móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.<br>
-            <br>
-            Czym jest Premiopolisa?
-        </h1>
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <h1 class="h1-mod-1">
+                Premiopolisa Emerytura bez Obaw <strong>pozwoli Ci zgromadzić kapitał</strong>, by na przyszłej emeryturze
+                móc utrzymać standard życia na obecnym poziomie i&nbsp;realizować swoje marzenia.<br>
+                <br><br>
+                Czym jest Premiopolisa?
+            </h1>
+        </div>
 
         <hr>
 
-        <p>
+        <p class="no-bottom-margin">
             To innowacyjne rozwiązanie, zapewniające:
         </p>
     </header>
@@ -42,8 +48,8 @@ Tpl::nav();
                         <img src="img/icon-progress.png" alt="" class="img-responsive center-block">
                     </div>
 
-                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        Możliwość długoterminowego<br class="hidden-xs hidden-sm">
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle main-info-desc">
+                        możliwość długoterminowego<br class="visible-lg">
                         systematycznego oszczędzania
                     </div>
 
@@ -51,8 +57,8 @@ Tpl::nav();
                         <img src="img/icon-umbrella.png" alt="" class="img-responsive center-block">
                     </div>
 
-                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
-                        Ochronę ubezpieczeniową przez cały czas<br class="hidden-xs hidden-sm">
+                    <div class="col-xs-12 col-md-4 col-md-height col-md-middle main-info-desc">
+                        ochronę ubezpieczeniową przez cały czas<br class="visible-lg">
                         trwania umowy
                     </div>
                 </div>
@@ -73,7 +79,7 @@ Tpl::nav();
             <div class="row std-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-coins.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-coins.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -87,7 +93,7 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-graph.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-graph.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -104,7 +110,7 @@ Tpl::nav();
             <div class="row std-info-table">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-hearths.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-hearths.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -117,7 +123,7 @@ Tpl::nav();
                     </div>
 
                     <div class="col-xs-12 col-md-2 col-md-height">
-                        <img src="img/icon-piggybank.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-piggybank.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-4 col-md-height col-md-top">
@@ -143,7 +149,7 @@ Tpl::nav();
                     Nasz konsultant pomoże Ci przygotować dokładny plan oszczędnościowy i zadbać o bezpieczną przyszłość.
                 </p>
 
-                <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami</a>
+                <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
@@ -162,37 +168,51 @@ Tpl::nav();
 
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
-            <div class="row std-info-table">
+            <div class="row">
                 <div class="row-height">
                     <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-bulb.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-bulb.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Sprawdź, na co będzie Cię stać na emeryturze</strong></p>
 
-                        <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
+                        <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Chwila prawdy</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-clock.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-clock.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Oblicz, ile miesięcznie powinieneś odkładać, aby zrealizować swój plan</strong></p>
 
-                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
+                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Im wcześniej, tym lepiej</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
-                        <img src="img/icon-umbrella-red.png" alt="" class="img-responsive pull-right">
+                        <img src="img/icon-umbrella-red.png" alt="" class="img-responsive center-block">
                     </div>
 
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Przekonaj się, jak bardzo odwlekanie decyzji o&nbsp;oszczędzaniu działa na Twoją niekorzyść</strong></p>
 
-                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Projekt Emerytura</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="row hidden-xs hidden-sm">
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
+                </div>
+
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
                 </div>
             </div>
         </div>
@@ -214,21 +234,11 @@ Tpl::nav();
                 <div class="col-md-6">
                     <figure>
                         <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
-                        
-                        <!--<figcaption>
-                            <img src="img/bulb.png" alt="">
-                            <a href="#">Przyszłość dzieci</a>
-                        </figcaption>-->
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowa"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="" class="img-responsive full-width"></a>
-                        
-                        <!--<figcaption>
-                            <img src="img/bulb.png" alt="">
-                            <a href="#">Ochrona zdrowa</a>
-                        </figcaption>-->
+                        <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
                     </figure>
                 </div>
             </div>

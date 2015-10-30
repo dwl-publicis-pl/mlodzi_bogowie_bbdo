@@ -2,7 +2,8 @@
 class App
 {
     const APP_URL = 'http://mlodzibogowie.pl/';
-    const APP_NAME = 'MłodziBogowie.pl';
+    const APP_NAME = 'Czy jesteś młodym bogiem?';
+    const APP_DESC = 'Obalamy finansowe mity młodych bogów! Kim są młodzi bogowie? Być może Ty jesteś jednym z nich. Sprawdź!';
     const CONTACT_EMAIL_CC = null;
     
     private $error = [];
@@ -16,6 +17,10 @@ class App
     public static function init()
     {
         date_default_timezone_set('Europe/Warsaw');
+        error_reporting(-1);
+        ini_set('display_errors', 0);
+        ini_set('log_errors', 1);
+        ini_set('error_log', 'php_errors.log');
         
         require_once('libs/Tpl.class.php');
         
