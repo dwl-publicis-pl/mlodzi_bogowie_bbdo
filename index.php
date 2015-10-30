@@ -5,182 +5,185 @@ Tpl::htmlHead();
 Tpl::nav();
 ?>
 
-<div class="jumbotron">
-    <video poster="img/poster.png">
-        <source type="video/webm" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" />
-        <source type="video/mp4" src="http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4" />
+<div class="jumbotron border-bottom-rsg" id="jumbotron-video">
+    <div id="intro-placeholder">
+        <img src="img/txt-kim-sa-mlodzi-bogowie.png" alt="Kim są młodzi bogowie?" class="img-responsive">
+
+        <button class="btn btn-link btn-video" data-trigger="startTopVideo"><img src="img/btn-play.png" alt="Start"></button>
+    </div>
+
+    <video poster="img/top-video-placeholder.jpg" preload>
+        <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
     </video>
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <header>
-            <h1><span>Poznaj <strong>mity</strong> młodych bogów</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt lectus at ligula mattis, vel tincidunt eros vestibulum. Aenean fringilla ipsum eget felis pellentesque faucibus vitae vitae lorem.</p>
-        </header>
-    </div>
+    <header class="row">
+        <h1>Poznaj <strong>mity</strong> młodych bogów</h1>
+        <p>
+            Czasami trzymamy się ich, bo tak jest nam wygodniej. Bo mamy inne, ważniejsze lub pilniejsze sprawy.
+            A&nbsp;może warto na chwilę się zatrzymać i przemyśleć swoje przekonania, zanim zmusi nas do tego rzeczywistość?
+        </p>
+    </header>
     
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2 myths-multibox">
-            <div class="row">
-                <div class="col-md-4">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 myths-rows">
+            <div class="myths-rows-insider">
+                <div class="myth-box myth-box-type-a">
                     <figure>
-                        <img src="img/mity/mit-1.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number">
-                            #1 mit
-                        </figcaption>
-                        <figcaption class="myth-title">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                            
-                            <div class="myth-see-more">
-                                <a href="#" class="see-more">Zobacz więcej</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-4">
-                    <figure>
-                        <img src="img/mity/mit-2.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number myth-black">
-                            #2 mit
-                        </figcaption>
-                        <figcaption class="myth-title myth-black">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                            
-                            <div class="myth-see-more">
-                                <a href="#" class="see-more">Zobacz więcej</a>
-                            </div>
-                        </figcaption>
+                        <a href="mit-panstwo-da-mi-dobra-emeryture"><img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive"></a>
                     </figure>
                 </div>
 
-                <div class="col-md-4">
+                <div class="myth-box myth-box-type-b">
                     <figure>
-                        <img src="img/mity/mit-3.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number">
-                            #3 mit
-                        </figcaption>
-                        <figcaption class="myth-title">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                        </figcaption>
+                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej"><img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive"></a>
+                    </figure>
+
+                    <figure class="hidden-xs hidden-sm">
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
 
-                <div class="col-md-4">
+                <div class="myth-box myth-box-type-c">
                     <figure>
-                        <img src="img/mity/mit-4.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number myth-black">
-                            #4 mit
-                        </figcaption>
-                        <figcaption class="myth-title myth-black">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                        </figcaption>
+                        <a href="mit-emerytura-nie-potrwa-dlugo"><img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive"></a>
                     </figure>
                 </div>
 
-                <div class="col-md-4">
+                <div class="myth-box myth-box-type-c visible-xs visible-sm">
                     <figure>
-                        <img src="img/mity/mit-5.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number">
-                            #5 mit
-                        </figcaption>
-                        <figcaption class="myth-title">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                        </figcaption>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
 
-                <div class="col-md-4">
+                <div class="clearfix"></div>
+
+                <div class="myth-box myth-box-type-a">
                     <figure>
-                        <img src="img/mity/mit-6.jpg" alt="" class="img-responsive" />
-                        <figcaption class="myth-number myth-black">
-                            #6 mit
-                        </figcaption>
-                        <figcaption class="myth-title myth-black">
-                            <a href="#">
-                                <span class="myth-title-style-1">Przecież</span><br>
-                                <span class="myth-title-style-2">mogę pracować</span><br>
-                                <span class="myth-title-style-3">do śmierci</span>
-                            </a>
-                        </figcaption>
+                        <a href="mit-nie-stac-mnie-na-oszczedzanie"><img src="img/mity/mit-5.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive"></a>
                     </figure>
                 </div>
 
+                <div class="myth-box myth-box-type-d">
+                    <figure>
+                        <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"><img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive"></a>
+                    </figure>
+                </div>
+
+                <div class="myth-box myth-box-type-e">
+                    <figure>
+                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"><img src="img/mity/mit-7.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive"></a>
+                    </figure>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="myth-box myth-box-type-a">
+                    <figure>
+                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo"><img src="img/mity/mit-8.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive"></a>
+                    </figure>
+                </div>
+
+                <div class="myth-box myth-box-type-f">
+                    <figure>
+                        <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"><img src="img/mity/mit-9.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive"></a>
+                    </figure>
+                </div>
+
+                <div class="myth-box myth-box-type-g">
+                    <figure>
+                        <a href="mit-zle-rzeczy-przydarzaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive"></a>
+                    </figure>
+                </div>
             </div>
         </div>
     </div>
-    
+
+    <?php
+    /*
     <div class="row">
         <div class="col-xs-12 bg-blue-man">
             <div class="row">
-                <div class="col-md-6 col-md-offset-2 blue-man-content">
-                    <div class="blue-man-line-1">Ile jest w Tobie</div>
-                    <div class="blue-man-line-2">– <span>młodego</span> – boga?</div>
-                    
-                    <a href="#" class="btn btn-link">Zrób test na boskość</a>
+                <div class="col-md-3 col-md-offset-2 blue-man-content">
+                    <img src="img/txt-czy-jestes-mlodym-bogiem.png" alt="Czy jesteś młodym bogiem?" class="img-responsive">
+                    <a href="#" class="btn btn-primary btn-special">Zrób test</a>
                 </div>
             </div>
         </div>
     </div>
+    */
+    ?>
     
     <div class="row">
         <header>
-            <h1>Zadbaj o <strong>przyszłość</strong></h1>
+            <h1>Zadbaj o przyszłość</h1>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt lectus at ligula mattis, vel tincidunt eros vestibulum. Aenean fringilla ipsum eget felis pellentesque faucibus vitae vitae lorem.</p>
+            <p>Wskaż, co jest dla Ciebie ważne, a&nbsp;my pomożemy Ci zadbać o&nbsp;przyszłość Twoją i&nbsp;Twoich bliskich.</p>
         </header>
     </div>
     
-    <div class="row row-padded row-products">
+    <div class="row row-padded row-margins row-products">
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-1.jpg" alt="">
-                <figcaption>
+                <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
+                <?php
+                /*<figcaption>
                     <img src="img/bulb.png" alt="">
-                    Przyszłość
-                    dzieci
+                    <div>
+                        <a href="">
+                            Przyszłość<br>
+                            dziecka
+                        </a>
+                    </div>
                 </figcaption>
+                */
+                ?>
             </figure>
         </div>
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-2.jpg" alt="">
-                <figcaption>
-                    <img src="img/bulb.png" alt="">
-                    Przyszłość
-                    dzieci
-                </figcaption>
+                <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                <?php
+                /*<figcaption>
+                    <img src="img/icon-sun.png" alt="">
+                    <div>
+                        <a href="emerytura-bez-obaw">
+                            Emerytura<br>
+                            bez obaw
+                        </a>
+                    </div>
+                </figcaption>*/
+                ?>
             </figure>
         </div>
         <div class="col-xs-12 col-md-4">
             <figure>
-                <img src="img/produkty/produkt-3.jpg" alt="">
-                <figcaption>
-                    <img src="img/bulb.png" alt="">
-                    Przyszłość
-                    dzieci
-                </figcaption>
+                <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
+                <?php
+                /*<figcaption>
+                    <img src="img/icon-hearth.png" alt="">
+                    <div>
+                        <a href="">
+                            Ochrona<br>
+                            życia
+                        </a>
+                    </div>
+                </figcaption>*/
+                ?>
             </figure>
+        </div>
+    </div>
+
+    <div class="row row-filled-red">
+        <div class="col-xs-12">
+            <div class="text-center">
+                <span class="btn-near-cta">Zrób pierwszy krok!</span>
+                <p>Umów się z naszym Konsultantem. Pomożemy Ci wybrać rozwiązanie dopasowane do Twoich potrzeb i celów.</p>
+                <a href="https://formularz.prudential.pl/lead?lid=45397" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            </div>
         </div>
     </div>
 </div>

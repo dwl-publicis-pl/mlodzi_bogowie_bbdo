@@ -1,7 +1,32 @@
-AuthType Basic
-AuthName "Dostep zastrzezony"
-AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
-Require valid-user
+Options +FollowSymLinks
+RewriteEngine on
+
+#RewriteCond %{REMOTE_ADDR} !=37.47.34.166
+#RewriteCond %{REMOTE_ADDR} !=212.180.168.148
+#RewriteCond %{REMOTE_ADDR} !=89.67.150.141
+#RewriteCond %{REMOTE_ADDR} !=78.11.222.224
+#FC home
+#RewriteCond %{REMOTE_ADDR} !=83.6.250.170
+#RewriteCond %{REMOTE_ADDR} !=37.47.10.43
+#RewriteCond %{REMOTE_ADDR} !=94.254.133.209
+#RewriteCond %{REMOTE_ADDR} !=212.180.145.117
+#RewriteCond %{REMOTE_ADDR} !=94.254.133.160
+#RewriteCond %{REMOTE_ADDR} !=212.91.10.71
+#RewriteCond %{REMOTE_ADDR} !=94.254.133.13
+#RewriteCond %{REMOTE_ADDR} !=212.244.179.218
+#RewriteCond %{REMOTE_ADDR} !=80.247.53.97
+#kob home
+#RewriteCond %{REMOTE_ADDR} !=79.191.184.209
+#RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]
+
+RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
+RewriteRule ^(.*)$ http://mlodzibogowie.pl/$1 [R=301,L]
+
+
+#AuthType Basic
+#AuthName "Dostep zastrzezony"
+#AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
+#Require valid-user
 
 # Apache Server Configs v2.11.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
