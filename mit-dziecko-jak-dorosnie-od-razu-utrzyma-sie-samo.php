@@ -27,24 +27,20 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-megaphone.png" alt="" class="headline-image img-responsive">
+        </div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-megaphone.png" alt="" class="headline-image img-responsive">
-            </div>
-
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                <div>
                     Naprawdę tak myślisz? I to właśnie powiesz dziecku, gdy będzie potrzebowało pieniędzy
                     na akademik i książki? Przecież pełnoletność to nie wszystko.
                     <strong>Dorosłe dziecko jeszcze przez kilka lat będzie korzystać z pomocy rodziców,</strong>
                     zwłaszcza w czasie studiów. Praca dorywcza, często na ułamek etatu, nie zawsze od razu pozwala na pełne usamodzielnienie się.
                 </div>
             </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 

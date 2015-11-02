@@ -27,31 +27,25 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-rescue-bag.png" alt="" class="headline-image img-responsive pull-right">
+        </div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-rescue-bag.png" alt="" class="headline-image img-responsive">
-            </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                <div>
+                    Wiecznie młodym można być... ale niestety tylko duchem. Dbając codziennie o&nbsp;nasze zdrowie
+                    i&nbsp;kondycję, możemy oczywiście zmniejszać ryzyko pojawienia się problemów ze zdrowiem.
+                    Ale na wszystko nie mamy wpływu, a życie potrafi zaskakiwać. Aż 40% z nas zna kogoś, kto jest
+                    lub był poważnie chory<sup><a href="#przypisy">1</a></sup>.
+                </div>
 
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
-                    <div>
-                        Wiecznie młodym można być... ale niestety tylko duchem. Dbając codziennie o&nbsp;nasze zdrowie
-                        i kondycję, możemy oczywiście zmniejszać ryzyko pojawienia się problemów ze zdrowiem.
-                        Ale na wszystko nie mamy wpływu, a życie potrafi zaskakiwać. Aż 40% z nas zna kogoś, kto jest
-                        lub był poważnie chory<sup><a href="#przypisy">1</a></sup>.
-                    </div>
-
-                    <div>
-                        Lepiej więc pomyśleć o tym i zabezpieczyć się, zanim  choroba się pojawi, żeby w&nbsp;takim
-                        przypadku móc się skupić na leczeniu, a nie na tym, jak zdobyć potrzebne na to pieniądze.
-                    </div>
+                <div>
+                    Lepiej więc pomyśleć o tym i zabezpieczyć się, zanim  choroba się pojawi, żeby w&nbsp;takim
+                    przypadku móc się skupić na leczeniu, a nie na tym, jak zdobyć potrzebne na to pieniądze.
                 </div>
             </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 

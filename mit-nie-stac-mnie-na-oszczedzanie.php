@@ -26,30 +26,25 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row row-margin">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-wallet.png" alt="" class="headline-image img-responsive pull-right">
+        </div>
 
-            <div class="col-xs-12 col-md-2 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-wallet.png" alt="" class="headline-image img-responsive">
-            </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                <div>
+                    A jednak odkładając codziennie drobne kwoty, <strong>możemy dojść do dużych oszczędności.</strong>
+                    I&nbsp;wcale nie kosztem wielkich wyrzeczeń. Wiadomo, początki bywają trudne.
+                    Pieniądze zaoszczędzone dzisiaj mogą zarabiać na Twoją przyszłość i&nbsp;wyznaczone długoterminowe cele,
+                    jak edukacja dzieci, budowa domu czy też zabezpieczenie emerytalne.
+                </div>
 
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
-                    <div>
-                        A jednak odkładając codziennie drobne kwoty, <strong>możemy dojść do dużych oszczędności.</strong>
-                        I wcale nie kosztem wielkich wyrzeczeń. Wiadomo, początki bywają trudne.
-                        Pieniądze zaoszczędzone dzisiaj mogą zarabiać na Twoją przyszłość i wyznaczone długoterminowe cele,
-                        jak edukacja dzieci, budowa domu czy też zabezpieczenie emerytalne.
-                    </div>
-
-                    <div>
-                        Im szybciej zaczniesz systematycznie i&nbsp;konsekwentnie inwestować określoną kwotę, tym większy będzie zgromadzony kapitał po latach.
-                    </div>
+                <div>
+                    Im szybciej zaczniesz systematycznie i&nbsp;konsekwentnie inwestować określoną kwotę,
+                    tym większy będzie zgromadzony kapitał po latach.
                 </div>
             </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 
