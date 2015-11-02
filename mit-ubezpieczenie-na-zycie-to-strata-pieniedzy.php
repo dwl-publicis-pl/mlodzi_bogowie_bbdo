@@ -27,32 +27,26 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row row-margin">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-vault.png" alt="" class="headline-image img-responsive pull-right">
+        </div>
 
-            <div class="col-xs-12 col-md-2 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-vault.png" alt="" class="headline-image img-responsive">
-            </div>
-
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
-                    <div>
-                        No tak, przecież Tobie nic się nie stanie, prawda?... Tylko że my pomyśleliśmy również o&nbsp;sytuacji, że może jednak...
-                    </div>
-                    <div>
-                        Premiopolisa to ubezpieczenie na życie i dożycie. To oznacza, że w przypadku śmierci osoby ubezpieczonej
-                        wyznaczone przez nią osoby otrzymają pieniądze, które pozwolą im żyć dalej na zbliżonym poziomie, spłacić kredyt mieszkaniowy itp.
-                        Ale <strong>nawet jeśli żadna tragedia ubezpieczonemu się nie przydarzy, to na koniec okresu umowy również wypłacimy mu pieniądze!</strong>
-                    </div>
-                    <div>
-                        Innymi słowy, nasza oferta łączy w sobie ubezpieczenie na życie z programem systematycznego oszczędzania. Czy można sobie wyobrazić bardziej
-                        wszechstronne zabezpieczenie przyszłości dla każdej odpowiedzialnej osoby?
-                    </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                <div>
+                    No tak, przecież Tobie nic się nie stanie, prawda?... Tylko że my pomyśleliśmy również o&nbsp;sytuacji, że może jednak...
+                </div>
+                <div>
+                    Premiopolisa to ubezpieczenie na życie i dożycie. To oznacza, że w przypadku śmierci osoby ubezpieczonej
+                    wyznaczone przez nią osoby otrzymają pieniądze, które pozwolą im żyć dalej na zbliżonym poziomie, spłacić kredyt mieszkaniowy itp.
+                    Ale <strong>nawet jeśli żadna tragedia ubezpieczonemu się nie przydarzy, to na koniec okresu umowy również wypłacimy mu pieniądze!</strong>
+                </div>
+                <div>
+                    Innymi słowy, nasza oferta łączy w sobie ubezpieczenie na życie z programem systematycznego oszczędzania. Czy można sobie wyobrazić bardziej
+                    wszechstronne zabezpieczenie przyszłości dla każdej odpowiedzialnej osoby?
                 </div>
             </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 

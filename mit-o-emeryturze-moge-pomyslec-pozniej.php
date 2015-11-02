@@ -26,24 +26,18 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-megaphone.png" alt="" class="headline-image img-responsive">
+        </div>
 
-            <div class="col-xs-12 col-md-2 col-lg-2 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-megaphone.png" alt="" class="headline-image img-responsive">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                Nie do końca, bo <strong>każdy dzień przybliża Cię do emerytury</strong>, czy tego
+                chcesz, czy nie. Jeśli zaczniesz odkładać już dziś, małymi krokami możesz uzbierać
+                tyle, by godnie przeżyć na emeryturze nawet 20 lat<sup><a href="#przypisy">1</a></sup>. Zobacz poniżej, ile tracisz przez
+                opóźnianie decyzji o&nbsp;oszczędzaniu.
             </div>
-
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
-                    Nie do końca, bo <strong>każdy dzień przybliża Cię do emerytury</strong>, czy tego
-                    chcesz, czy nie. Jeśli zaczniesz odkładać już dziś, małymi krokami możesz uzbierać
-                    tyle, by godnie przeżyć na emeryturze nawet 20 lat<sup><a href="#przypisy">1</a></sup>. Zobacz poniżej, ile tracisz przez
-                    opóźnianie decyzji o&nbsp;oszczędzaniu.
-                </div>
-            </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 

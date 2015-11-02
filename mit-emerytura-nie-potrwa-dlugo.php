@@ -26,23 +26,19 @@ Tpl::nav();
 </div>
 
 <div class="container-fluid">
-    <div class="row row-margin">
-        <div class="row-height">
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle">&nbsp;</div>
+    <div class="row row-flex row-centered row-margin">
+        <div class="hidden-xs hidden-sm hidden-md col-lg-2 col-lg-offset-2">
+            <img src="img/icon-magnifier.png" alt="" class="headline-image img-responsive">
+        </div>
 
-            <div class="col-xs-12 col-md-1 col-lg-1 col-md-height col-md-middle col-image-top">
-                <img src="img/icon-magnifier.png" alt="" class="headline-image img-responsive">
-            </div>
-
-            <div class="col-xs-12 col-md-8 col-lg-6 col-md-height">
-                <div class="headline headline-left">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-6">
+            <div class="headline headline-left">
+                <div>
                     <strong>To mit. Już dziś na emeryturze Polacy żyją średnio
-                    ok. 19 lat<sup><a href="#przypisy">1</a></sup></strong>. A żyjemy coraz dłużej. Niektórzy z nas mogą na
+                    ok.&nbsp;19 lat<sup><a href="#przypisy">1</a></sup></strong>. A&nbsp;żyjemy coraz dłużej. Niektórzy z&nbsp;nas mogą na
                     emeryturze spędzić nawet 30 lat! Wystarczy spojrzeć na liczby.
                 </div>
             </div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-2 col-md-middle"></div>
         </div>
     </div>
 
