@@ -308,8 +308,10 @@ Tpl::nav();
 
                             <div id="nRCalcRetirementValue" class="coins-stack">
                                 <div class="rnCalcRetirementSumTxt">
-                                    <sup class="pull-right"><a href="#przypisy">3</a></sup>
-                                    <img src="img/txt-twoja-szacunkowa-miesieczna-emerytura.png" alt="Twoja szacunkowa miesięczna emerytura" class="img-responsive">
+                                    <div class="inline-block">
+                                        <sup class="pull-right"><a href="#przypisy">3</a></sup>
+                                        <img src="img/txt-twoja-szacunkowa-miesieczna-emerytura.png" alt="Twoja szacunkowa miesięczna emerytura" class="img-responsive">
+                                    </div>
                                     <div class="calc-2-sum-container"><span id="calc-2-retirement-value">1000</span> zł</div>
                                 </div>
                             </div>
