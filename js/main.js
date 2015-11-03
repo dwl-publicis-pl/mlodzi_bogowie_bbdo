@@ -953,3 +953,4 @@ function WHCloseCookiesWindow() {
     WHCreateCookie('cookies_accepted', 'T', 365);
 
 }
+ő
