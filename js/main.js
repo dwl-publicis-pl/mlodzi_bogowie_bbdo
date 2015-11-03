@@ -1,14 +1,14 @@
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
         }
     });
 });
@@ -36,8 +36,8 @@ $('[data-trigger]').on('click', function(e) {
             $('#jumbotron-video').addClass('jumbotron-video-full');
 
             /*$('html,body').animate({
-                scrollTop: $('#jumbotron-video').offset().top
-            }, 600);*/
+             scrollTop: $('#jumbotron-video').offset().top
+             }, 600);*/
 
             var v = $('#jumbotron-video').find('video')[0];
 
@@ -55,6 +55,10 @@ $('[data-trigger]').on('click', function(e) {
                 $('#jumbotron-video').removeClass('jumbotron-video-full');
             };
 
+            break;
+
+        case 'init-quiz':
+            quiz.init($(this));
             break;
 
         default:
@@ -79,6 +83,45 @@ Number.prototype.format = function(n, x, s, c) {
 
     return (c ? num.replace('.', c) : num).replace(new RegExp(re, 'g'), '$&' + (s || ','));
 };
+
+/**
+ * quiz
+ */
+var quiz = (function() {
+    var initBtnElement,
+        rootSelector = '#quiz-section';
+
+    var init = function(initButton) {
+        initBtnElement = initButton;
+
+        initRootElement();
+
+        $('html,body').animate({
+            scrollTop: $(rootSelector).offset().top,
+            easing: 'easeOutCubic'
+        }, 600);
+    };
+
+    var initRootElement = function() {
+        var wHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        TweenLite.set(rootSelector, {
+            className:'+=row-flex'
+        });
+
+        TweenLite.to(rootSelector,.6, {
+            height: wHeight,
+            ease: Power2.easeOut
+        });
+    };
+
+    return {
+        init: init
+    };
+})();
+/**
+ * quiz END
+ */
 
 
 /**
@@ -129,32 +172,32 @@ var monthlySavingsCalculator = (function() {
 
         return true;
     };
-    
+
     var initListeners = function() {
         $(calcForm + ' input, ' + calcForm + ' select').on('input change', function() {
             onRangeChange();
         });
-        
+
         return true;
     };
-    
+
     var onRangeChange = function() {
         getValues();
         showValues();
         calculateMonthlySavings();
-        
+
         return true;
     };
-    
+
     var getValues = function() {
         retirementLengthVal = parseInt(retirementLengthElement.val());
         monthlySavingsVal = parseInt(monthlySavingsElements.val());
         startSaveUpVal = parseInt(startSaveUpElement.val());
         saveUpLength = retirementAge - startSaveUpVal;
-        
+
         return true;
     };
-    
+
     var showValues = function() {
         retirementLengthValueElement.html(retirementLengthVal);
         monthlySavingsValueElements.html(monthlySavingsVal);
@@ -162,7 +205,7 @@ var monthlySavingsCalculator = (function() {
 
         return true;
     };
-    
+
     var calculateMonthlySavings = function() {
         //console.log(retirementLengthVal, monthlySavingsVal, startSaveUpVal, saveUpLength);
 
@@ -174,13 +217,13 @@ var monthlySavingsCalculator = (function() {
 
         setFace();
         proceedMonthlySavings();
-        
+
         return true;
     };
 
     var proceedMonthlySavings = function() {
         monthlySavingsElement.html(monthlySaveUp);
-        
+
         return true;
     };
 
@@ -327,6 +370,7 @@ var retirementNecessitiesCalculator = (function() {
 
         if (!$(retirementLiveValueContainerSelector).hasClass('active')) {
             $(retirementLiveValueContainerSelector).addClass('active');
+            $(window).resize(); // fix dla cycle2 (resize kontenera)
         }
 
         getEarnings();
@@ -376,7 +420,7 @@ var retirementNecessitiesCalculator = (function() {
             retirementValue = 0;
             checkedGroupsList = [];
         }
-            
+
         errorMsg = [];
         percentRetirementToNecessities = 0;
 
@@ -545,64 +589,77 @@ var retirementNecessitiesCalculator = (function() {
         htmlSumElement.html(necessitiesSum.format(0, 3, ' '));
         htmlRetirementSumElement.html(retirementValue.format(0, 3, ' '));
 
-        if (windowWidth >= doNotInsertCoinsBelow) {
-            if (percentRetirementToNecessities > 95 && percentRetirementToNecessities < 104) {
-                coinsAmountExpenses = coinsInContainer;
-                coinsAmountEarnings = coinsInContainer;
-            } else if (percentRetirementToNecessities >= 104) {
-                coinsAmountExpenses = Math.floor((coinsInContainer * 100) / percentRetirementToNecessities);
-                coinsAmountEarnings = coinsInContainer;
-            } else if (percentRetirementToNecessities <= 95) {
-                coinsAmountExpenses = coinsInContainer;
-                coinsAmountEarnings = Math.floor(coinsInContainer * percentRetirementToNecessities / 100);
-            }
-
-            coinsAmountEarnings = Math.max(1, coinsAmountEarnings);
-            coinsAmountExpenses = Math.max(1, coinsAmountExpenses);
-
-            //console.log(Math.floor(percentRetirementToNecessities) + '%', coinsAmountExpenses, coinsAmountEarnings);
-
-            var randomHorzTransform;
-            var i = 0;
-
-            for (i = 0; i < coinsAmountExpenses; i++) {
-                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
-                $(nRCalcExpensesElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(' + randomHorzTransform + 'px); -moz-transform: translateX(' + randomHorzTransform + 'px); -ms-transform: translateX(' + randomHorzTransform + 'px); -o-transform: translateX(' + randomHorzTransform + 'px); transform: translateX(' + randomHorzTransform + 'px);">');
-            }
-
-            var n = 0;
-            var isFinalCoin = function (c) {
-                if (c + 1 == coinsAmountExpenses) {
-                    showChartLabels();
-                }
-            };
-
-            $(nRCalcExpensesElement).children('img').each(function () {
-                TweenLite.to(this, coinsSpeed, {
-                    delay: (0.1 * n),
-                    opacity: 1,
-                    bottom: (n * 15),
-                    ease: Power2.easeOut,
-                    onComplete: isFinalCoin,
-                    onCompleteParams: [n]
-                });
-                n++;
-            });
-
-            for (i = 0; i < coinsAmountEarnings; i++) {
-                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
-                $(nRCalcRetirementValueElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(' + randomHorzTransform + 'px); -moz-transform: translateX(' + randomHorzTransform + 'px); -ms-transform: translateX(' + randomHorzTransform + 'px); -o-transform: translateX(' + randomHorzTransform + 'px); transform: translateX(' + randomHorzTransform + 'px);">');
-            }
-
-            n = 0;
-
-            $(nRCalcRetirementValueElement).children('img').each(function () {
-                TweenLite.to(this, coinsSpeed, {delay: (0.1 * n), opacity: 1, bottom: (n * 15), ease: Power2.easeOut});
-                n++;
-            });
-        } else {
-            showChartLabels();
+        //if (windowWidth >= doNotInsertCoinsBelow) { // całkowite wyłączenie rysowania monet
+        if (percentRetirementToNecessities > 95 && percentRetirementToNecessities < 104) {
+            coinsAmountExpenses = coinsInContainer;
+            coinsAmountEarnings = coinsInContainer;
+        } else if (percentRetirementToNecessities >= 104) {
+            coinsAmountExpenses = Math.floor((coinsInContainer * 100) / percentRetirementToNecessities);
+            coinsAmountEarnings = coinsInContainer;
+        } else if (percentRetirementToNecessities <= 95) {
+            coinsAmountExpenses = coinsInContainer;
+            coinsAmountEarnings = Math.floor(coinsInContainer * percentRetirementToNecessities / 100);
         }
+
+        coinsAmountEarnings = Math.max(1, coinsAmountEarnings);
+        coinsAmountExpenses = Math.max(1, coinsAmountExpenses);
+
+        //console.log(Math.floor(percentRetirementToNecessities) + '%', coinsAmountExpenses, coinsAmountEarnings);
+
+        var randomHorzTransform;
+        var i = 0;
+
+        for (i = 0; i < coinsAmountExpenses; i++) {
+            randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
+            $(nRCalcExpensesElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(' + randomHorzTransform + 'px); -moz-transform: translateX(' + randomHorzTransform + 'px); -ms-transform: translateX(' + randomHorzTransform + 'px); -o-transform: translateX(' + randomHorzTransform + 'px); transform: translateX(' + randomHorzTransform + 'px);">');
+        }
+
+        var n = 0;
+        var coinDelay;
+        var isFinalCoin = function (c) {
+            if (c + 1 == coinsAmountExpenses) {
+                showChartLabels();
+            }
+        };
+
+        $(nRCalcExpensesElement).children('img').each(function() {
+            if (windowWidth >= doNotInsertCoinsBelow) {
+                coinDelay = 0.1 * n;
+            } else {
+                coinDelay = 0;
+            }
+
+            TweenLite.to(this, coinsSpeed, {
+                delay: coinDelay,
+                opacity: 1,
+                bottom: (n * 15),
+                ease: Power2.easeOut,
+                onComplete: isFinalCoin,
+                onCompleteParams: [n]
+            });
+            n++;
+        });
+
+        for (i = 0; i < coinsAmountEarnings; i++) {
+            randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
+            $(nRCalcRetirementValueElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(' + randomHorzTransform + 'px); -moz-transform: translateX(' + randomHorzTransform + 'px); -ms-transform: translateX(' + randomHorzTransform + 'px); -o-transform: translateX(' + randomHorzTransform + 'px); transform: translateX(' + randomHorzTransform + 'px);">');
+        }
+
+        n = 0;
+
+        $(nRCalcRetirementValueElement).children('img').each(function () {
+            if (windowWidth >= doNotInsertCoinsBelow) {
+                coinDelay = 0.1 * n;
+            } else {
+                coinDelay = 0;
+            }
+
+            TweenLite.to(this, coinsSpeed, {delay: coinDelay, opacity: 1, bottom: (n * 15), ease: Power2.easeOut});
+            n++;
+        });
+        /*} else {
+         showChartLabels();
+         }*/
 
         selectedFinalTextElement.addClass('activeOpacity');
 
@@ -610,7 +667,7 @@ var retirementNecessitiesCalculator = (function() {
     };
 
     var showChartLabels = function() {
-	    	var contenerHeight = $('#nRCalcExpenses').height();
+        var contenerHeight = $('#nRCalcExpenses').height();
         if (percentRetirementToNecessities > 95 && percentRetirementToNecessities < 104) {
             $(rnCalcSumTxtElement).addClass('active');
             $(rnCalcRetirementSumTxtElement).addClass('active');
@@ -853,8 +910,8 @@ necessitiesCalculator.init();
 /**
  * kalkulator 4 END
  */
- 
- /*
+
+/*
  * Skrypt wyświetlający okienko z informacją o wykorzystaniu ciasteczek (cookies)
  * 
  * Więcej informacji: http://webhelp.pl/artykuly/okienko-z-informacja-o-ciasteczkach-cookies/
@@ -865,17 +922,17 @@ function WHCreateCookie(name, value, days) {
     var date = new Date();
     date.setTime(date.getTime() + (days*24*60*60*1000));
     var expires = "; expires=" + date.toGMTString();
-	document.cookie = name+"="+value+expires+"; path=/";
+    document.cookie = name+"="+value+expires+"; path=/";
 }
 function WHReadCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-	}
-	return null;
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
 }
 
 window.onload = WHCheckCookies;
@@ -891,8 +948,8 @@ function WHCheckCookies() {
 }
 
 function WHCloseCookiesWindow() {
-	
-	$('#cookies-message-container').remove();
+
+    $('#cookies-message-container').remove();
     WHCreateCookie('cookies_accepted', 'T', 365);
-    
+
 }
