@@ -145,10 +145,14 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Zadbaj o przyszłość</div>
-                <a href="przyszlosc-dziecka" class="btn btn-primary btn-white">Zaplanuj dziecku start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46722" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>

@@ -168,10 +168,14 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Lepiej zacznij działać!</div>
-                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46144" class="btn btn-primary btn-white" target="_blank">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>

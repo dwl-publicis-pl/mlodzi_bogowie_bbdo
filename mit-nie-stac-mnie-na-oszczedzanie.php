@@ -202,7 +202,7 @@ Tpl::nav();
             <div class="text-center">
                 <span class="btn-near-cta">Nie zwlekaj!</span>
                 <p>
-                    <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zrób plan oszczędzania <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a href="https://formularz.prudential.pl/lead?lid=46432" class="btn btn-primary btn-white" target="_blank">Zrób plan oszczędzania <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </p>
             </div>
         </div>
@@ -266,6 +266,10 @@ Tpl::nav();
             <div class="hidden-xs hidden-sm col-md-3">&nbsp;</div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>

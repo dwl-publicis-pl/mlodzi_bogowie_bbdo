@@ -61,6 +61,10 @@ $('[data-trigger]').on('click', function(e) {
             quiz.init($(this));
             break;
 
+        case 'quiz-restart':
+            quiz.restart();
+        break;
+
         default:
             console.log('no action triggered');
             break;
@@ -88,35 +92,240 @@ Number.prototype.format = function(n, x, s, c) {
  * quiz
  */
 var quiz = (function() {
-    var initBtnElement,
-        rootSelector = '#quiz-section';
+    var numOfQuestions = 10,
+        initBtnElement,
+        rootSelector = '#quiz-section',
+        btnAnswerSelector = '.btn-quiz',
+        btnNextSelector = '.btn-quiz-select-answer',
+        triggerBoxElement = '#js-blue-man',// element do ukrycia przy rozpoczęciu quizu
+        questionsAndAnswers = {}, // question : points
+        pointsSum = 0,
+        calculatedResultSlide,
+        currentQuestion,
+        errorMsg = [],
+        errorMsgs = [
+            'Nieprawidłowy wybór pytania.',
+            'Nie wybrano odpowiedzi w tym pytaniu.'
+        ],
+        currentWidth;
+
 
     var init = function(initButton) {
         initBtnElement = initButton;
-
         initRootElement();
+        currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        onWindowResize();
 
-        $('html,body').animate({
-            scrollTop: $(rootSelector).offset().top,
-            easing: 'easeOutCubic'
-        }, 600);
+        $(btnNextSelector).prop('disabled', true);
+
+
+        $(btnAnswerSelector).on('click', function(e) {
+            e.preventDefault();
+            proceedAnswer(this);
+        });
+
+
+        $(btnNextSelector).on('click', function(e) {
+            e.preventDefault();
+
+            var t = $(this).data('question-validate');
+
+            if (typeof questionsAndAnswers[t] === "undefined") {
+                addError(errorMsgs[1]);
+            } else {
+                $(this).prop('disabled', true);
+                nextQuestionTrigger(this);
+            }
+
+            if (isError()) {
+                printErrors();
+            }
+        });
+        
+        /*AdobeEdge.loadComposition('q1', 'EDGE-3094357563', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0px",
+				    maxW: "undefined",
+				    width: "100%",
+				    height: "720px"
+				}, {"dom":{}}, {"dom":{}});*/
     };
 
+
+    var proceedAnswer = function(answerElement) {
+        answerElement = $(answerElement);
+
+        var value = parseInt(answerElement.data('value'));
+        var question = parseInt(answerElement.data('question'));
+
+        if (question < 1) {
+            addError(errorMsgs[0]); // shouldn't happen
+
+            return false;
+        }
+
+        currentQuestion = question;
+
+        clearQuestionSelect();
+
+        questionsAndAnswers[currentQuestion] = value;
+        answerElement.addClass('active');
+
+        enableNextQuestionBtn(currentQuestion);
+
+        return true;
+    };
+
+
+    var clearQuestionSelect = function() {
+        var search = $(rootSelector).find('.active[data-question="' + currentQuestion + '"]');
+
+        if (search) {
+            $.each(search, function(i, found) {
+                $(found).removeClass('active');
+            });
+        }
+
+        delete questionsAndAnswers[currentQuestion];
+
+        return true;
+    };
+
+
+    var enableNextQuestionBtn = function(number) {
+        $(btnNextSelector + '[data-question-validate="' + number + '"]').prop('disabled', false);
+    };
+
+
+    var nextQuestionTrigger = function(clickedElement) {
+        if ($(clickedElement).data('is-final')) {
+            calculatePoints();
+            $(rootSelector).cycle('goto', calculatedResultSlide);
+        } else {
+            $(rootSelector).cycle('next');
+        }
+    };
+
+
+    var calculatePoints = function() {
+        for (var index in questionsAndAnswers) {
+            pointsSum = pointsSum + questionsAndAnswers[index];
+        }
+
+        if (pointsSum < 11) {
+            calculatedResultSlide = 10;
+        } else if (pointsSum < 16) {
+            calculatedResultSlide = 11;
+        } else if (pointsSum < 26) {
+            calculatedResultSlide = 12;
+        } else if (pointsSum < 36) {
+            calculatedResultSlide = 13;
+        } else {
+            calculatedResultSlide = 14;
+        }
+
+        // GA event
+        ga('send', 'event', 'Quiz', 'Koniec', 'wynik', pointsSumő);
+
+        return true;
+    };
+
+
     var initRootElement = function() {
-        var wHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        //var currentHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        $(triggerBoxElement).collapse('hide');
 
-        TweenLite.set(rootSelector, {
-            className:'+=row-flex'
+        $(triggerBoxElement).on('hidden.bs.collapse', function() {
+            if (currentWidth > 992) {
+                TweenLite.set(rootSelector, {
+                    className:'+=row-flex-md'
+                });
+
+                var wHeight = 720;
+
+                TweenLite.to(rootSelector, .6, {
+                    height: wHeight,
+                    ease: Power2.easeOut
+                });
+            } else {
+                TweenLite.set(rootSelector, {
+                    display: 'block'
+                });
+            }
+
+            $('html,body').animate({
+                scrollTop: ($(rootSelector).offset().top),
+                easing: 'easeOutCubic'
+            }, 600);
         });
 
-        TweenLite.to(rootSelector,.6, {
-            height: wHeight,
-            ease: Power2.easeOut
+        // GA event
+        ga('send', 'event', 'Quiz', 'Start');
+    };
+
+    var onWindowResize = function() {
+        $(window).on('resize', function(){
+            var win = $(this);
+
+            if (win.width() > 992 && $(rootSelector).innerHeight != 720) {
+                TweenLite.set(rootSelector, {
+                    className:'+=row-flex-md'
+                });
+
+                TweenLite.to(rootSelector, .6, {
+                    height: 720,
+                    ease: Power2.easeOut
+                });
+            } else if (win.width() <= 992 && $(rootSelector).innerHeight == 720) {
+                $(rootSelector).css({height : 'auto', display : 'block'}).removeClass('row-flex-md');
+            }
         });
+    };
+
+    var addError = function(msg) {
+        errorMsg.push(msg);
+
+        //removing potential duplicates
+        var uniq = [];
+        errorMsg.forEach(function(item) {
+            if (uniq.indexOf(item) < 0) {
+                uniq.push(item);
+            }
+        });
+
+        errorMsg = uniq;
+
+        return true;
+    };
+
+    var isError = function() {
+        if (errorMsg.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    var printErrors = function() {
+        alert(errorMsg.join("\n"));
+        errorMsg = []; //cleaning
+
+        return true;
+    };
+
+    var restart = function() {
+        errorMsg = [];
+        pointsSum = 0;
+        $(btnNextSelector).prop('disabled', false);
+
+        $(rootSelector).cycle('goto', 0);
     };
 
     return {
-        init: init
+        init: init,
+        isError: isError,
+        restart: restart
     };
 })();
 /**
@@ -290,10 +499,12 @@ var retirementNecessitiesCalculator = (function() {
         minCoinTranslate = -17,
         maxCoinTranslate = 17,
         coinsSpeed = 0.821, // [s]
-        coinEdgeHeight = 16;
+        coinEdgeHeight = 16,
+        chartLabelsVisible = false;
     var coinsAmountExpenses = 0;
     var coinsAmountEarnings = 0;
     var resetOnBack = false; // resetuje cały kalkulator przy wciśnięciu "oblicz ponownie", czyli usuwa aktualnie wybrane pozycje
+    var previousOrientation = window.orientation;
 
 
     var init = function() {
@@ -304,6 +515,9 @@ var retirementNecessitiesCalculator = (function() {
         collectListOfGroups();
         initEarningsValidatorAndUpdater();
         findRetirementLiveElement();
+
+        window.addEventListener("resize", checkOrientation, false);
+        window.addEventListener("orientationchange", checkOrientation, false);
 
         $(btnResetSelector).on('click', function(event) {
             event.preventDefault();
@@ -343,6 +557,17 @@ var retirementNecessitiesCalculator = (function() {
                 return true;
             }
         });
+    };
+
+    var checkOrientation = function(){
+        if (window.orientation !== previousOrientation){
+            previousOrientation = window.orientation;
+
+            if (chartLabelsVisible) {
+                // ponowne umiejscowienie labeli wyników
+                showChartLabels();
+            }
+        }
     };
 
 
@@ -423,6 +648,7 @@ var retirementNecessitiesCalculator = (function() {
 
         errorMsg = [];
         percentRetirementToNecessities = 0;
+        chartLabelsVisible = false;
 
 
         $('[' + dataTxtResultSelectorName + ']').removeClass('active activeOpacity');
@@ -684,6 +910,8 @@ var retirementNecessitiesCalculator = (function() {
                 }
             );
         }
+
+        chartLabelsVisible = true;
 
         return true;
     };

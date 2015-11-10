@@ -1,0 +1,13 @@
+
+(function(compId){var _=null,y=true,n=false,x1='6.0.0',rz='rotateZ',x3='6.0.0.400',x2='5.0.0',e8='${q5-2}',x4='rgba(0,0,0,0)',x7='rgba(255,255,255,0)',tp='top',g='image',e9='${q5-1}',rt='right',i='none';var g6='q5-2.png',g5='q5-1.png';var im='img/quiz/',aud='media/',vid='media/',js='js/',fonts={},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=[],symbols={"stage":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:'q5-1',t:g,r:['auto','481px','986px','169px','-104px','auto'],f:[x4,im+g5,'0px','0px']},{id:'q5-2',t:g,r:['auto','-172px','849px','683px','-407px','auto'],f:[x4,im+g6,'0px','0px']}],style:{'${Stage}':{isStage:true,r:[undefined,undefined,'100%','720px'],overflow:'hidden',f:[x7]}}},tt:{d:8000,a:y,data:[["eid8",tp,0,2000,"easeInOutQuad",e8,'-62px','-76px'],["eid11",tp,2000,2000,"easeInOutQuad",e8,'-76px','-62px'],["eid26",tp,4000,2000,"easeInOutQuad",e8,'-62px','-172px'],["eid31",tp,6000,2000,"easeInOutQuad",e8,'-172px','-62px'],["eid18",rt,0,2000,"easeInOutQuad",e9,'-104px','-114px'],["eid19",rt,2000,2000,"easeInOutQuad",e9,'-114px','-104px'],["eid35",rt,4000,2000,"easeInOutQuad",e9,'-104px','-449px'],["eid37",rt,6000,2000,"easeInOutQuad",e9,'-449px','-104px'],["eid17",rt,0,2000,"easeInOutQuad",e8,'-73px','-120px'],["eid15",rt,2000,2000,"easeInOutQuad",e8,'-120px','-73px'],["eid27",rt,4000,2000,"easeInOutQuad",e8,'-73px','-407px'],["eid32",rt,6000,2000,"easeInOutQuad",e8,'-407px','-73px'],["eid6",rz,0,2000,"easeInOutQuad",e8,'-4deg','4deg'],["eid9",rz,2000,2000,"easeInOutQuad",e8,'4deg','-4deg'],["eid25",rz,4000,2000,"easeInOutQuad",e8,'-4deg','42deg'],["eid33",rz,6000,2000,"easeInOutQuad",e8,'42deg','-4deg']]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-3111705464");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindSymbolAction(compId,symbolName,"creationComplete",function(sym,e){sym.setVariable("numLoops",0);});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",4000,function(sym,e){var numLoopsHolder=sym.getVariable("numLoops");numLoopsHolder=numLoopsHolder+1;sym.setVariable("numLoops",numLoopsHolder);if(numLoopsHolder==10){sym.setVariable("numLoops",0);}else{sym.play(0);}});
+//Edge binding end
+Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",8000,function(sym,e){sym.play(0);});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-3111705464");

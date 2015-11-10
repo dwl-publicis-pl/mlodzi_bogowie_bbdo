@@ -17,7 +17,7 @@ RewriteEngine on
 #RewriteCond %{REMOTE_ADDR} !=80.247.53.97
 #kob home
 #RewriteCond %{REMOTE_ADDR} !=79.191.184.209
-#RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]
+#RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]ő
 
 RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
 RewriteRule ^(.*)$ http://mlodzibogowie.pl/$1 [R=301,L]
