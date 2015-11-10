@@ -242,8 +242,8 @@ Tpl::nav();
                             </div>
 
                             <div class="row">
-                                <button class="btn btn-quiz" data-question="3" data-value="4">&raquo; Wpadasz w szał zakupów i&nbsp;kupujesz jeszcze kurtkę, buty i&nbsp;narty</button>
-                                <button class="btn btn-quiz" data-question="3" data-value="1">&raquo; Odkładasz spodnie, które wybrałeś, ale sprawdzasz jeszcze, czy nie ma podobnych i&nbsp;tańszych</button>
+                                <button class="btn btn-quiz" data-question="3" data-value="4">&raquo; Wpadam w szał zakupów i&nbsp;kupuję jeszcze kurtkę, buty i&nbsp;narty</button>
+                                <button class="btn btn-quiz" data-question="3" data-value="1">&raquo; Odkładam spodnie, które wybrałem, ale sprawdzam jeszcze, czy nie ma podobnych i&nbsp;tańszych</button>
                             </div>
 
                             <div class="col-xs-12">
