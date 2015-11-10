@@ -226,7 +226,7 @@ var quiz = (function() {
         }
 
         // GA event
-        ga('send', 'event', 'Quiz', 'Koniec', 'wynik', pointsSumő);
+        ga('send', 'event', 'Quiz', 'Koniec', 'wynik', pointsSum);
 
         return true;
     };
