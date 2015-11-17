@@ -117,6 +117,8 @@ var quiz = (function() {
     var init = function(initButton) {
         initBtnElement = initButton;
         initRootElement();
+        initFirstAnimation();
+        listenCycleProceed();
         currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         onWindowResize();
 
@@ -145,7 +147,38 @@ var quiz = (function() {
                 printErrors();
             }
         });
+    };
 
+
+    var initFirstAnimation = function() {
+        $('.cycle-sentinel .quiz-animation').remove(); // fix, ponieważ sentinel duplikuje obiekt animacji
+        loadAdobeComposition('EDGE-3094357563', 'q1');
+    }
+
+
+    var listenCycleProceed = function() {
+        $(rootSelector).on('cycle-before', function(e, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+            var adobeName = $(incomingSlideEl).data().anim;
+            var adobePName = $(incomingSlideEl).data().animQ;
+
+            if (adobeName && adobePName) {
+                loadAdobeComposition(adobeName, adobePName);
+            }
+        });
+    };
+
+
+    var loadAdobeComposition = function(name, projectname) {
+        console.log(name, projectname);
+
+        AdobeEdge.loadComposition(projectname, name, {
+            scaleToFit: "none",
+            centerStage: "none",
+            minW: "0px",
+            maxW: "undefined",
+            width: "100%",
+            height: "720px"
+        }, {"dom":{}}, {"dom":{}});
     };
 
 
@@ -250,19 +283,13 @@ var quiz = (function() {
                 });
             }
 
+            //var tempCurrSlide = $(rootSelector).data('cycle.opts').currSlide;
+            //loadAdobeComposition(tempCurrSlide.data().anim, tempCurrSlide.data().animQ);
+
             $('html,body').animate({
                 scrollTop: ($(rootSelector).offset().top),
                 easing: 'easeOutCubic'
             }, 600, function() {
-
-	          		AdobeEdge.loadComposition('q1', 'EDGE-3094357563', {
-								    scaleToFit: "none",
-								    centerStage: "none",
-								    minW: "0px",
-								    maxW: "undefined",
-								    width: "100%",
-								    height: "720px"
-								}, {"dom":{}}, {"dom":{}});
 
             });
         });

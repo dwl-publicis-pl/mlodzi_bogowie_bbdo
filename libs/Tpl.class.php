@@ -42,7 +42,7 @@ class Tpl {
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
             <link rel="stylesheet" href="css/main.20151110.css">
     
-            <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+            <script src="js/vendor/modernizr-respond-1.4.2.min.js"></script>
             <?php
             // biblioteka Adobe Edge tylko na niektórych stronach
             if (App::currentPage() == 'index') {
