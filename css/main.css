@@ -471,6 +471,15 @@ _:-ms-input-placeholder, :root .btn-selector span {
     font-size: .8rem;
 }
 
+#js-rnCalc-chart-img {
+    visibility: hidden;
+}
+
+.chart-lines {
+    margin-top: 0 !important;
+    position: absolute;
+}
+
 .btn-selector:focus,
 .btn-selector:hover {
     background-color: #e68685;

@@ -146,7 +146,7 @@ Tpl::nav();
                     Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.
                 </p>
 
-                <a href="https://formularz.prudential.pl/lead?lid=45916" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=45916" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/45916">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

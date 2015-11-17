@@ -154,7 +154,7 @@ Tpl::nav();
                 <p>
                     Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.
                 </p>
-                <a href="https://formularz.prudential.pl/lead?lid=46929" class="btn btn-primary btn-white"target="_blank">Zadbaj o ubezpieczenie <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46929" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46929">Zadbaj o ubezpieczenie <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

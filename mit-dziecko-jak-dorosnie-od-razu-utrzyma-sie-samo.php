@@ -145,7 +145,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Zadbaj o przyszłość</div>
-                <a href="https://formularz.prudential.pl/lead?lid=46722" class="btn btn-primary btn-white" target="_blank">Zaplanuj dziecku start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46722" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46722">Zaplanuj dziecku start <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

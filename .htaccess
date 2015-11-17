@@ -23,10 +23,10 @@ RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
 RewriteRule ^(.*)$ http://mlodzibogowie.pl/$1 [R=301,L]
 
 
-#AuthType Basic
-#AuthName "Dostep zastrzezony"
-#AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
-#Require valid-user
+AuthType Basic
+AuthName "Dostep zastrzezony"
+AuthUserFile /home/www/mlodzibogowie.pl/.htpasswd
+Require valid-user
 
 # Apache Server Configs v2.11.0 | MIT License
 # https://github.com/h5bp/server-configs-apache

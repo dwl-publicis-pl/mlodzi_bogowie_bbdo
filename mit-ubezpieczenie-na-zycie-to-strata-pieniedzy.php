@@ -207,7 +207,7 @@ Tpl::nav();
                     pomoże Ci przygotować dokładny plan oszczędnościowy i&nbsp;zadbać o bezpieczną przyszłość.
                 </p>
                 <p>
-                    <a href="https://formularz.prudential.pl/lead?lid=46513" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a href="https://formularz.prudential.pl/lead?lid=46513" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46513">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </p>
             </div>
         </div>

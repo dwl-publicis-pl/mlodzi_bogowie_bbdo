@@ -296,7 +296,7 @@ Tpl::nav();
 
                 <div id="rNCalc-chart">
                     <div id="rnCalc-chart-img">
-                        <img src="img/calc-chart.png" alt="" class="img-responsive">
+                        <img src="img/calc-chart.png" alt="" class="img-responsive" id="js-rnCalc-chart-img">
 
                         <div id="nRCalc-results">
                             <div id="nRCalcExpenses" class="coins-stack">
@@ -374,7 +374,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Zacznij działać!</div>
-                <a href="https://formularz.prudential.pl/lead?lid=46388" class="btn btn-primary btn-white" target="_blank">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46388" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46388">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

@@ -160,8 +160,8 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <!--<div id="Stage1" class="EDGE-3094357563"></div>-->
-                    <img src="img/quiz/q1-static.png" alt="">
+                    <div id="Stage1" class="EDGE-3094357563"></div>
+<!--                     <img src="img/quiz/q1-static.png" alt=""> -->
                 </div>
             </div>
         </div>
@@ -956,7 +956,7 @@ Tpl::nav();
             <div class="text-center">
                 <span class="btn-near-cta">Zrób pierwszy krok!</span>
                 <p>Umów się z naszym Konsultantem. Pomożemy Ci wybrać rozwiązanie dopasowane do Twoich potrzeb i celów.</p>
-                <a href="https://formularz.prudential.pl/lead?lid=45397" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=45397" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/45397">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

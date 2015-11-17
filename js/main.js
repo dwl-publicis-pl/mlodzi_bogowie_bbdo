@@ -45,7 +45,7 @@ $('[data-trigger]').on('click', function(e) {
             $('#jumbotron-video video').prop('controls', true);
 
             if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
-                //ga('send', 'event', 'video', 'Film na głównej');
+                ga('send', 'event', 'video', 'Film na głównej');
             }
 
             v.onended = function(e) {
@@ -63,7 +63,11 @@ $('[data-trigger]').on('click', function(e) {
 
         case 'quiz-restart':
             quiz.restart();
-        break;
+            break;
+
+        case 'versatag-click':
+            versaTagObj.generateRequest($(this).data().url);
+            break;
 
         default:
             console.log('no action triggered');
@@ -141,15 +145,7 @@ var quiz = (function() {
                 printErrors();
             }
         });
-        
-        /*AdobeEdge.loadComposition('q1', 'EDGE-3094357563', {
-				    scaleToFit: "none",
-				    centerStage: "none",
-				    minW: "0px",
-				    maxW: "undefined",
-				    width: "100%",
-				    height: "720px"
-				}, {"dom":{}}, {"dom":{}});*/
+
     };
 
 
@@ -257,7 +253,18 @@ var quiz = (function() {
             $('html,body').animate({
                 scrollTop: ($(rootSelector).offset().top),
                 easing: 'easeOutCubic'
-            }, 600);
+            }, 600, function() {
+
+	          		AdobeEdge.loadComposition('q1', 'EDGE-3094357563', {
+								    scaleToFit: "none",
+								    centerStage: "none",
+								    minW: "0px",
+								    maxW: "undefined",
+								    width: "100%",
+								    height: "720px"
+								}, {"dom":{}}, {"dom":{}});
+
+            });
         });
 
         // GA event
@@ -471,10 +478,13 @@ var retirementNecessitiesCalculator = (function() {
         ],
         maxEarningsLength = 8,
         moneySufix = ' PLN',
-        doNotInsertCoinsBelow = 992; // poniżej tej szerokości nie będą dodawane monety (mobile z założenia)
+        doNotInsertCoinsBelow = 992, // poniżej tej szerokości nie będą dodawane monety (mobile z założenia)
+        enableChartAnimation = false;
     var htmlSumElement = $('#calc-2-sum'),
         htmlRetirementSumElement = $('#calc-2-retirement-value'),
         dataTxtResultSelectorName = 'data-rNCalc-result',
+        chartUpperContainer = '#rnCalc-chart-img',
+        chartImgSelector = '#js-rnCalc-chart-img',
         selectedFinalTextElement,
         backBtnSelector = '.rnCalc-results-page button',
         btnResetSelector = '[data-calc-trigger="reset-calc"]',
@@ -500,7 +510,8 @@ var retirementNecessitiesCalculator = (function() {
         maxCoinTranslate = 17,
         coinsSpeed = 0.821, // [s]
         coinEdgeHeight = 16,
-        chartLabelsVisible = false;
+        chartLabelsVisible = false,
+        chartUpperContainerHeight = 0;
     var coinsAmountExpenses = 0;
     var coinsAmountEarnings = 0;
     var resetOnBack = false; // resetuje cały kalkulator przy wciśnięciu "oblicz ponownie", czyli usuwa aktualnie wybrane pozycje
@@ -830,7 +841,63 @@ var retirementNecessitiesCalculator = (function() {
         coinsAmountEarnings = Math.max(1, coinsAmountEarnings);
         coinsAmountExpenses = Math.max(1, coinsAmountExpenses);
 
-        //console.log(Math.floor(percentRetirementToNecessities) + '%', coinsAmountExpenses, coinsAmountEarnings);
+        //console.log(Math.floor(percentRetirementToNecessities) + '%', retirementValue, necessitiesSum, coinsAmountExpenses, coinsAmountEarnings);
+
+        // jeśli emerytura wynosi mniej niż N emerytury, wtedy jest animacja linii i poszczególnych grup wydatków,
+        // w przeciwnym wypadku jest zbyt ciasno
+
+        if (enableChartAnimation && percentRetirementToNecessities < 190) {
+            //wymiary kontenera jak wymiary obrazka
+            chartUpperContainerHeight = $(chartImgSelector).outerHeight(true);
+            chartCoinsContainerHeight = $(nRCalcExpensesElement).height();
+
+            $(chartUpperContainer).css({
+                height: chartUpperContainerHeight,
+                width: $(chartImgSelector).outerWidth(true)
+            });
+
+            $(chartImgSelector).remove(); // usunięcie IMG z statycznym wykresem
+
+            var search = $(rootElement).find('[data-selected="true"]');
+            var groups = {};
+            var spaceUsed = 0;
+            var g, dValue, perc, pos, i;
+            var elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            spaceUsed = elementsDiffHeight;
+            elementsDiffHeight = elementsDiffHeight - 141;
+
+            if (search) {
+                var t = 0;
+
+                $.each(search, function(i, found) {
+                    g = $(found).attr('data-group');
+                    dValue = $(found).attr('data-value');
+                    perc = dValue / necessitiesSum;
+                    pos = ($(nRCalcExpensesElement).height() - 141) * perc;
+                    i = pos;
+                    pos = pos + elementsDiffHeight + spaceUsed;
+
+                    groups[t] = {
+                        group: g,
+                        value: dValue,
+                        percent: perc,
+                        position: pos
+                    };
+
+                    spaceUsed = spaceUsed + i;
+                    t++;
+                });
+            }
+
+            //console.table(groups);
+
+            $.each(groups, function(n, groupChartData) {
+                $(chartUpperContainer).prepend('<img src="img/result-lines/line-' + groupChartData.group + '.png" alt="" class="img-responsive chart-lines" style="bottom: ' + groupChartData.position + 'px">');
+            })
+
+        } else {
+            $(chartImgSelector).css({visibility: 'visible'});
+        }
 
         var randomHorzTransform;
         var i = 0;
