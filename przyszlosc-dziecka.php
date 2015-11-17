@@ -151,7 +151,7 @@ Tpl::nav();
                     oszczędnościowy i zadbać o bezpieczną przyszłość Twojej pociechy.
                 </p>
 
-                <a href="https://formularz.prudential.pl/lead?lid=45827" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=45827" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/45827">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

@@ -296,7 +296,7 @@ Tpl::nav();
 
                 <div id="rNCalc-chart">
                     <div id="rnCalc-chart-img">
-                        <img src="img/calc-chart.png" alt="" class="img-responsive">
+                        <img src="img/calc-chart.png" alt="" class="img-responsive" id="js-rnCalc-chart-img">
 
                         <div id="nRCalc-results">
                             <div id="nRCalcExpenses" class="coins-stack">
@@ -359,7 +359,7 @@ Tpl::nav();
                                     <p>
                                         Trzymamy kciuki, żebyś nigdy nie musiał sobie niczego odmawiać. Ale co będzie, jeśli coś pójdzie nie tak? Czy masz
                                         pewność, że zawsze będziesz dobrze zarabiać? A co, jeśli w przyszłości politycy postanowią przeorganizować
-                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o lepszą przyszłość dla siebie i bliskich.
+                                        system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z&nbsp;nami o&nbsp;lepszą przyszłość dla siebie i&nbsp;bliskich.
                                     </p>
                                 </div>
                             </div>
@@ -374,10 +374,14 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Zacznij działać!</div>
-                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46388" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46388">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>

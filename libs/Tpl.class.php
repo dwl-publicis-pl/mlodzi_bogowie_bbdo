@@ -3,8 +3,7 @@ class Tpl {
     public static function htmlHead($bodyClass = null, array $options = ['title' => null, 'desc' => ''])
     {
         $currentPage = App::currentPage();
-        $bodyClass = null;
-        
+
         if (!empty($bodyClass)) {
             $bodyClass = ' class="' . $bodyClass . '"';
         }
@@ -39,11 +38,19 @@ class Tpl {
             <meta property="og:description" content="<?php echo $desc; ?>" />
             <meta property="og:image" content="<?php echo App::APP_URL; ?>img/fb-img.png" />
 
-            <link rel="stylesheet" href="css/bootstrap.min.css">
-            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="css/main.css">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/main.20151110.css">
     
             <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+            <?php
+            // biblioteka Adobe Edge tylko na niektórych stronach
+            if (App::currentPage() == 'index') {
+                ?>
+                <script src="//animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js"></script>
+                <?php
+            }
+            ?>
         </head>
 
         <body<?php echo $bodyClass; ?>>
@@ -55,7 +62,6 @@ class Tpl {
                     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-TH6V2V');</script>
             <!-- End Google Tag Manager -->
-
         <?php
     }
 
@@ -150,21 +156,20 @@ class Tpl {
                                   <li class="menu-nasze-rozwiazania">
                                     <div class="row">
                                       <div class="col-sm-6 col-sm-offset-1">
+                                          <div class="solution solution-1 clearfix">
+                                              <a href="przyszlosc-dziecka"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
+                                              <span class="menu-span">Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
+                                          </div>
 
-                                              <div class="solution solution-1 clearfix">
-                                                  <a href="przyszlosc-dziecka"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
-                                                  <span class="menu-span">Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
-                                              </div>
+                                          <div class="solution solution-2 clearfix">
+                                              <a href="emerytura-bez-obaw"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
+                                              <span class="menu-span">Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
+                                          </div>
 
-                                              <div class="solution solution-2 clearfix">
-                                                  <a href="emerytura-bez-obaw"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
-                                                  <span class="menu-span">Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
-                                              </div>
-
-                                              <div class="solution solution-3 clearfix">
-                                                  <a href="ochrona-zdrowia"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
-                                                  <span class="menu-span">Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</span></a>
-                                              </div>
+                                          <div class="solution solution-3 clearfix">
+                                              <a href="ochrona-zdrowia"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
+                                              <span class="menu-span">Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</span></a>
+                                          </div>
                                       </div>
                                     </div>
                                   </li>
@@ -225,6 +230,75 @@ class Tpl {
 
         <?php
     }
+
+
+    public function products()
+    {
+        ?>
+
+        <div class="row row-margins">
+            <header>
+                <h1>Zadbaj o przyszłość</h1>
+                <hr>
+                <p>Wskaż, co jest dla Ciebie ważne, a&nbsp;my pomożemy Ci zadbać o&nbsp;przyszłość Twoją i&nbsp;Twoich bliskich.</p>
+            </header>
+        </div>
+
+        <div class="row row-padded row-margins row-products">
+            <div class="col-xs-12 col-md-4">
+                <figure>
+                    <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
+                    <?php
+                    /*<figcaption>
+                        <img src="img/bulb.png" alt="">
+                        <div>
+                            <a href="">
+                                Przyszłość<br>
+                                dziecka
+                            </a>
+                        </div>
+                    </figcaption>
+                    */
+                    ?>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure>
+                    <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                    <?php
+                    /*<figcaption>
+                        <img src="img/icon-sun.png" alt="">
+                        <div>
+                            <a href="emerytura-bez-obaw">
+                                Emerytura<br>
+                                bez obaw
+                            </a>
+                        </div>
+                    </figcaption>*/
+                    ?>
+                </figure>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <figure>
+                    <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
+                    <?php
+                    /*<figcaption>
+                        <img src="img/icon-hearth.png" alt="">
+                        <div>
+                            <a href="">
+                                Ochrona<br>
+                                życia
+                            </a>
+                        </div>
+                    </figcaption>*/
+                    ?>
+                </figure>
+            </div>
+        </div>
+
+        <?php
+    }
+
     
     
     public static function footer()
@@ -276,13 +350,13 @@ class Tpl {
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        
-        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.20151110.js"></script>
         
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

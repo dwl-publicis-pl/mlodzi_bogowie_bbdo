@@ -131,7 +131,7 @@ Tpl::nav();
 
                         <p>
                             Pieniądze, które otrzymasz na koniec okresu ubezpieczenia, nie podlegają opodatkowaniu
-                            19–procentowym podatkiem od zysków kapitałowych  (zgodnie z aktualnie obowiązującymi przepisami prawa
+                            19–procentowym podatkiem od zysków kapitałowych (zgodnie z aktualnie obowiązującymi przepisami prawa
                             na dzień 21.10.2015 r.).
                         </p>
                     </div>
@@ -149,7 +149,7 @@ Tpl::nav();
                     Nasz konsultant pomoże Ci przygotować dokładny plan oszczędnościowy i zadbać o bezpieczną przyszłość.
                 </p>
 
-                <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=45788" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/45788">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

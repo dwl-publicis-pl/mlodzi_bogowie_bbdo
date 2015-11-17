@@ -1,0 +1,9 @@
+
+(function(compId){var _=null,y=true,n=false,or='-webkit-transform-origin',e8='${q7-2}',x3='6.0.0.400',x2='5.0.0',x4='rgba(0,0,0,0)',oo='-o-transform-origin',g='image',x9='@@0@@% @@1@@%',om='-ms-transform-origin',oz='-moz-transform-origin',ot='transform-origin',x7='rgba(255,255,255,0)',on='msTransformOrigin',x1='6.0.0',rz='rotateZ',i='none';var g6='q7-2.png',g5='q7-1.png';var im='img/quiz/',aud='media/',vid='media/',js='js/',fonts={},opts={'gAudioPreloadPreference':'auto','gVideoPreloadPreference':'auto'},resources=[],scripts=[],symbols={"stage":{v:x1,mv:x2,b:x3,stf:i,cg:i,rI:n,cn:{dom:[{id:'q7-1',t:g,r:['auto','-11px','747px','742px','0px','auto'],f:[x4,im+g5,'0px','0px']},{id:'q7-2',t:g,r:['auto','54px','366px','257px','181px','auto'],f:[x4,im+g6,'0px','0px'],tf:[[],['-3']]}],style:{'${Stage}':{isStage:true,r:[undefined,undefined,'100%','720px'],overflow:'hidden',f:[x7]}}},tt:{d:2000,a:y,data:[["eid4",rz,0,1000,"easeInOutQuad",e8,'-3deg','3deg'],["eid6",rz,1000,1000,"easeInOutQuad",e8,'3deg','-3deg'],["eid7",or,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}],["eid23",oz,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}],["eid24",om,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}],["eid25",on,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}],["eid26",oo,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}],["eid27",ot,0,0,"easeInOutQuad",e8,[46.46,10.2],[46.46,10.2],{vt:x9}]]}}};AdobeEdge.registerCompositionDefn(compId,symbols,fonts,scripts,resources,opts);})("EDGE-3184706548");
+(function($,Edge,compId){var Composition=Edge.Composition,Symbol=Edge.Symbol;Edge.registerEventBinding(compId,function($){
+//Edge symbol: 'stage'
+(function(symbolName){Symbol.bindTriggerAction(compId,symbolName,"Default Timeline",2000,function(sym,e){sym.play(0);});
+//Edge binding end
+})("stage");
+//Edge symbol end:'stage'
+})})(AdobeEdge.$,AdobeEdge,"EDGE-3184706548");

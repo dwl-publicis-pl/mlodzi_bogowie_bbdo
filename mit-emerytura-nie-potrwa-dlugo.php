@@ -63,20 +63,6 @@ Tpl::nav();
                                 o blisko 20 lat dłużej niż nasi pradziadkowie!
                             </p>
                         </div>
-
-                        <!--<div class="col-xs-9 col-xs-height">
-                            <h2>Coraz <strong>dłużej żyjemy</strong></h2>
-
-                            <p>
-                                Tempo tych zmian może być zaskakujące: wg danych
-                                GUS od połowy XX wieku średnia długość życia w Polsce
-                                wydłużyła się prawie o 30%! To znaczy, że żyjemy
-                                o blisko 20 lat dłużej niż nasi pradziadkowie!
-                            </p>
-                        </div>
-                        <div class="col-xs-3 col-xs-height col-xs-middle">
-                            <img src="img/icon-sock-graph.png" alt="" class="img-responsive">
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -155,10 +141,14 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Jeżeli nie chcesz przez kilkanaście lat się martwić, to...</div>
-                <a href="emerytura-bez-obaw" class="btn btn-primary btn-white" target="_blank">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46210" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46210">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>

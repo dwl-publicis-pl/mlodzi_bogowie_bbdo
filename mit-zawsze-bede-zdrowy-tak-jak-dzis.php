@@ -144,10 +144,14 @@ Tpl::nav();
                 <p>
                     Umów się z nami na niezobowiązujące spotkanie w wybranym przez Ciebie miejscu i czasie.
                 </p>
-                <a href="ochrona-zdrowia" class="btn btn-primary btn-white">Skontaktuj się z nami</a>
+                <a href="https://formularz.prudential.pl/lead?lid=46818" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46818">Skontaktuj się z nami</a>
             </div>
         </div>
     </div>
+
+    <?php
+    Tpl::products();
+    ?>
 
     <div class="row row-padded-vertical">
         <header>
