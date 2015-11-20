@@ -790,7 +790,7 @@ var retirementNecessitiesCalculator = (function() {
 
         var select;
 
-        if (percentRetirementToNecessities >= 100) {
+        if (percentRetirementToNecessities >= 99) {
             select = 3;
         } else if (percentRetirementToNecessities > 66) {
             select = 2;
@@ -862,11 +862,11 @@ var retirementNecessitiesCalculator = (function() {
             coinsAmountExpenses = coinsInContainer;
             coinsAmountEarnings = coinsInContainer;
         } else if (percentRetirementToNecessities >= 104) {
-            coinsAmountExpenses = Math.floor((coinsInContainer * 100) / percentRetirementToNecessities);
+            coinsAmountExpenses = Math.round((coinsInContainer * 100) / percentRetirementToNecessities);
             coinsAmountEarnings = coinsInContainer;
         } else if (percentRetirementToNecessities <= 95) {
             coinsAmountExpenses = coinsInContainer;
-            coinsAmountEarnings = Math.floor(coinsInContainer * percentRetirementToNecessities / 100);
+            coinsAmountEarnings = Math.round(coinsInContainer * percentRetirementToNecessities / 100);
         }
 
         coinsAmountEarnings = Math.max(1, coinsAmountEarnings);
@@ -877,34 +877,33 @@ var retirementNecessitiesCalculator = (function() {
         // jeśli emerytura wynosi mniej niż N% wydatków, wtedy jest animacja linii i poszczególnych grup wydatków,
         // w przeciwnym wypadku jest zbyt ciasno
         if (enableChartAnimation && percentRetirementToNecessities < 170) {
-            //wymiary kontenera jak wymiary obrazka
-            /*chartUpperContainerHeight = $(chartImgSelector).outerHeight(true);
-            chartCoinsContainerHeight = $(nRCalcExpensesElement).height();
-
-            $(chartUpperContainer).css({
-                height: chartUpperContainerHeight,
-                width: $(chartImgSelector).outerWidth(true)
-            });
-
-            $(chartImgSelector).remove(); // usunięcie IMG z statycznym wykresem
-            */
-
             var search = $(rootElement).find('[data-selected="true"]');
             var groups = {};
             var spaceUsed = 0;
             var g, dValue, perc, pos, i;
-            var elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            var elementsDiffHeight = 0;
             var minChartBarHeight = 30;
             var overHeightSum = 0;
             var maxGroupIterator;
             var maxGroupHeight = 0;
 
+            if (coinsAmountExpenses < coinsAmountEarnings) {
+                elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcRetirementValueElement).height();
+            } else {
+                elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            }
+
             spaceUsed = elementsDiffHeight;
+
             elementsDiffHeight = elementsDiffHeight - 126; //poprawka na kontener wewnętrzny
 
             if (search) {
                 var t = 0;
                 var containerHeight = coinsAmountExpenses * 17.45; //wys monety
+
+                if (coinsAmountExpenses < coinsAmountEarnings) {
+                    containerHeight += 17; // kind of magic
+                }
 
                 $.each(search, function(i, found) {
                     g = $(found).attr('data-group');

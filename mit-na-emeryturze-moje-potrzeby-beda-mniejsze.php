@@ -289,7 +289,6 @@ Tpl::nav();
 
         <section class="row rnCalc-results-page">
             <div class="col-xs-12">
-
                 <div id="rNCalc-chart">
                     <div id="rnCalc-chart-img">
                         <img src="img/calc-chart.png" alt="" class="img-responsive" id="js-rnCalc-chart-img">

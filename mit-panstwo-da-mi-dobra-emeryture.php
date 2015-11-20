@@ -343,14 +343,9 @@ Tpl::nav();
 
             <section class="row rnCalc-results-page">
                 <div class="col-xs-12">
-                    <button class="btn btn-left btn-red collapse hidden-xs hidden-sm" data-calc-trigger="reset-calc">
-                        <img src="img/icon-arrow-left-red.png" alt="">
-                        oblicz<br> jeszcze raz
-                    </button>
-
                     <div id="rNCalc-chart">
                         <div id="rnCalc-chart-img">
-                            <img src="img/calc-chart.png" alt="" class="img-responsive">
+                            <img src="img/calc-chart.png" alt="" class="img-responsive" id="js-rnCalc-chart-img">
 
                             <div id="nRCalc-results">
                                 <div id="nRCalcExpenses" class="coins-stack">
@@ -366,7 +361,6 @@ Tpl::nav();
                                             <sup class="pull-right"><a href="#przypisy">3</a></sup>
                                             <img src="img/txt-twoja-szacunkowa-miesieczna-emerytura.png" alt="Twoja szacunkowa miesięczna emerytura" class="img-responsive">
                                         </div>
-
                                         <div class="calc-2-sum-container"><span id="calc-2-retirement-value">1000</span> zł</div>
                                     </div>
                                 </div>
@@ -374,7 +368,12 @@ Tpl::nav();
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row rNCalc-row-text-info">
+                        <button class="btn btn-left btn-red btn-top collapse" data-calc-trigger="reset-calc">
+                            <img src="img/icon-arrow-left-red.png" alt="">
+                            oblicz<br> jeszcze raz
+                        </button>
+
                         <div class="col-xs-12 col-md-6 col-md-offset-3">
                             <div class="list-unstyled rNCalc-text-info">
                                 <div data-rNCalc-result="1">
@@ -394,7 +393,7 @@ Tpl::nav();
                                 <div data-rNCalc-result="2">
                                     <div class="calc-headline">
                                         <div class="calc-headline-header">
-                                            Ciężkie czasy nadchodzą, a&nbsp;Ty jesteś <span>średnio gotowy</span>.
+                                            Ciężkie czasy nadchodzą, a Ty jesteś <span>średnio gotowy</span>.
                                         </div>
 
                                         <p>
@@ -408,24 +407,17 @@ Tpl::nav();
                                 <div data-rNCalc-result="3">
                                     <div class="calc-headline">
                                         <div class="calc-headline-header">
-                                            Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w&nbsp;bardzo ciemnych barwach</span>.
+                                            Wygląda na to, że należysz do tej grupki osób, których <span>przyszłość nie rysuje się w bardzo ciemnych barwach</span>.
                                         </div>
 
                                         <p>
                                             Trzymamy kciuki, żebyś nigdy nie musiał sobie niczego odmawiać. Ale co będzie, jeśli coś pójdzie nie tak? Czy masz
-                                            pewność, że zawsze będziesz dobrze zarabiać? A&nbsp;co, jeśli w przyszłości politycy postanowią przeorganizować
-                                            system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z nami o&nbsp;lepszą przyszłość dla siebie i&nbsp;bliskich.
+                                            pewność, że zawsze będziesz dobrze zarabiać? A co, jeśli w przyszłości politycy postanowią przeorganizować
+                                            system emerytalny na Twoją niekorzyść? Zawsze warto być przygotowanym. Lepiej zadbaj z&nbsp;nami o&nbsp;lepszą przyszłość dla siebie i&nbsp;bliskich.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <button class="btn btn-left btn-red collapse visible-xs visible-sm" data-calc-trigger="reset-calc">
-                                <img src="img/icon-arrow-left-red.png" alt="">
-                                oblicz<br> jeszcze raz
-                            </button>
                         </div>
                     </div>
                 </div>
