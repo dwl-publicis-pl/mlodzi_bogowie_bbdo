@@ -153,7 +153,7 @@ var quiz = (function() {
     var initFirstAnimation = function() {
         $('.cycle-sentinel .quiz-animation').remove(); // fix, ponieważ sentinel duplikuje obiekt animacji
         loadAdobeComposition('EDGE-3094357563', 'q1');
-    }
+    };
 
 
     var listenCycleProceed = function() {
@@ -169,7 +169,7 @@ var quiz = (function() {
 
 
     var loadAdobeComposition = function(name, projectname) {
-        console.log(name, projectname);
+        //console.log(name, projectname);
 
         AdobeEdge.loadComposition(projectname, name, {
             scaleToFit: "none",
@@ -506,7 +506,7 @@ var retirementNecessitiesCalculator = (function() {
         maxEarningsLength = 8,
         moneySufix = ' PLN',
         doNotInsertCoinsBelow = 992, // poniżej tej szerokości nie będą dodawane monety (mobile z założenia)
-        enableChartAnimation = false;
+        enableChartAnimation = true;
     var htmlSumElement = $('#calc-2-sum'),
         htmlRetirementSumElement = $('#calc-2-retirement-value'),
         dataTxtResultSelectorName = 'data-rNCalc-result',
@@ -533,8 +533,8 @@ var retirementNecessitiesCalculator = (function() {
         nRCalcRetirementValueElement = '#nRCalcRetirementValue',
         rnCalcSumTxtElement = '.rnCalcSumTxt',
         rnCalcRetirementSumTxtElement = '.rnCalcRetirementSumTxt',
-        minCoinTranslate = -17,
-        maxCoinTranslate = 17,
+        minCoinTranslate = -14,
+        maxCoinTranslate = 14,
         coinsSpeed = 0.821, // [s]
         coinEdgeHeight = 16,
         chartLabelsVisible = false,
@@ -543,6 +543,8 @@ var retirementNecessitiesCalculator = (function() {
     var coinsAmountEarnings = 0;
     var resetOnBack = false; // resetuje cały kalkulator przy wciśnięciu "oblicz ponownie", czyli usuwa aktualnie wybrane pozycje
     var previousOrientation = window.orientation;
+    var chartColors = ['#bed0e0', '#dae4ed', '#d8d8d8', '#e8e8e8', '#eb9f9e', '#f4cccc', '#fae6e6'];
+    var groupsNames = ['Lokum na emeryturze', 'Codzienne wydatki', 'Opieka medyczna', 'Transport', 'Prezenty dla wnuków', 'Podróże', 'Hobby'];
 
 
     var init = function() {
@@ -674,6 +676,7 @@ var retirementNecessitiesCalculator = (function() {
 
         $(nRCalcExpensesElement + ' > img').remove();
         $(nRCalcRetirementValueElement + ' > img').remove();
+        $('.js-img-chart-block').remove();
 
         if (resetOnBack) {
             clickedElement = null;
@@ -692,6 +695,7 @@ var retirementNecessitiesCalculator = (function() {
         $('[' + dataTxtResultSelectorName + ']').removeClass('active activeOpacity');
         $(rnCalcSumTxtElement).removeClass('active').removeAttr('style');
         $(rnCalcRetirementSumTxtElement).removeClass('active').removeAttr('style');
+        $(chartImgSelector).css({visibility: ''});
 
         return true;
     };
@@ -870,12 +874,11 @@ var retirementNecessitiesCalculator = (function() {
 
         //console.log(Math.floor(percentRetirementToNecessities) + '%', retirementValue, necessitiesSum, coinsAmountExpenses, coinsAmountEarnings);
 
-        // jeśli emerytura wynosi mniej niż N emerytury, wtedy jest animacja linii i poszczególnych grup wydatków,
+        // jeśli emerytura wynosi mniej niż N% wydatków, wtedy jest animacja linii i poszczególnych grup wydatków,
         // w przeciwnym wypadku jest zbyt ciasno
-
-        if (enableChartAnimation && percentRetirementToNecessities < 190) {
+        if (enableChartAnimation && percentRetirementToNecessities < 170) {
             //wymiary kontenera jak wymiary obrazka
-            chartUpperContainerHeight = $(chartImgSelector).outerHeight(true);
+            /*chartUpperContainerHeight = $(chartImgSelector).outerHeight(true);
             chartCoinsContainerHeight = $(nRCalcExpensesElement).height();
 
             $(chartUpperContainer).css({
@@ -884,31 +887,52 @@ var retirementNecessitiesCalculator = (function() {
             });
 
             $(chartImgSelector).remove(); // usunięcie IMG z statycznym wykresem
+            */
 
             var search = $(rootElement).find('[data-selected="true"]');
             var groups = {};
             var spaceUsed = 0;
             var g, dValue, perc, pos, i;
             var elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            var minChartBarHeight = 30;
+            var overHeightSum = 0;
+            var maxGroupIterator;
+            var maxGroupHeight = 0;
+
             spaceUsed = elementsDiffHeight;
-            elementsDiffHeight = elementsDiffHeight - 141;
+            elementsDiffHeight = elementsDiffHeight - 126; //poprawka na kontener wewnętrzny
 
             if (search) {
                 var t = 0;
+                var containerHeight = coinsAmountExpenses * 17.45; //wys monety
 
                 $.each(search, function(i, found) {
                     g = $(found).attr('data-group');
                     dValue = $(found).attr('data-value');
                     perc = dValue / necessitiesSum;
-                    pos = ($(nRCalcExpensesElement).height() - 141) * perc;
+                    pos =  containerHeight * perc;
                     i = pos;
-                    pos = pos + elementsDiffHeight + spaceUsed;
+
+                    if (i > maxGroupHeight) {
+                        maxGroupIterator = t;
+                        maxGroupHeight = i;
+                    }
+
+                    if (i < minChartBarHeight) {
+                        var h = minChartBarHeight - i;
+                        i = minChartBarHeight;
+                        overHeightSum += h;
+                        //console.log(t, h, overHeightSum);
+                    }
+
+                    pos = elementsDiffHeight + spaceUsed;
 
                     groups[t] = {
                         group: g,
                         value: dValue,
                         percent: perc,
-                        position: pos
+                        position: pos,
+                        height: i
                     };
 
                     spaceUsed = spaceUsed + i;
@@ -916,10 +940,23 @@ var retirementNecessitiesCalculator = (function() {
                 });
             }
 
+            if (overHeightSum > 0) {
+                var x = false;
+
+                $.each(groups, function(n, groupChartData) {
+                    if (n == maxGroupIterator) {
+                        groups[n]['height'] -= overHeightSum;
+                        x = true;
+                    } else if (x == true) {
+                        groups[n]['position'] -= overHeightSum;
+                    }
+                });
+            }
+
             //console.table(groups);
 
             $.each(groups, function(n, groupChartData) {
-                $(chartUpperContainer).prepend('<img src="img/result-lines/line-' + groupChartData.group + '.png" alt="" class="img-responsive chart-lines" style="bottom: ' + groupChartData.position + 'px">');
+                $(chartUpperContainer).prepend('<div class="js-img-chart-block chart-block" style="background-color: ' + chartColors[n] + '; position: absolute; bottom: ' + (groupChartData.position) + 'px; line-height: ' + groupChartData.height + 'px; width: 100%; height: ' + groupChartData.height + 'px">' + groupsNames[n] + '</div>');
             })
 
         } else {
