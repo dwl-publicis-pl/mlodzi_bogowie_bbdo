@@ -289,11 +289,6 @@ Tpl::nav();
 
         <section class="row rnCalc-results-page">
             <div class="col-xs-12">
-                <button class="btn btn-left btn-red collapse" data-calc-trigger="reset-calc">
-                    <img src="img/icon-arrow-left-red.png" alt="">
-                    oblicz<br> jeszcze raz
-                </button>
-
                 <div id="rNCalc-chart">
                     <div id="rnCalc-chart-img">
                         <img src="img/calc-chart.png" alt="" class="img-responsive" id="js-rnCalc-chart-img">
@@ -319,7 +314,12 @@ Tpl::nav();
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row rNCalc-row-text-info">
+                    <button class="btn btn-left btn-red btn-top collapse" data-calc-trigger="reset-calc">
+                        <img src="img/icon-arrow-left-red.png" alt="">
+                        oblicz<br> jeszcze raz
+                    </button>
+
                     <div class="col-xs-12 col-md-6 col-md-offset-3">
                         <div class="list-unstyled rNCalc-text-info">
                             <div data-rNCalc-result="1">

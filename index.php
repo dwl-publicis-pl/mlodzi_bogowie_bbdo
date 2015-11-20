@@ -120,7 +120,7 @@ Tpl::nav();
          data-cycle-log="false"
          data-cycle-auto-height="calc"
     >
-        <div class="col-xs-12 quiz-q quiz-q-1 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-1 full-height" data-anim="EDGE-3094357563" data-anim-q="q1">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     1/10
@@ -160,13 +160,13 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <div id="Stage1" class="EDGE-3094357563"></div>
+                    <div class="EDGE-3094357563"></div>
 <!--                     <img src="img/quiz/q1-static.png" alt=""> -->
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-2 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-2 full-height" data-anim="EDGE-3105854034" data-anim-q="q2">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     2/10
@@ -206,22 +206,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q2', 'EDGE-3105854034', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage2" class="EDGE-3105854034"></div>
+                    <div class="EDGE-3105854034"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-3 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-3 full-height" data-anim="EDGE-3109339741" data-anim-q="q3">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     3/10
@@ -260,22 +250,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q3', 'EDGE-3109339741', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage3" class="EDGE-3109339741"></div>
+                    <div class="EDGE-3109339741"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-4 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-4 full-height" data-anim="EDGE-3110479232" data-anim-q="q4">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     4/10
@@ -314,22 +294,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q4', 'EDGE-3110479232', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage4" class="EDGE-3110479232"></div>
+                    <div class="EDGE-3110479232"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-5 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-5 full-height" data-anim="EDGE-3111705464" data-anim-q="q5">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     5/10
@@ -368,22 +338,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q5', 'EDGE-3111705464', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage5" class="EDGE-3111705464"></div>
+                    <div class="EDGE-3111705464"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-6 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-6 full-height" data-anim="EDGE-3183171165" data-anim-q="q6">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     6/10
@@ -422,22 +382,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q6', 'EDGE-3183171165', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage6" class="EDGE-3183171165"></div>
+                    <div class="EDGE-3183171165"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-7 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-7 full-height" data-anim="EDGE-3184706548" data-anim-q="q7">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     7/10
@@ -476,22 +426,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q7', 'EDGE-3184706548', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage7" class="EDGE-3184706548"></div>
+                    <div class="EDGE-3184706548"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-8 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-8 full-height" data-anim="EDGE-3185708298" data-anim-q="q8">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     8/10
@@ -530,22 +470,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q8', 'EDGE-3185708298', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage8" class="EDGE-3185708298"></div>
+                    <div class="EDGE-3185708298"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-9 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-9 full-height" data-anim="EDGE-3187922298" data-anim-q="q9">
             <div class="row row-flex-md-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     9/10
@@ -584,22 +514,12 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q9', 'EDGE-3187922298', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage9" class="EDGE-3187922298"></div>
+                    <div class="EDGE-3187922298"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 quiz-q quiz-q-10 full-height">
+        <div class="col-xs-12 quiz-q quiz-q-10 full-height" data-anim="EDGE-3188618048" data-anim-q="q10">
             <div class="row row-flex-md full-height">
                 <div class="col-xs-12 col-md-2 quiz-position">
                     10/10
@@ -638,17 +558,7 @@ Tpl::nav();
                 </div>
 
                 <div class="quiz-animation">
-                    <script>
-                        AdobeEdge.loadComposition('q10', 'EDGE-3188618048', {
-                            scaleToFit: "none",
-                            centerStage: "none",
-                            minW: "0px",
-                            maxW: "undefined",
-                            width: "100%",
-                            height: "720px"
-                        }, {"dom":{}}, {"dom":{}});
-                    </script>
-                    <div id="Stage10" class="EDGE-3188618048"></div>
+                    <div class="EDGE-3188618048"></div>
                 </div>
             </div>
         </div>
