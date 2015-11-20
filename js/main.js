@@ -117,6 +117,8 @@ var quiz = (function() {
     var init = function(initButton) {
         initBtnElement = initButton;
         initRootElement();
+        initFirstAnimation();
+        listenCycleProceed();
         currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         onWindowResize();
 
@@ -145,7 +147,38 @@ var quiz = (function() {
                 printErrors();
             }
         });
+    };
 
+
+    var initFirstAnimation = function() {
+        $('.cycle-sentinel .quiz-animation').remove(); // fix, ponieważ sentinel duplikuje obiekt animacji
+        loadAdobeComposition('EDGE-3094357563', 'q1');
+    };
+
+
+    var listenCycleProceed = function() {
+        $(rootSelector).on('cycle-before', function(e, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag) {
+            var adobeName = $(incomingSlideEl).data().anim;
+            var adobePName = $(incomingSlideEl).data().animQ;
+
+            if (adobeName && adobePName) {
+                loadAdobeComposition(adobeName, adobePName);
+            }
+        });
+    };
+
+
+    var loadAdobeComposition = function(name, projectname) {
+        //console.log(name, projectname);
+
+        AdobeEdge.loadComposition(projectname, name, {
+            scaleToFit: "none",
+            centerStage: "none",
+            minW: "0px",
+            maxW: "undefined",
+            width: "100%",
+            height: "720px"
+        }, {"dom":{}}, {"dom":{}});
     };
 
 
@@ -250,19 +283,13 @@ var quiz = (function() {
                 });
             }
 
+            //var tempCurrSlide = $(rootSelector).data('cycle.opts').currSlide;
+            //loadAdobeComposition(tempCurrSlide.data().anim, tempCurrSlide.data().animQ);
+
             $('html,body').animate({
                 scrollTop: ($(rootSelector).offset().top),
                 easing: 'easeOutCubic'
             }, 600, function() {
-
-	          		AdobeEdge.loadComposition('q1', 'EDGE-3094357563', {
-								    scaleToFit: "none",
-								    centerStage: "none",
-								    minW: "0px",
-								    maxW: "undefined",
-								    width: "100%",
-								    height: "720px"
-								}, {"dom":{}}, {"dom":{}});
 
             });
         });
@@ -479,7 +506,7 @@ var retirementNecessitiesCalculator = (function() {
         maxEarningsLength = 8,
         moneySufix = ' PLN',
         doNotInsertCoinsBelow = 992, // poniżej tej szerokości nie będą dodawane monety (mobile z założenia)
-        enableChartAnimation = false;
+        enableChartAnimation = true;
     var htmlSumElement = $('#calc-2-sum'),
         htmlRetirementSumElement = $('#calc-2-retirement-value'),
         dataTxtResultSelectorName = 'data-rNCalc-result',
@@ -506,8 +533,8 @@ var retirementNecessitiesCalculator = (function() {
         nRCalcRetirementValueElement = '#nRCalcRetirementValue',
         rnCalcSumTxtElement = '.rnCalcSumTxt',
         rnCalcRetirementSumTxtElement = '.rnCalcRetirementSumTxt',
-        minCoinTranslate = -17,
-        maxCoinTranslate = 17,
+        minCoinTranslate = -14,
+        maxCoinTranslate = 14,
         coinsSpeed = 0.821, // [s]
         coinEdgeHeight = 16,
         chartLabelsVisible = false,
@@ -516,6 +543,8 @@ var retirementNecessitiesCalculator = (function() {
     var coinsAmountEarnings = 0;
     var resetOnBack = false; // resetuje cały kalkulator przy wciśnięciu "oblicz ponownie", czyli usuwa aktualnie wybrane pozycje
     var previousOrientation = window.orientation;
+    var chartColors = ['#bed0e0', '#dae4ed', '#d8d8d8', '#e8e8e8', '#eb9f9e', '#f4cccc', '#fae6e6'];
+    var groupsNames = ['Lokum na emeryturze', 'Codzienne wydatki', 'Opieka medyczna', 'Transport', 'Prezenty dla wnuków', 'Podróże', 'Hobby'];
 
 
     var init = function() {
@@ -647,6 +676,7 @@ var retirementNecessitiesCalculator = (function() {
 
         $(nRCalcExpensesElement + ' > img').remove();
         $(nRCalcRetirementValueElement + ' > img').remove();
+        $('.js-img-chart-block').remove();
 
         if (resetOnBack) {
             clickedElement = null;
@@ -665,6 +695,7 @@ var retirementNecessitiesCalculator = (function() {
         $('[' + dataTxtResultSelectorName + ']').removeClass('active activeOpacity');
         $(rnCalcSumTxtElement).removeClass('active').removeAttr('style');
         $(rnCalcRetirementSumTxtElement).removeClass('active').removeAttr('style');
+        $(chartImgSelector).css({visibility: ''});
 
         return true;
     };
@@ -759,7 +790,7 @@ var retirementNecessitiesCalculator = (function() {
 
         var select;
 
-        if (percentRetirementToNecessities >= 100) {
+        if (percentRetirementToNecessities >= 99) {
             select = 3;
         } else if (percentRetirementToNecessities > 66) {
             select = 2;
@@ -831,11 +862,11 @@ var retirementNecessitiesCalculator = (function() {
             coinsAmountExpenses = coinsInContainer;
             coinsAmountEarnings = coinsInContainer;
         } else if (percentRetirementToNecessities >= 104) {
-            coinsAmountExpenses = Math.floor((coinsInContainer * 100) / percentRetirementToNecessities);
+            coinsAmountExpenses = Math.round((coinsInContainer * 100) / percentRetirementToNecessities);
             coinsAmountEarnings = coinsInContainer;
         } else if (percentRetirementToNecessities <= 95) {
             coinsAmountExpenses = coinsInContainer;
-            coinsAmountEarnings = Math.floor(coinsInContainer * percentRetirementToNecessities / 100);
+            coinsAmountEarnings = Math.round(coinsInContainer * percentRetirementToNecessities / 100);
         }
 
         coinsAmountEarnings = Math.max(1, coinsAmountEarnings);
@@ -843,45 +874,64 @@ var retirementNecessitiesCalculator = (function() {
 
         //console.log(Math.floor(percentRetirementToNecessities) + '%', retirementValue, necessitiesSum, coinsAmountExpenses, coinsAmountEarnings);
 
-        // jeśli emerytura wynosi mniej niż N emerytury, wtedy jest animacja linii i poszczególnych grup wydatków,
+        // jeśli emerytura wynosi mniej niż N% wydatków, wtedy jest animacja linii i poszczególnych grup wydatków,
         // w przeciwnym wypadku jest zbyt ciasno
-
-        if (enableChartAnimation && percentRetirementToNecessities < 190) {
-            //wymiary kontenera jak wymiary obrazka
-            chartUpperContainerHeight = $(chartImgSelector).outerHeight(true);
-            chartCoinsContainerHeight = $(nRCalcExpensesElement).height();
-
-            $(chartUpperContainer).css({
-                height: chartUpperContainerHeight,
-                width: $(chartImgSelector).outerWidth(true)
-            });
-
-            $(chartImgSelector).remove(); // usunięcie IMG z statycznym wykresem
-
+        if (enableChartAnimation && percentRetirementToNecessities < 170) {
             var search = $(rootElement).find('[data-selected="true"]');
             var groups = {};
             var spaceUsed = 0;
             var g, dValue, perc, pos, i;
-            var elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            var elementsDiffHeight = 0;
+            var minChartBarHeight = 30;
+            var overHeightSum = 0;
+            var maxGroupIterator;
+            var maxGroupHeight = 0;
+
+            if (coinsAmountExpenses < coinsAmountEarnings) {
+                elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcRetirementValueElement).height();
+            } else {
+                elementsDiffHeight = $(chartUpperContainer).height() - $(nRCalcExpensesElement).height();
+            }
+
             spaceUsed = elementsDiffHeight;
-            elementsDiffHeight = elementsDiffHeight - 141;
+
+            elementsDiffHeight = elementsDiffHeight - 126; //poprawka na kontener wewnętrzny
 
             if (search) {
                 var t = 0;
+                var containerHeight = coinsAmountExpenses * 17.45; //wys monety
+
+                if (coinsAmountExpenses < coinsAmountEarnings) {
+                    containerHeight += 17; // kind of magic
+                }
 
                 $.each(search, function(i, found) {
                     g = $(found).attr('data-group');
                     dValue = $(found).attr('data-value');
                     perc = dValue / necessitiesSum;
-                    pos = ($(nRCalcExpensesElement).height() - 141) * perc;
+                    pos =  containerHeight * perc;
                     i = pos;
-                    pos = pos + elementsDiffHeight + spaceUsed;
+
+                    if (i > maxGroupHeight) {
+                        maxGroupIterator = t;
+                        maxGroupHeight = i;
+                    }
+
+                    if (i < minChartBarHeight) {
+                        var h = minChartBarHeight - i;
+                        i = minChartBarHeight;
+                        overHeightSum += h;
+                        //console.log(t, h, overHeightSum);
+                    }
+
+                    pos = elementsDiffHeight + spaceUsed;
 
                     groups[t] = {
                         group: g,
                         value: dValue,
                         percent: perc,
-                        position: pos
+                        position: pos,
+                        height: i
                     };
 
                     spaceUsed = spaceUsed + i;
@@ -889,10 +939,23 @@ var retirementNecessitiesCalculator = (function() {
                 });
             }
 
+            if (overHeightSum > 0) {
+                var x = false;
+
+                $.each(groups, function(n, groupChartData) {
+                    if (n == maxGroupIterator) {
+                        groups[n]['height'] -= overHeightSum;
+                        x = true;
+                    } else if (x == true) {
+                        groups[n]['position'] -= overHeightSum;
+                    }
+                });
+            }
+
             //console.table(groups);
 
             $.each(groups, function(n, groupChartData) {
-                $(chartUpperContainer).prepend('<img src="img/result-lines/line-' + groupChartData.group + '.png" alt="" class="img-responsive chart-lines" style="bottom: ' + groupChartData.position + 'px">');
+                $(chartUpperContainer).prepend('<div class="js-img-chart-block chart-block" style="background-color: ' + chartColors[n] + '; position: absolute; bottom: ' + (groupChartData.position) + 'px; line-height: ' + groupChartData.height + 'px; width: 100%; height: ' + groupChartData.height + 'px">' + groupsNames[n] + '</div>');
             })
 
         } else {

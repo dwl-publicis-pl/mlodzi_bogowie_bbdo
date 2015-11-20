@@ -480,6 +480,14 @@ _:-ms-input-placeholder, :root .btn-selector span {
     position: absolute;
 }
 
+.chart-block {
+    border: 1px solid #fff;
+    border-bottom-color: rgba(255, 255, 255, .2);
+    overflow: hidden;
+    padding-left: 20px;
+    text-align: left;
+}
+
 .btn-selector:focus,
 .btn-selector:hover {
     background-color: #e68685;
@@ -521,6 +529,10 @@ _:-ms-input-placeholder, :root .btn-selector span {
     border-color: transparent;
     color: #333;
     font-size: 1.333rem;
+}
+
+.btn-top {
+    top: 0;
 }
 /**
  * buttons END
@@ -1328,7 +1340,7 @@ input[type=range]:focus::-ms-fill-upper {
 #nRCalcExpenses {
     height: 83%;
     position: absolute;
-    width: 50%;
+    width: 60%;
 }
 
 #nRCalcRetirementValue {
@@ -1384,7 +1396,7 @@ input[type=range]:focus::-ms-fill-upper {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    right: 0;
+    right: -30px;
     top: 0;
     z-index: 10;
     -webkit-transition: all .692s ease-out;
@@ -1435,6 +1447,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 .calc-headline-header span {
     font-family: 'pru_sans_ot2_bold', sans-serif;
+}
+
+.rNCalc-row-text-info {
+    position: relative;
 }
 
 .rNCalc-text-info > div {
@@ -2694,6 +2710,12 @@ input[type=range]:focus::-ms-fill-upper {
 
     .quiz-txt-your-result {
         position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-block {
+        display: none;
     }
 }
 
