@@ -45,11 +45,11 @@ class Tpl {
             <script src="js/vendor/modernizr-respond-1.4.2.min.js"></script>
             <?php
             // biblioteka Adobe Edge tylko na niektórych stronach
-            if (App::currentPage() == 'index') {
+            //if (App::currentPage() == 'index') {
                 ?>
                 <script src="//animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js"></script>
                 <?php
-            }
+            //}
             ?>
         </head>
 

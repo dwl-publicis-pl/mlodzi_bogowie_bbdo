@@ -12,7 +12,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+        AdobeEdge.loadComposition('m1', 'EDGE-2158215072', {
+            scaleToFit: "width",
+            centerStage: "horizontal",
+            minW: "0px",
+            maxW: "undefined",
+            width: "1800px",
+            height: "576px"
+        }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2158215072 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture-mobile.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="btn btn-left">
@@ -40,7 +50,7 @@ Tpl::nav();
                 </div>
 
                 <div>
-                    Dziś średnia emerytura to ok. 1500 zł netto<sup><a href="#przypisy">2</a></sup>, a według prognoz w przyszłości emerytury będą coraz niższe, nie wyższe.
+                    Dziś średnia emerytura to ok. 1700 zł netto<sup><a href="#przypisy">2</a></sup>, a według prognoz w przyszłości emerytury będą coraz niższe, nie wyższe.
                 </div>
             </div>
         </div>
@@ -467,11 +477,10 @@ Tpl::nav();
 Tpl::bottom();
 Tpl::annotations([
     1 => 'Wywiad z prezesem ZUS, Z. Derdziukiem, Gazeta Wyborcza, 19 marca 2012 r.',
-    2 => 'GUS, Opracowanie „Emerytury i renty w 2013 r.”',
+    2 => 'Obliczenia własne Prudential na podstawie danych GUS, listopad 2015 r.',
     3 => 'Wartość wysokości świadczenia emerytalnego została obliczona w sposób uproszczony przy założeniu, że przewidywana emerytura wyniesie
             1/3 obecnej miesięcznej pensji netto podanej przez osobę zainteresowaną obliczeniami. Założenie bazuje na prognozach podawanych przez
             Zakład Ubezpieczeń Społecznych dotyczących relacji emerytury do ostatniej pensji. <a href="http://www.zus.pl/default.asp?id=1&amp;p=1&amp;idk=1916" target="_blank">Źródło</a>.'
 ]);
 Tpl::htmlFooter();
 ?>
-

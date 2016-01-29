@@ -13,9 +13,9 @@ Tpl::nav();
     </div>
 
     <video poster="img/top-video-placeholder.jpg" preload>
-        <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-        <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
-        <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+        <source src="video/prudential-mlodzi-bogowie-v2.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/prudential-mlodzi-bogowie-v2.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <source src="video/prudential-mlodzi-bogowie-v2.ogv"  type='video/ogg; codecs="theora, vorbis"'>
     </video>
 </div>
 
