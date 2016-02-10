@@ -10,7 +10,18 @@ Tpl::nav();
 ?>
 
 <div class="jumbotron border-top">
-    <img src="img/produkty/ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width">
+    <script>
+       AdobeEdge.loadComposition('p3', 'EDGE-2150870897', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2150870897 full-width hidden-xs hidden-sm"></div>
+    <img src="img/produkty/ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width visible-xs visible-sm">
 
     <a href="emerytura-bez-obaw" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">

@@ -12,7 +12,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo.jpg" alt="Mit. Dziecko, jak dorośnie, od razu utrzyma się samo." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+       AdobeEdge.loadComposition('m8', 'EDGE-2335674786', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2335674786 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo-mobile.jpg" alt="Mit. Dziecko, jak dorośnie, od razu utrzyma się samo." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-left">

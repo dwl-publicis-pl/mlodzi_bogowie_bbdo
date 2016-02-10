@@ -12,7 +12,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-zle-rzeczy-przydarzaja-sie-innym.jpg" alt="Mit. Złe rzeczy przydarzają się innym." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+       AdobeEdge.loadComposition('m10', 'EDGE-2340133538', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2340133538 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-zle-rzeczy-przydarzaja-sie-innym-mobile.jpg" alt="Mit. Złe rzeczy przydarzają się innym." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-left">

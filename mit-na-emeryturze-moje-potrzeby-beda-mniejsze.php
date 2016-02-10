@@ -12,7 +12,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-na-emeryturze-moje-potrzeby-beda-mniejsze.jpg" alt="Mit. Na emeryturze moje potrzeby będą mniejsze." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+       AdobeEdge.loadComposition('m4', 'EDGE-2328581351', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2328581351 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-na-emeryturze-moje-potrzeby-beda-mniejsze-mobile.jpg" alt="Mit. Na emeryturze moje potrzeby będą mniejsze." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-emerytura-nie-potrwa-dlugo" class="btn btn-left">
