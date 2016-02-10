@@ -11,7 +11,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+       AdobeEdge.loadComposition('m2', 'EDGE-2251754560', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2251754560 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej-mobile.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-left">

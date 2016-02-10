@@ -32,29 +32,75 @@ Tpl::nav();
         <div class="col-xs-12 col-md-10 col-md-offset-1 myths-rows">
             <div class="myths-rows-insider">
                 <div class="myth-box myth-box-type-a">
-                    <figure>
+                    <figure class="myth-1 hidden-xs hidden-sm">
+                        <a href="mit-panstwo-da-mi-dobra-emeryture">
+                            <img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-1-clean.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive onhover">
+                            <h2><strong>MIT #1</strong></h2>  
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-panstwo-da-mi-dobra-emeryture" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-panstwo-da-mi-dobra-emeryture"><img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive"></a>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-b">
-                    <figure>
+                    <figure class="myth-2 hidden-xs hidden-sm">
+                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
+                            <img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-2-clean.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive onhover">
+                            <h2><strong>MIT #2</strong></h2>  
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-o-emeryturze-moge-pomyslec-pozniej"><img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive"></a>
                     </figure>
 
-                    <figure class="hidden-xs hidden-sm">
-                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
+                    <figure class="myth-4 hidden-xs hidden-sm">
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">
+                            <img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-4-clean.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive onhover">
+                            <h2><strong>MIT #4</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="alllink"></a>
+                        </div>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-c">
-                    <figure>
+                    <figure class="myth-3 hidden-xs hidden-sm">
+                        <a href="mit-emerytura-nie-potrwa-dlugo">
+                            <img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-3-clean.jpg" alt="Emerytura nie potrwa długo" class="img-responsive onhover">
+                            <h2><strong>MIT #3</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-emerytura-nie-potrwa-dlugo" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-emerytura-nie-potrwa-dlugo"><img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive"></a>
                     </figure>
                 </div>
 
-                <div class="myth-box myth-box-type-c visible-xs visible-sm">
-                    <figure>
+                <div class="myth-box myth-box-type-c visible-xs visible-sm">                    
+                    <figure class="myth-4">
                         <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
                     </figure>
                 </div>
@@ -62,19 +108,55 @@ Tpl::nav();
                 <div class="clearfix"></div>
 
                 <div class="myth-box myth-box-type-a">
-                    <figure>
+                    <figure class="myth-5 hidden-xs hidden-sm">
+                        <a href="mit-nie-stac-mnie-na-oszczedzanie">
+                            <img src="img/mity/mit-5.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-5-clean.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive onhover">
+                            <h2><strong>MIT #5</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-nie-stac-mnie-na-oszczedzanie" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="myth-5 visible-xs visible-sm">
                         <a href="mit-nie-stac-mnie-na-oszczedzanie"><img src="img/mity/mit-5.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive"></a>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-d">
-                    <figure>
+                    <figure class="myth-6 hidden-xs hidden-sm">
+                        <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">
+                            <img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-6-clean.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive onhover">
+                            <h2><strong>MIT #6</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"><img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive"></a>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-e">
-                    <figure>
+                    <figure class="myth-7 hidden-xs hidden-sm">
+                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
+                            <img src="img/mity/mit-7.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-7-clean.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive onhover">
+                            <h2><strong>MIT #7</strong></h2>  
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"><img src="img/mity/mit-7.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive"></a>
                     </figure>
                 </div>
@@ -82,19 +164,55 @@ Tpl::nav();
                 <div class="clearfix"></div>
 
                 <div class="myth-box myth-box-type-a">
-                    <figure>
+                    <figure class="myth-8 hidden-xs hidden-sm">
+                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">
+                            <img src="img/mity/mit-8.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-8-clean.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive onhover">
+                            <h2><strong>MIT #8</strong></h2>  
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo"><img src="img/mity/mit-8.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive"></a>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-f">
-                    <figure>
+                    <figure class="myth-9 hidden-xs hidden-sm">
+                        <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">
+                            <img src="img/mity/mit-9.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-9-clean.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive onhover">
+                            <h2><strong>MIT #9</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"><img src="img/mity/mit-9.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive"></a>
                     </figure>
                 </div>
 
                 <div class="myth-box myth-box-type-g">
-                    <figure>
+                    <figure class="myth-10 hidden-xs hidden-sm">
+                        <a href="mit-zle-rzeczy-przydarzaja-sie-innym">
+                            <img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive">
+                        </a>
+                        
+                        <div class="mask">  
+                            <img src="img/mity/mit-10-clean.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive onhover">
+                            <h2><strong>MIT #10</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="alllink"></a>
+                        </div>  
+                    </figure>
+                    <figure class="visible-xs visible-sm">
                         <a href="mit-zle-rzeczy-przydarzaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive"></a>
                     </figure>
                 </div>

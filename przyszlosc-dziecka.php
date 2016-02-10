@@ -9,7 +9,19 @@ Tpl::nav();
 ?>
 
 <div class="jumbotron border-top">
-    <img src="img/produkty/przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width">
+    <script>
+       AdobeEdge.loadComposition('p1', 'EDGE-2147585985', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2147585985 full-width hidden-xs hidden-sm"></div>
+    
+    <img src="img/produkty/przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width visible-xs visible-sm">
 
     <a href="emerytura-bez-obaw" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">

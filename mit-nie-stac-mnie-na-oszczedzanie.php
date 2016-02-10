@@ -11,7 +11,17 @@ Tpl::nav();
 
 
 <div class="jumbotron border-top">
-    <img src="img/mity/mit-nie-stac-mnie-na-oszczedzanie.jpg" alt="Mit. Nie stać mnie na oszczędzanie." class="img-responsive full-width hidden-xs hidden-sm">
+    <script>
+       AdobeEdge.loadComposition('m5', 'EDGE-2329430560', {
+        scaleToFit: "width",
+        centerStage: "horizontal",
+        minW: "0px",
+        maxW: "undefined",
+        width: "1800px",
+        height: "576px"
+    }, {"dom":{}}, {"dom":{}});
+    </script>
+    <div id="Stage" class="EDGE-2329430560 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-nie-stac-mnie-na-oszczedzanie-mobile.jpg" alt="Mit. Nie stać mnie na oszczędzanie." class="img-responsive full-width visible-xs visible-sm">
 
     <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-left">
