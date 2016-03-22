@@ -25,12 +25,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2335674786 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo-mobile.jpg" alt="Mit. Dziecko, jak dorośnie, od razu utrzyma się samo." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-left">
+    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-right">
+    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>

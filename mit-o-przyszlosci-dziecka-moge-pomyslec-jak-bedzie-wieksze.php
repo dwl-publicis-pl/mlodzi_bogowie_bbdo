@@ -24,12 +24,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2333302564 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-przyszlosc-dziecka-mobile.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-left">
+    <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="btn btn-left">
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="btn btn-right">
+    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
