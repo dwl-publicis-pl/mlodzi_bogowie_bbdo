@@ -489,6 +489,200 @@ monthlySavingsCalculator.init();
  */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * kalkulator 1.5 (nowy mit 7)
+ */
+var monthlyOutcomeCalculator = (function() {
+    var calcForm = '#mscCalc7';
+    var $calcElem = $(calcForm);
+    var retirementLengthElement = $('select[name="retirement_length"]');
+    var monthlySavingsElements = $('select[name="monthly_savings"]');
+    var startSaveUpElement = $('input[name="start_save_up"]');
+
+    var startSaveUpElementValue = $('input[name="start_save_up"]').val();
+
+    var monthlySavingsElement = $('#retirement_saves_result');
+    var faceImgElement = $('#retirements_saves_face');
+
+    var retirementLengthValueElement = $('.retirement_length_value');
+    var monthlySavingsValueElements = $('.monthly_savings_value');
+    var startSaveUpValueElement = $('.start_save_up_value');
+    var startSaveUpLabel = $('.Start_save_up_label');
+
+        if(window.location.hash) {
+            hash = window.location.hash;
+            money_to_input = hash.replace(/[#_]/g,'');
+            console.log(money_to_input);
+
+            $('select#f-msc-ms').append($('<option>', {
+                value: money_to_input,
+                text: money_to_input + ' zł'
+            }).prop('selected', true));
+        }
+
+    var retirementLengthVal,
+        monthlySavingsVal,
+        startSaveUpVal,
+        saveUpLength,
+        monthlySaveUp = 0,
+        saveUpRangeMin,
+        saveUpRangeMax,
+        faceElements = 7; // num of face alternatives
+
+    var annualReturnRate = 0.02; // roczna stopa zwrotu
+
+
+
+    var init = function() {
+        if ($calcElem.length > 0) {
+            initListeners();
+
+            saveUpRangeMin = startSaveUpElement.attr('min');
+            saveUpRangeMax = startSaveUpElement.attr('max');
+
+            onRangeChange();
+        }
+
+        return true;
+    };
+
+    var initListeners = function() {
+        $(calcForm + ' input, ' + calcForm + ' select').on('input change', function() {
+            onRangeChange();
+        });
+
+        return true;
+    };
+
+    var onRangeChange = function() {
+        getValues();
+        showValues();
+        calculateMonthlyOutcome();
+
+        return true;
+    };
+
+    var getValues = function() {
+        retirementLengthVal = parseInt(retirementLengthElement.val());
+        monthlySavingsVal = parseInt(monthlySavingsElements.val());
+        startSaveUpVal = parseInt(startSaveUpElement.val());
+
+        return true;
+    };
+
+    var polishLanguageVariety = function() {
+        // polski to trudna jezyk ver. odmiana lat wg. liczby 
+        var rangeValues =
+        {
+            "0": "miesiące",
+            "1": "rok",
+            "2": "lata",
+            '3': "lata",
+            "4": "lata",
+            "5": "lat"
+        };
+        if ($('input#f-msc-ss').val() == '0'){
+            $('span.start_save_up_value').text('3');
+        }
+        $('span.Start_save_up_label').text(rangeValues[$('input#f-msc-ss').val()]);
+        $('input#f-msc-ss').on('input change', function () {
+            $('span.Start_save_up_label').text(rangeValues[$(this).val()]);
+        });
+
+        return true;
+    };
+
+    var showValues = function() {
+        retirementLengthValueElement.html(retirementLengthVal);
+        monthlySavingsValueElements.html(monthlySavingsVal);
+        startSaveUpValueElement.html(startSaveUpVal);
+        polishLanguageVariety();
+
+        return true;
+    };
+
+
+    var calculateMonthlyOutcome = function() {
+        //wartości pól z formularza
+        monthlySavingsElementsVal = monthlySavingsElements.val();
+        retirementLengthElementVal = retirementLengthElement.val();
+
+        monthlySaveUp = (monthlySavingsElementsVal) / ((retirementLengthElementVal - startSaveUpVal) * 12);
+        monthlySaveUp = Math.round(monthlySaveUp);
+        //console.log('musisz odkladac' + monthlySaveUp)
+        setFace();
+        proceedMonthlySavings();
+
+        return true;
+    };
+
+    var proceedMonthlySavings = function() {
+        monthlySavingsElement.html(monthlySaveUp);
+
+        return true;
+    };
+
+    var setFace = function() {
+        var faceValue = Math.max(1, Math.round(((startSaveUpVal - saveUpRangeMin) / (saveUpRangeMax - saveUpRangeMin)) * faceElements));
+
+        faceImgElement.attr('src', faceImgElement.data().srcPattern.replace('%', faceValue));
+
+        return true;
+    };
+
+    return {
+        init: init
+    };
+})();
+
+monthlyOutcomeCalculator.init();
+/**
+ * kalkulator 1.5 END
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * kalkulator 2 (mit 1, 4)
  */
@@ -1090,7 +1284,7 @@ retirementNecessitiesCalculator.init();
 
 
 /**
- * kalkulator 4 (mit 7)
+ * kalkulator 4 (mit 7) // będzie do usunięcia po zrobieniu kalkulatora #mit8 
  */
 var necessitiesCalculator = (function() {
     var rootElement = '#nCalc';
@@ -1269,6 +1463,428 @@ necessitiesCalculator.init();
  * kalkulator 4 END
  */
 
+
+/**
+ * kalkulator 5 (mit 8)
+ */
+var necessitiesCalculator = (function() {
+    var rootElement = '#nCalc7';
+    var necessitiesSum = 0;
+    var btnSelector = '.calc-2-element';
+    var clickedElement,
+        clickedGroup,
+        errorMsg = [];
+    var htmlSumElement = $('#calc-5-sum');
+    var groupsList = [];
+    var checkedGroupsList = [];
+    var coinsInContainer = 4, // max and full stack of coins
+        coinImgSrc = 'img/coin.png',
+        minCoinTranslate = 0, //was -17
+        maxCoinTranslate = 0, //was 17
+        coinsSpeed = 0.821, // [s]
+        coinEdgeHeight = 10,
+        coinsElement = $('#calc-5-coins');
+    var coinsAmount = 0;
+
+    var init = function() {
+
+        if ($(rootElement).length == 0) {
+            return false;
+        }
+
+        collectListOfGroups();
+
+        $( ".btn-cloud" ).click(function(event) {
+            event.preventDefault();
+            return false;
+            $(this).remove();
+        });
+        $( ".btn-cloud" ).click(function(event) {
+            $(this).parent().parent().parent().parent().parent().parent().hide().next().show();
+            if ($('.cloud7-step').is(':visible')) {
+                $('.cloud-result-col, .coins-stack').addClass('active-step-7');
+                var link_saving = $('.btn-cta').attr('href');
+                $('.btn-cta').attr('href', link_saving + "#" + money_sum_for_another_calc );
+
+            } 
+        });
+
+
+
+        $(btnSelector).on('click', function(event) {
+
+            
+
+            clickedElement = $(this).not(".btn-cloud");
+            clickedElement.toggleClass('active');
+            clickedElement.parent().parent().parent().find('div[data-selected="true"]').removeClass('active');
+            clickedGroup = parseInt(clickedElement.data().group);
+
+            if (clickedElement.attr('data-selected') == 'true') {
+                clearGroupSelect();
+
+
+            } else {
+                clearGroupSelect();
+                addToSum();
+                setAsSelected();
+            }
+
+            renderHTML();
+            
+        });
+
+        return true;
+    };
+
+    var collectListOfGroups = function() {
+        var group;
+
+        $(rootElement + ' [data-group]').each(function() {
+            group = parseInt($(this).data().group);
+
+            if (groupsList.indexOf(group) === -1) {
+                groupsList.push(group);
+            }
+        });
+
+        return true;
+    };
+
+
+    var clearGroupSelect = function() {
+        var search = $(rootElement).find('[data-group="' + clickedGroup + '"][data-selected="true"]');
+
+        if (search) {
+            $.each(search, function(i, found) {
+                $(found).attr('data-selected', 'false');
+
+                necessitiesSum = necessitiesSum - Math.max(0, parseInt($(found).data().value));
+            });
+        }
+
+        var toRemove = checkedGroupsList.indexOf(clickedGroup);
+
+        if (toRemove > -1) {
+            checkedGroupsList.splice(toRemove, 1);
+        }
+
+        return true;
+    };
+
+    var setAsSelected = function() {
+
+        clickedElement.attr('data-selected', 'true');
+        checkedGroupsList.push(clickedGroup);
+
+        return true;
+    };
+
+    var addToSum = function() {
+        var value = clickedElement.data().value;
+        value = Math.max(0, parseInt(value));
+        necessitiesSum = necessitiesSum + value;
+        money_sum_for_another_calc = necessitiesSum;
+
+        return true;
+    };
+
+    var numberStep = function(now, tween) {
+        var target = $(tween.elem),
+            rounded_now = Math.round(now);
+
+        target.prop('number', rounded_now).text(rounded_now.format(0, 3, ' '));
+    };
+
+    var renderHTML = function() {
+        if (isError()) {
+            return false;
+        }
+
+        htmlSumElement.stop().animateNumber(
+            {
+                number: necessitiesSum,
+                easing: 'easeInQuad',
+                numberStep: numberStep
+            },
+            800
+        );
+
+        var coinsNum = coinsElement.find('> img');
+
+        if (coinsNum.length == 0) {
+            coinsElement.animate({height: (coinEdgeHeight * coinsInContainer * 2.01) + 'px'}, 500);
+
+            var randomHorzTransform;
+            var i = 0;
+
+            for (i = 0; i < coinsInContainer; i++) {
+                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
+                $(coinsElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -moz-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -ms-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -o-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); transform: translateX(calc(' + randomHorzTransform + 'px - 50%));">');
+            }
+
+            var n = 0;
+
+            $(coinsElement).children('img').each(function () {
+                TweenLite.to(this, coinsSpeed, {
+                    delay: (0.1 * n),
+                    opacity: 1,
+                    bottom: (n * coinEdgeHeight),
+                    ease: Power2.easeOut
+                });
+                n++;
+            });
+        }
+
+        return true;
+    };
+
+    var addError = function(msg) {
+        errorMsg.push(msg);
+
+        return true;
+    };
+
+    var isError = function() {
+        if (errorMsg.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    var printErrors = function() {
+        alert(errorMsg.join("\n"));
+        errorMsg = []; //cleaning
+
+        return true;
+    };
+
+    return {
+        init: init,
+        isError: isError
+
+    };
+})();
+
+necessitiesCalculator.init();
+
+/**
+ * kalkulator 5 END
+ */
+
+
+/**
+ * kalkulator 5-mobile (mit 8)
+ */
+
+var necessitiesCalculator = (function() {
+    var rootElement = '#nCalcmobile';
+    var necessitiesSum = 0;
+    var btnSelector = '.calc-2-element-mobile';
+    var clickedElement,
+        clickedGroup,
+        errorMsg = [];
+    var htmlSumElement2 = $('#calc-5-sum-mobile');
+    var groupsList = [];
+    var checkedGroupsList = [];
+    var coinsInContainer = 4, // max and full stack of coins
+        coinImgSrc = 'img/coin.png',
+        minCoinTranslate = 0, //was -17
+        maxCoinTranslate = 0, //was 17
+        coinsSpeed = 0.821, // [s]
+        coinEdgeHeight = 10,
+        coinsElement = $('#calc-5-coins-mobile');
+    var coinsAmount = 0;
+
+    var init = function() {
+
+        if ($(rootElement).length == 0) {
+            return false;
+        }
+
+        collectListOfGroups();
+
+        $( ".calc-2-element-mobile" ).click(function(event) {
+            event.preventDefault();
+            return false;
+            $(this).remove();
+        });
+        $( "button.next-step" ).click(function(event) {
+            $('button.next-step').prop('disabled', true);
+            $(this).parent().parent().parent().hide().next().show();
+            if ($('.cloud7-step').is(':visible')) {
+                var link_saving = $('.btn-cta').attr('href');
+                $('.btn-cta').attr('href', link_saving + "#" + money_sum_for_another_calc );
+
+                $('#nCalcmobile .guy-container').css('background','#7AA8B5');
+                $('.cloud-result-col, .coins-stack').addClass('active-step-7');
+            } 
+        });
+
+        $(btnSelector).on('click', function(event) {
+
+            clickedElement = $(this).not(".btn-cloud");
+            clickedElement.toggleClass('active');
+            clickedElement.parent().parent().parent().find('div[data-selected="true"]').removeClass('active');
+            clickedGroup = parseInt(clickedElement.data().group);
+
+            if (clickedElement.attr('data-selected') == 'true') {
+                clearGroupSelect();
+                $('button.next-step').prop('disabled', true);
+
+
+            } else {
+                clearGroupSelect();
+                addToSum();
+                setAsSelected();$('button.next-step').prop('disabled', false);
+            }
+
+            renderHTML();
+            
+        });
+
+        return true;
+    };
+
+    var collectListOfGroups = function() {
+        var group;
+
+        $(rootElement + ' [data-group]').each(function() {
+            group = parseInt($(this).data().group);
+
+            if (groupsList.indexOf(group) === -1) {
+                groupsList.push(group);
+            }
+        });
+
+        return true;
+    };
+
+
+    var clearGroupSelect = function() {
+        var search = $(rootElement).find('[data-group="' + clickedGroup + '"][data-selected="true"]');
+
+        if (search) {
+            $.each(search, function(i, found) {
+                $(found).attr('data-selected', 'false');
+
+                necessitiesSum = necessitiesSum - Math.max(0, parseInt($(found).data().value));
+            });
+        }
+
+        var toRemove = checkedGroupsList.indexOf(clickedGroup);
+
+        if (toRemove > -1) {
+            checkedGroupsList.splice(toRemove, 1);
+        }
+
+        return true;
+    };
+
+    var setAsSelected = function() {
+
+        clickedElement.attr('data-selected', 'true');
+        checkedGroupsList.push(clickedGroup);
+
+        return true;
+    };
+
+    var addToSum = function() {
+        var value = clickedElement.data().value;
+        value = Math.max(0, parseInt(value));
+        necessitiesSum = necessitiesSum + value;
+        money_sum_for_another_calc = necessitiesSum;
+
+        return true;
+    };
+
+    var numberStep = function(now, tween) {
+        var target = $(tween.elem),
+            rounded_now = Math.round(now);
+
+        target.prop('number', rounded_now).text(rounded_now.format(0, 3, ' '));
+    };
+
+    var renderHTML = function() {
+        if (isError()) {
+            return false;
+        }
+
+        htmlSumElement2.stop().animateNumber(
+            {
+                number: necessitiesSum,
+                easing: 'easeInQuad',
+                numberStep: numberStep
+            },
+            800
+        );
+
+        var coinsNum = coinsElement.find('> img');
+
+        if (coinsNum.length == 0) {
+            coinsElement.animate({height: (coinEdgeHeight * coinsInContainer * 2.01) + 'px'}, 500);
+
+            var randomHorzTransform;
+            var i = 0;
+
+            for (i = 0; i < coinsInContainer; i++) {
+                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
+                $(coinsElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -moz-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -ms-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -o-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); transform: translateX(calc(' + randomHorzTransform + 'px - 50%));">');
+            }
+
+            var n = 0;
+
+            $(coinsElement).children('img').each(function () {
+                TweenLite.to(this, coinsSpeed, {
+                    delay: (0.1 * n),
+                    opacity: 1,
+                    bottom: (n * coinEdgeHeight),
+                    ease: Power2.easeOut
+                });
+                n++;
+            });
+        }
+
+        return true;
+    };
+
+    var addError = function(msg) {
+        errorMsg.push(msg);
+
+        return true;
+    };
+
+    var isError = function() {
+        if (errorMsg.length > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    var printErrors = function() {
+        alert(errorMsg.join("\n"));
+        errorMsg = []; //cleaning
+
+        return true;
+    };
+
+    return {
+        init: init,
+        isError: isError
+
+    };
+})();
+
+necessitiesCalculator.init();
+
+
+/**
+ * kalkulator 5 END
+ */
+
+
 /*
  * Skrypt wyświetlający okienko z informacją o wykorzystaniu ciasteczek (cookies)
  * 
@@ -1311,3 +1927,14 @@ function WHCloseCookiesWindow() {
     WHCreateCookie('cookies_accepted', 'T', 365);
 
 }
+var rolloverImageCloud = 'img/cloud-red.png';
+var origImageCloud = 'img/cloud.png';
+$(".cloud-container").hover(function() {
+    $(this).find("img.cloud").attr("src", rolloverImageCloud);
+    var icon_attr = $(this).find("img:not(.cloud)").attr('src').slice(0,-4);
+    $(this).find("img:not(.cloud, .cloud-result)").attr("src", icon_attr + '-white.png');
+}, function() {
+    $(this).find("img.cloud").attr("src", origImageCloud);
+    var icon_attr = $(this).find("img:not(.cloud)").attr('src').slice(0,-10);
+    $(this).find("img:not(.cloud, .cloud-result)").attr("src", icon_attr + '.png');
+});
