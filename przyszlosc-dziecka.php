@@ -25,7 +25,7 @@ Tpl::nav();
 
     <a href="emerytura-bez-obaw" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
-        Pprzedni<br>produkt
+        Poprzedni<br>produkt
     </a>
 
     <a href="ochrona-zdrowia" class="btn btn-left">
