@@ -50,6 +50,18 @@ Tpl::nav();
                 </div>
 
                 <div class="myth-box myth-box-type-b">
+                    <figure class="myth-8 hidden-xs hidden-sm">
+                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
+                            <img src="img/mity/mit-8.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive">
+                        </a>
+
+                        <div class="mask">
+                            <img src="img/mity/mit-8-clean.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive onhover">
+                            <h2><strong>MIT #8</strong></h2>
+                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                            <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="alllink"></a>
+                        </div>
+                    </figure>
                     <figure class="visible-xs visible-sm">
                         <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"><img src="img/mity/mit-8.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive"></a>
                     </figure>
@@ -68,19 +80,6 @@ Tpl::nav();
                     </figure>
                     <figure class="visible-xs visible-sm">
                         <a href="mit-zle-rzeczy-przydarzaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive"></a>
-                    </figure>
-
-                    <figure class="myth-8 hidden-xs hidden-sm">
-                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
-                            <img src="img/mity/mit-8.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-8-clean.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive onhover">
-                            <h2><strong>MIT #8</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="alllink"></a>
-                        </div>
                     </figure>
                 </div>
 
