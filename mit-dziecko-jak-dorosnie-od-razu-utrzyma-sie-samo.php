@@ -70,7 +70,7 @@ Tpl::nav();
             <h1>Kosztowna <strong>dorosłość</strong></h1>
             <hr>
             <p>
-                Przyjrzyj się bliżej przyszłym potrzebom Twojego dziecka, by wyliczyć kwotę, jaka ułatwi mu start w&nbsp;dorosłe życie.
+                Przyjrzyj się bliżej przyszłym potrzebom Twojego dziecka, by wyliczyć kwotę, jaka ułatwi mu start w&nbsp;dorosłe życie<sup><a href="#przypisy">1</a></sup>.
             </p>
         </header>
         <div id="nCalc7" class="calc-selectors row hidden-sm hidden-xs">
@@ -258,7 +258,7 @@ Tpl::nav();
                                             <img src="img/cloud.png" alt="" class="cloud">
                                             <div style="margin-top: -130px;">
                                                 <img src="img/cloud-pioro.png" alt="" class="">
-                                                <p> Eleganckie pióro<span>(z grawerem)</span></p>
+                                                <p>Eleganckie pióro<span>(z grawerem)</span></p>
                                             </div>
                                         </div>
                                         <div class="cta-container">
@@ -432,7 +432,7 @@ Tpl::nav();
                         </div>
                         <div class="cloud6-step">
                             <div class="col-xs-5 col-md-5 col-md-offset-2 text-center quiz8-question">
-                                <h2>RODZICIELSKI WKŁAD WE WŁASNEMIESZKANIE:</h2>
+                                <h2>RODZICIELSKI WKŁAD WE WŁASNE MIESZKANIE:</h2>
                             </div>  
                             <div class="guy-block guy-progress-bar">
                                 <img src="img/calc-progress-6.png" alt="" class="img-responsive">
@@ -540,7 +540,7 @@ Tpl::nav();
             </div>
         </div>
 
-    <div id="nCalcmobile" class="calc-selectors row hidden-md hidden-lg">
+        <div id="nCalcmobile" class="calc-selectors row hidden-md hidden-lg">
             <div class="guy-margin" style="margin: 0;">
                 <div class="row-filled-gray">
                     <div class="guy-container" style="background: #add6e2;">
@@ -744,7 +744,7 @@ Tpl::nav();
 
                         <div class="cloud6-step">
                             <div class="col-xs-12 col-md-12 text-center">
-                                <h2 style="color:#fff;font-weight:900">RODZICIELSKI WKŁAD WE WŁASNEMIESZKANIE:</h2>
+                                <h2 style="color:#fff;font-weight:900">RODZICIELSKI WKŁAD WE WŁASNE MIESZKANIE:</h2>
                             </div>
                             <div class="guy-block guy-progress-bar-mobile">
                                 <img src="img/calc-progress-6.png" alt="" class="img-responsive">
@@ -808,6 +808,7 @@ Tpl::nav();
             </div>
         </div>
     </div>
+
     <div class="row row-filled-red">
         <div class="col-xs-12">
             <div class="text-center">
@@ -849,11 +850,12 @@ Tpl::nav();
 <?php
 Tpl::bottom();
 Tpl::annotations([
-    1 => '<a href="http://www.bankier.pl/wiadomosc/ile-kosztuje-utrzymanie-studenta-2034004.html" target="_blank">Dominika Bojarska, Malwina Wrotniak, Ile kosztuje utrzymanie studenta?</a>, 23.10.2009.',
+    1 => 'Przedstawione koszty mają charakter jedynie szacunkowy i zostały opracowane na podstawie analiz własnych Prudential.'
+    /*1 => '<a href="http://www.bankier.pl/wiadomosc/ile-kosztuje-utrzymanie-studenta-2034004.html" target="_blank">Dominika Bojarska, Malwina Wrotniak, Ile kosztuje utrzymanie studenta?</a>, 23.10.2009.',
     2 => 'Obliczenia własne Prudential na podstawie cen biletów dostępnych na stronach internetowych ZTM, w wybranych miastach akademickich.',
     3 => 'Wyliczenia własne przygotowane na podstawie przykładowych cen akcesoriów medycznych oraz artykułów plastycznych dostępnych w specjalistycznych sklepach internetowych.',
     4 => 'Szacunkowa cena średniego zamówienia z dostawą do domu na podstawie ofert portali oferujących jedzenie na wynos. Szacunkowa cena biletu na podstawie ofert zawartych na portalach umożliwiających rezerwację i zakup biletów online na wydarzenia masowe.',
-    5 => '<a href="http://www.bankier.pl/wiadomosc/Szukasz-pierwszej-pracy-Zapomnij-o-kokosach-na-starcie-3006216.html" target="_blank">Marcin Lekki, Bankier.pl, Szukasz pierwszej pracy? Zapomnij o kokosach na starcie</a>, 5.12.2013 r.'
+    5 => '<a href="http://www.bankier.pl/wiadomosc/Szukasz-pierwszej-pracy-Zapomnij-o-kokosach-na-starcie-3006216.html" target="_blank">Marcin Lekki, Bankier.pl, Szukasz pierwszej pracy? Zapomnij o kokosach na starcie</a>, 5.12.2013 r.'*/
 ]);
 Tpl::htmlFooter();
 ?>

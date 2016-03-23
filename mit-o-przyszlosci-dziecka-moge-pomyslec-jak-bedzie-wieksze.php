@@ -72,12 +72,12 @@ Tpl::nav();
                         <div class="col-md-4">
                             <select name="retirement_length" class="form-control input-lg" id="f-msc-rl">
                                  <option value="18">Na osiemnastkę</option>
-                                 <option value="24">Na koniec studiów</option>
+                                 <option value="24">Na koniec studiów (25 lat)</option>
                             </select>
                         </div>
 
                         <div class="col-md-2">
-                            <label for="f-msc-ms">Jaką kwotą planujesz wesprzeć dziecko?: </label>
+                            <label for="f-msc-ms">Jaką&nbsp;kwotą planujesz wesprzeć dziecko?: </label>
                         </div>
 
                         <div class="col-md-4">
@@ -103,9 +103,6 @@ Tpl::nav();
                         </div>
                     </div>
                     <script>
-                        
-                        
-
 
                     </script>
                     <div class="row">
@@ -147,17 +144,211 @@ Tpl::nav();
     </div>
 
 
+    <?php
+    /**
+     * stara wersja kalkulatora
+     *
+     */
 
+    /*
+    <header class="row border-top" id="kalkulator">
+        <h1>Kosztowna <strong>dorosłość</strong></h1>
+        <hr>
+        <p>
+            Zabezpieczenie przyszłości dziecka to duże wyzwanie. Policz, ile potrzebujesz, by ułatwić mu start w dorosłe życie<sup><a href="#przypisy">1</a></sup>.
+        </p>
+    </header>
 
+    <div id="nCalc" class="calc-selectors">
+        <section class="row row-flex-sm">
+            <div class="col-xs-12 col-md-6 col-md-offset-1 nCalc-column">
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        1. 5-letnie studia
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="12000" data-selected="false" data-group="7">
+                                Dzienne
+                                <span>(państwowe)</span>
+                            </button>
+                        </div>
 
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="36000" data-selected="false" data-group="7">
+                                Na prywatnej uczelni
+                                <span>(w Polsce)</span>
+                            </button>
+                        </div>
 
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="150000" data-selected="false" data-group="7">
+                                Prestiżowy kierunek
+                                <span>(za granicą)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        2. Lokum w czasie 5-letnich studiów
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="15000" data-selected="false" data-group="1">
+                                Akademik
+                                <span>(przytulny ;) )</span>
+                            </button>
+                        </div>
 
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="1">
+                                Wynajęte mieszkanie
+                                <span>(albo chociaż pokój)</span>
+                            </button>
+                        </div>
 
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="120000" data-selected="false" data-group="1">
+                                Kawalerka
+                                <span>(ciasna, ale własna)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        3. Nagroda za obronę dyplomu
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="500" data-selected="false" data-group="6">
+                                Wspólny wypad na sushi
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="1500" data-selected="false" data-group="6">
+                                Eleganckie pióro
+                                <span>(z grawerem)</span>
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="5000" data-selected="false" data-group="6">
+                                Zasłużone wakacje
+                                <span>(zagraniczne!)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        4. Pierwszy samochód
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="20000" data-selected="false" data-group="4">
+                                Tani, (nie)zawodny
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="50000" data-selected="false" data-group="4">
+                                Miejski i&nbsp;sportowy
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="80000" data-selected="false" data-group="4">
+                                Lśniący i&nbsp;komfortowy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        5. Ślub!
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="10000" data-selected="false" data-group="2">
+                                Uroczysty obiad z lampką szampana
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="30000" data-selected="false" data-group="2">
+                                Tradycyjnie, w domu panny młodej
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="60000" data-selected="false" data-group="2">
+                                Wystawne przyjęcie w oranżerii
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 calc-section-label">
+                        6. Rodzicielski wkład we własne mieszkanie
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row-height">
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="25000" data-selected="false" data-group="5">
+                                Skromne M1
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="45000" data-selected="false" data-group="5">
+                                Optymalne M2
+                            </button>
+                        </div>
+
+                        <div class="col-sm-3 col-sm-height">
+                            <button class="btn btn-selector calc-2-element" data-value="65000" data-selected="false" data-group="5">
+                                Poważne M3
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4 calc-result-col">
+                <img src="img/txt-suma-przyszlych-potrzeb-twojego-dziecka.png" alt="Suma przyszłych potrzeb Twojego dziecka" class="img-responsive center-block">
+                <div class="calc-2-sum-container"><span id="calc-4-sum">0</span> zł</div>
+
+                <div class="coins-stack hidden-xs" id="calc-4-coins"></div>
+            </div>
+        </section>
+    </div>
+     */
+    ?>
 
 
     <div class="row row-filled-red">
@@ -201,7 +392,7 @@ Tpl::nav();
 <?php
 Tpl::bottom();
 Tpl::annotations([
-    1 => 'Przedstawione koszty mają charakter jedynie szacunkowy i zostały opracowane na podstawie analiz własnych Prudential.'
+
 ]);
 Tpl::htmlFooter();
 ?>
