@@ -40,7 +40,7 @@ class Tpl {
 
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-            <link rel="stylesheet" href="css/main.20151110.css">
+            <link rel="stylesheet" href="css/main.20160322.css">
     
             <script src="js/vendor/modernizr-respond-1.4.2.min.js"></script>
             <?php
@@ -129,12 +129,12 @@ class Tpl {
                                                 <span class="menu-span">Ubezpieczenie na życie to strata pieniędzy</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">MIT #7
-                                                <span class="menu-span">O przyszłości dziecka mogę pomyśleć, jak będzie większe</span></a>
+                                                  <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">MIT #7
+                                                      <span class="menu-span">Dziecko, jak dorośnie, od razu utrzyma się samo</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">MIT #8
-                                                <span class="menu-span">Dziecko, jak dorośnie, od razu utrzyma się samo</span></a>
+                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">MIT #8
+                                                <span class="menu-span">O przyszłości dziecka mogę pomyśleć, jak będzie większe</span></a>
                                               </li>
                                               <li>
                                                 <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">MIT #9

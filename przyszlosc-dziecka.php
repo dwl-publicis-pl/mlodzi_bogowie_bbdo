@@ -25,7 +25,7 @@ Tpl::nav();
 
     <a href="emerytura-bez-obaw" class="btn btn-right">
         <img src="img/icon-arrow-right.png" alt="">
-        Pprzedni<br>produkt
+        Poprzedni<br>produkt
     </a>
 
     <a href="ochrona-zdrowia" class="btn btn-left">
@@ -188,7 +188,7 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
                         <p class="text-center"><strong>Policz, ile potrzebujesz, by ułatwić dziecku start w&nbsp;dorosłe życie</strong></p>
 
-                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze#kalkulator" class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
+                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo#kalkulator" class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
                     </div>
                     <div class="hidden-xs hidden-sm col-md-3 col-md-height"></div>
                 </div>
