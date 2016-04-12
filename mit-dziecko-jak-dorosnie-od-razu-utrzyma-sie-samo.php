@@ -813,7 +813,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w&nbsp;dorosłość?</div>
-                <a href="https://formularz.prudential.pl/lead?lid=46722" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46722">Zaplanuj dziecku przyszłość <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46722" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Zaplanuj dziecku przyszłość <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

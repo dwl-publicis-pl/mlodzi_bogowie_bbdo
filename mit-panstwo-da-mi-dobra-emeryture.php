@@ -439,7 +439,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <p class="btn-near-cta">Jeśli nie chcesz żyć za 1/3 pensji, to...</p>
-                <a href="https://formularz.prudential.pl/lead?lid=46020" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46020">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46020" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

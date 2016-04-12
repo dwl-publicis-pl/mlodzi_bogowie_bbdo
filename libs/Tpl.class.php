@@ -176,7 +176,7 @@ class Tpl {
                                 </ul>
                               </li>
 
-                            <li><a href="https://formularz.prudential.pl/lead?lid=45649" target="_blank">Kontakt</a></li>
+                            <li><a href="https://formularz.prudential.pl/lead?lid=45649" target="_blank" data-trigger="run-conversion" data-id="798548">Kontakt</a></li>
                         </ul>
                     </div>
                 </div></div>
@@ -248,50 +248,16 @@ class Tpl {
             <div class="col-xs-12 col-md-4">
                 <figure>
                     <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
-                    <?php
-                    /*<figcaption>
-                        <img src="img/bulb.png" alt="">
-                        <div>
-                            <a href="">
-                                Przyszłość<br>
-                                dziecka
-                            </a>
-                        </div>
-                    </figcaption>
-                    */
-                    ?>
                 </figure>
             </div>
             <div class="col-xs-12 col-md-4">
                 <figure>
                     <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
-                    <?php
-                    /*<figcaption>
-                        <img src="img/icon-sun.png" alt="">
-                        <div>
-                            <a href="emerytura-bez-obaw">
-                                Emerytura<br>
-                                bez obaw
-                            </a>
-                        </div>
-                    </figcaption>*/
-                    ?>
                 </figure>
             </div>
             <div class="col-xs-12 col-md-4">
                 <figure>
                     <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
-                    <?php
-                    /*<figcaption>
-                        <img src="img/icon-hearth.png" alt="">
-                        <div>
-                            <a href="">
-                                Ochrona<br>
-                                życia
-                            </a>
-                        </div>
-                    </figcaption>*/
-                    ?>
                 </figure>
             </div>
         </div>
@@ -329,25 +295,8 @@ class Tpl {
     {
         ?>
 
-        <script>
-            var versaTag = {};
-            versaTag.id = "3893";
-            versaTag.sync = 0;
-            versaTag.dispType = "js";
-            versaTag.ptcl = "HTTP";
-            versaTag.bsUrl = "bs.serving-sys.com/BurstingPipe";
-            versaTag.activityParams = {
-                "Session":""
-            };
-            versaTag.retargetParams = {};
-            versaTag.dynamicRetargetParams = {};
-            versaTag.conditionalParams = {};
-        </script>
-        <script id="ebOneTagUrlId" src="http://ds.serving-sys.com/SemiCachedScripts/ebOneTag.js"></script>
-        <noscript>
-            <iframe src="http://bs.serving-sys.com/BurstingPipe?cn=ot&amp;onetagid=3893&amp;ns=1&amp;activityValues=$$Session=[Session]$$&amp;retargetingValues=$$$$&amp;dynamicRetargetingValues=$$$$&amp;acp=$$$$&amp;" style="display:none;width:0;height:0"></iframe>
-        </noscript>
-        
+        <script src="//secure-ds.serving-sys.com/BurstingRes/CustomScripts/mmConversionTagV3.js"></script>
+       
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -356,7 +305,7 @@ class Tpl {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.20151110.js"></script>
+        <script src="js/main.20160412.js"></script>
         
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

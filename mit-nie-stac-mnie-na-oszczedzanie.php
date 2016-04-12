@@ -212,7 +212,7 @@ Tpl::nav();
             <div class="text-center">
                 <span class="btn-near-cta">Nie zwlekaj!</span>
                 <p>
-                    <a href="https://formularz.prudential.pl/lead?lid=46432" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46432">Zrób plan oszczędzania <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    <a href="https://formularz.prudential.pl/lead?lid=46432" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Zrób plan oszczędzania <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                 </p>
             </div>
         </div>

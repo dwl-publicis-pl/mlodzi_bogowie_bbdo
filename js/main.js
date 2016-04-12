@@ -65,8 +65,9 @@ $('[data-trigger]').on('click', function(e) {
             quiz.restart();
             break;
 
-        case 'versatag-click':
-            versaTagObj.generateRequest($(this).data().url);
+        case 'run-conversion':
+            e.preventDefault();
+            runConversion($(this).data().id, this, $(this).attr('href'));
             break;
 
         default:
@@ -1938,3 +1939,8 @@ $(".cloud-container").hover(function() {
     var icon_attr = $(this).find("img:not(.cloud)").attr('src').slice(0,-10);
     $(this).find("img:not(.cloud, .cloud-result)").attr("src", icon_attr + '.png');
 });
+
+
+function runConversion(id, obj, redirectURL) {
+    mmConversionTag(id, obj, 'self', redirectURL);
+}

@@ -355,7 +355,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <p class="btn-near-cta">Chcesz ułatwić swojemu dziecku start w&nbsp;dorosłość?</p>
-                <a href="https://formularz.prudential.pl/lead?lid=46630" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46630">Zaplanuj dziecku przyszłość <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46630" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Zaplanuj dziecku przyszłość <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>

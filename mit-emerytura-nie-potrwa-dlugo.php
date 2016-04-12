@@ -111,18 +111,6 @@ Tpl::nav();
                                 co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
                             </p>
                         </div>
-
-                        <!--<div class="col-xs-9 col-xs-height">
-                            <h2>„Mnie to <strong>nie dotyczy</strong>”</h2>
-
-                            <p>
-                                Według naszych badań<sup><a href="#przypisy">2</a></sup> prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
-                                co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
-                            </p>
-                        </div>
-                        <div class="col-xs-3 col-xs-height col-xs-middle">
-                            <img src="img/icon-sock-cake.png" alt="" class="img-responsive">
-                        </div>-->
                     </div>
                 </div>
             </div>
@@ -151,7 +139,7 @@ Tpl::nav();
         <div class="col-xs-12">
             <div class="text-center">
                 <div class="btn-near-cta">Jeżeli nie chcesz przez kilkanaście lat się martwić, to...</div>
-                <a href="https://formularz.prudential.pl/lead?lid=46210" class="btn btn-primary btn-white" target="_blank" data-trigger="versatag-click" data-url="<?php echo App::APP_URL; ?>versatag/46210">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                <a href="https://formularz.prudential.pl/lead?lid=46210" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Zaplanuj swoją emeryturę <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
             </div>
         </div>
     </div>
