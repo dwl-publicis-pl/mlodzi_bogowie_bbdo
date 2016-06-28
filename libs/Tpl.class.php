@@ -58,7 +58,7 @@ class Tpl {
             <?php
             if (!empty($og_appid)) {}
                 ?>
-                <meta property="og:app_id" content="<?php echo $og_appid; ?>">
+                <meta property="fb:app_id" content="<?php echo $og_appid; ?>">
                 <?php
             ?>
 
