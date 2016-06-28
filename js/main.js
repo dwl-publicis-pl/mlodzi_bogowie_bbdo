@@ -103,6 +103,7 @@ var quiz = (function() {
         btnAnswerSelector = '.btn-quiz',
         btnNextSelector = '.btn-quiz-select-answer',
         triggerBoxElement = '#js-blue-man',// element do ukrycia przy rozpoczęciu quizu
+        triggerShareElement = '.js-quiz-share',
         questionsAndAnswers = {}, // question : points
         pointsSum = 0,
         calculatedResultSlide,
@@ -120,6 +121,7 @@ var quiz = (function() {
         initRootElement();
         initFirstAnimation();
         listenCycleProceed();
+        listenQuizShare();
         currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         onWindowResize();
 
@@ -165,6 +167,23 @@ var quiz = (function() {
             if (adobeName && adobePName) {
                 loadAdobeComposition(adobeName, adobePName);
             }
+        });
+    };
+
+
+    var listenQuizShare = function() {
+        var button = $(triggerShareElement);
+
+        button.click(function(e) {
+            var b_href = $(this).data('href');
+
+            FB.ui({
+                method: 'share',
+                href: b_href,
+            }, function(response){
+                // GA event
+                ga('send', 'event', 'Quiz', 'Share result');
+            });
         });
     };
 

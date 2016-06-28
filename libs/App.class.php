@@ -1,7 +1,7 @@
 <?php
 class App
 {
-    const APP_URL = 'http://mlodzibogowie.pl/__DEV/';
+    const APP_URL = 'https://mlodzibogowie.pl/';
     const APP_NAME = 'Czy jesteś młodym bogiem?';
     const APP_DESC = 'Obalamy finansowe mity młodych bogów! Kim są młodzi bogowie? Być może Ty jesteś jednym z nich. Sprawdź!';
     const CONTACT_EMAIL_CC = null;
@@ -10,7 +10,7 @@ class App
     
     protected $emailFrom = 'noreply@mlodzibogowie.pl';
     protected $emailFromName = 'MłodziBogowie.pl';
-    protected $emailTo = 'czachorowski@Bbdo.com.pl';
+    protected $emailTo = 'czachorowski@bbdo.com.pl';
     protected $emailCC = null;
 
 

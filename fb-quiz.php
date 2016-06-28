@@ -1,25 +1,54 @@
 <?php
 require_once('libs/App.class.php');
 
-Tpl::htmlHead();
-Tpl::nav();
+// link do aplikacji Facebook
+$fb_app_url = 'https://apps.facebook.com/test-mlodego-boga';
+
+$result_param = $_GET['wynik'];
+$og_image = null;
+
+// obrazki dla poszczególnych wyników
+switch ($result_param) {
+    case 10:
+        $og_image = 'share-czlowiek-rozsadek.jpg';
+
+        break;
+
+    case 11:
+        $og_image = 'share-permanentny-inwigilator.jpg';
+
+        break;
+
+    case 12:
+        $og_image = 'share-troche-bog-troche-niebog.jpg';
+
+        break;
+
+    case 13:
+        $og_image = 'share-prokrastynator-amator.jpg';
+
+        break;
+
+    case 14:
+        $og_image = 'share-bog-mlodych-bogow.jpg';
+
+        break;
+
+    default:
+        $og_image = 'share-quiz.jpg';
+}
+
+Tpl::htmlHead(null, [
+    'title' => 'Test Młodego Boga',
+    'desc' => 'Młodzi Bogowie, rozwiążcie test! Sprawdź jaki Młody Bóg kryje się w Tobie i jaka może być Twoja przyszła emerytura. Zobacz w jaki sposób lepsza emerytura jest możliwa dzięki polisie Prudential.',
+    'og:url' => $fb_app_url,
+    'og:app_id' => '1736737319898953',
+    'og:image' => App::APP_URL . 'img/quiz/share/' . $og_image
+]);
 ?>
 
-<div class="jumbotron border-bottom-rsg" id="jumbotron-video">
-    <div id="intro-placeholder">
-        <img src="img/txt-kim-sa-mlodzi-bogowie.png" alt="Kim są młodzi bogowie?" class="img-responsive">
-
-        <button class="btn btn-link btn-video" data-trigger="startTopVideo"><img src="img/btn-play.png" alt="Start"></button>
-    </div>
-
-    <video poster="img/top-video-placeholder.jpg" preload>
-        <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-        <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
-        <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
-    </video>
-</div>
-
 <div class="container-fluid">
+<!--
     <header class="row">
         <h1>Poznaj <strong>mity</strong> młodych bogów</h1>
         <p>
@@ -27,198 +56,7 @@ Tpl::nav();
             A&nbsp;może warto na chwilę się zatrzymać i przemyśleć swoje przekonania, zanim zmusi nas do tego rzeczywistość?
         </p>
     </header>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1 myths-rows">
-            <div class="myths-rows-insider">
-                <div class="myth-box myth-box-type-a">
-                    <figure class="myth-7 hidden-xs hidden-sm">
-                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">
-                            <img src="img/mity/mit-7.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-7-clean.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive onhover">
-                            <h2><strong>MIT #7</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo"><img src="img/mity/mit-7.jpg" alt="Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-b">
-                    <figure class="myth-8 hidden-xs hidden-sm">
-                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
-                            <img src="img/mity/mit-8.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-8-clean.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive onhover">
-                            <h2><strong>MIT #8</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"><img src="img/mity/mit-8.jpg" alt="O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive"></a>
-                    </figure>
-
-                    <figure class="myth-10 hidden-xs hidden-sm">
-                        <a href="mit-zle-rzeczy-przydarzaja-sie-innym">
-                            <img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-10-clean.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive onhover">
-                            <h2><strong>MIT #10</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-zle-rzeczy-przydarzaja-sie-innym"><img src="img/mity/mit-10.jpg" alt="Złe rzeczy przydarzają się innym" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-c">
-                    <figure class="myth-6 hidden-xs hidden-sm">
-                        <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">
-                            <img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-6-clean.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive onhover">
-                            <h2><strong>MIT #6</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"><img src="img/mity/mit-6.jpg" alt="Ubezpieczenie na życie to strata pieniędzy" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-c visible-xs visible-sm">                    
-                    <figure class="myth-4">
-                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"><img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="myth-box myth-box-type-a">
-                    <figure class="myth-5 hidden-xs hidden-sm">
-                        <a href="mit-nie-stac-mnie-na-oszczedzanie">
-                            <img src="img/mity/mit-5.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive">
-                        </a>
-                        
-                        <div class="mask">  
-                            <img src="img/mity/mit-5-clean.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive onhover">
-                            <h2><strong>MIT #5</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-nie-stac-mnie-na-oszczedzanie" class="alllink"></a>
-                        </div>  
-                    </figure>
-                    <figure class="myth-5 visible-xs visible-sm">
-                        <a href="mit-nie-stac-mnie-na-oszczedzanie"><img src="img/mity/mit-5.jpg" alt="Nie stać mnie na oszczędzanie" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-d">
-                    <figure class="myth-3 hidden-xs hidden-sm">
-                        <a href="mit-emerytura-nie-potrwa-dlugo">
-                            <img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-3-clean.jpg" alt="Emerytura nie potrwa długo" class="img-responsive onhover">
-                            <h2><strong>MIT #3</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-emerytura-nie-potrwa-dlugo" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-emerytura-nie-potrwa-dlugo"><img src="img/mity/mit-3.jpg" alt="Emerytura nie potrwa długo" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-e">
-                    <figure class="myth-1 hidden-xs hidden-sm">
-                        <a href="mit-panstwo-da-mi-dobra-emeryture">
-                            <img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-1-clean.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive onhover">
-                            <h2><strong>MIT #1</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-panstwo-da-mi-dobra-emeryture" class="alllink"></a>
-                        </div>
-                    </figure>
-
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-panstwo-da-mi-dobra-emeryture"><img src="img/mity/mit-1.jpg" alt="Państwo da mi dobrą emeryturę" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="myth-box myth-box-type-a">
-                    <figure class="myth-9 hidden-xs hidden-sm">
-                        <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">
-                            <img src="img/mity/mit-9.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-9-clean.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive onhover">
-                            <h2><strong>MIT #9</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"><img src="img/mity/mit-9.jpg" alt="Zawsze będę zdrwoy tak jak dziś" class="img-responsive"></a>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-f">
-                    <figure class="myth-4 hidden-xs hidden-sm">
-                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">
-                            <img src="img/mity/mit-4.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-4-clean.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive onhover">
-                            <h2><strong>MIT #4</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="alllink"></a>
-                        </div>
-                    </figure>
-                </div>
-
-                <div class="myth-box myth-box-type-g">
-                    <figure class="myth-2 hidden-xs hidden-sm">
-                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
-                            <img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive">
-                        </a>
-
-                        <div class="mask">
-                            <img src="img/mity/mit-2-clean.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive onhover">
-                            <h2><strong>MIT #2</strong></h2>
-                            <div class="info">Zobacz <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
-                            <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="alllink"></a>
-                        </div>
-                    </figure>
-                    <figure class="visible-xs visible-sm">
-                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej"><img src="img/mity/mit-2.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive"></a>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
+-->
 
     <div class="row collapse in" id="js-blue-man">
         <div class="col-xs-12 bg-blue-man">
@@ -718,6 +556,10 @@ Tpl::nav();
                         Ktoś, kto podchodzi do wydatków tak ostrożnie jak Ty, na pewno lubi też porównywać różne opcje.
                     </p>
 
+                    <div class="quiz-btn-share-box">
+                        <button class="btn btn-quiz-share js-quiz-share" data-href="<?php echo $fb_app_url; ?>?wynik=10">Podziel się wynikiem i sprawdź swoich znajomych <img src="img/icon-arrow-right-red.png" alt=""></button>
+                    </div>
+
                     <button type="button" class="btn btn-left visible-xs visible-sm" data-trigger="quiz-restart">
                         <img src="img/icon-arrow-left-red.png" alt="">
                         Jeszcze raz?
@@ -778,6 +620,10 @@ Tpl::nav();
                         do jej zabezpieczenia?
                     </p>
 
+                    <div class="quiz-btn-share-box">
+                        <button class="btn btn-quiz-share js-quiz-share" data-href="<?php echo $fb_app_url; ?>?wynik=11">Podziel się wynikiem i sprawdź swoich znajomych <img src="img/icon-arrow-right-red.png" alt=""></button>
+                    </div>
+
                     <button type="button" class="btn btn-left visible-xs visible-sm" data-trigger="quiz-restart">
                         <img src="img/icon-arrow-left-red.png" alt="">
                         Jeszcze raz?
@@ -833,6 +679,10 @@ Tpl::nav();
                         A może odwrotnie. Do tej pory żyłeś według bardzo ostrożnych zasad finansowych,
                         ale zaczęło Ci się trochę lepiej powodzić i&nbsp;postanowiłeś trochę popuścić pasa?
                     </p>
+
+                    <div class="quiz-btn-share-box">
+                        <button class="btn btn-quiz-share js-quiz-share" data-href="<?php echo $fb_app_url; ?>?wynik=12">Podziel się wynikiem i sprawdź swoich znajomych <img src="img/icon-arrow-right-red.png" alt=""></button>
+                    </div>
 
                     <button type="button" class="btn btn-left visible-xs visible-sm" data-trigger="quiz-restart">
                         <img src="img/icon-arrow-left-red.png" alt="">
@@ -891,6 +741,10 @@ Tpl::nav();
                         i wyznaczone długoterminowe cele, jak edukacja dzieci, budowa domu czy też zabezpieczenie emerytalne.
                         Im szybciej zaczniesz systematycznie i&nbsp;konsekwentnie inwestować określoną kwotę, tym większy będzie zgromadzony kapitał po latach.
                     </p>
+
+                    <div class="quiz-btn-share-box">
+                        <button class="btn btn-quiz-share js-quiz-share" data-href="<?php echo $fb_app_url; ?>?wynik=13">Podziel się wynikiem i sprawdź swoich znajomych <img src="img/icon-arrow-right-red.png" alt=""></button>
+                    </div>
 
                     <button type="button" class="btn btn-left visible-xs visible-sm" data-trigger="quiz-restart">
                         <img src="img/icon-arrow-left-red.png" alt="">
@@ -952,6 +806,10 @@ Tpl::nav();
                         Że w razie wypadku nadal będziesz mógł być młodym bogiem dla swojej rodziny?
                     </p>
 
+                    <div class="quiz-btn-share-box">
+                        <button class="btn btn-quiz-share js-quiz-share" data-href="<?php echo $fb_app_url; ?>?wynik=14">Podziel się wynikiem i sprawdź swoich znajomych <img src="img/icon-arrow-right-red.png" alt=""></button>
+                    </div>
+
                     <button type="button" class="btn btn-left visible-xs visible-sm" data-trigger="quiz-restart">
                         <img src="img/icon-arrow-left-red.png" alt="">
                         Jeszcze raz?
@@ -974,21 +832,25 @@ Tpl::nav();
             </div>
         </div>
     </div>
-
-    <?php
-    Tpl::products();
-    ?>
-
-    <div class="row row-filled-red">
-        <div class="col-xs-12">
-            <div class="text-center">
-                <span class="btn-near-cta">Zrób pierwszy krok!</span>
-                <p>Umów się z naszym Konsultantem. Pomożemy Ci wybrać rozwiązanie dopasowane do Twoich potrzeb i celów.</p>
-                <a href="https://formularz.prudential.pl/lead?lid=45397" class="btn btn-primary btn-white" target="_blank" data-trigger="run-conversion" data-id="798548">Skontaktuj się z nami <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-            </div>
-        </div>
-    </div>
 </div>
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1736737319898953',
+            xfbml      : true,
+            version    : 'v2.6'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pl_PL/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <?php
 Tpl::bottom();

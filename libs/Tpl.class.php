@@ -19,6 +19,24 @@ class Tpl {
         } else {
             $desc = $options['desc'];
         }
+
+        if (empty($options['og:image'])) {
+            $og_image = App::APP_URL . 'img/fb-img.png';
+        } else {
+            $og_image = $options['og:image'];
+        }
+
+        if (empty($options['og:app_id'])) {
+            $og_appid = null;
+        } else {
+            $og_appid = $options['og:app_id'];
+        }
+
+        if (empty($options['og:url'])) {
+            $og_url = App::APP_URL;
+        } else {
+            $og_url = $options['og:url'];
+}
         ?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pl"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="pl"> <![endif]-->
@@ -32,22 +50,28 @@ class Tpl {
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="apple-touch-icon" href="apple-touch-icon.png">
             
-            <meta property="og:url" content="<?php echo App::APP_URL; ?>" />
-            <meta property="og:locale" content="pl_PL" />
-            <meta property="og:title" content="<?php echo $title; ?>" />
-            <meta property="og:description" content="<?php echo $desc; ?>" />
-            <meta property="og:image" content="<?php echo App::APP_URL; ?>img/fb-img.png" />
+            <meta property="og:url" content="<?php echo $og_url; ?>">
+            <meta property="og:locale" content="pl_PL">
+            <meta property="og:title" content="<?php echo $title; ?>">
+            <meta property="og:description" content="<?php echo $desc; ?>">
+            <meta property="og:image" content="<?php echo $og_image; ?>">
+            <?php
+            if (!empty($og_appid)) {}
+                ?>
+                <meta property="og:app_id" content="<?php echo $og_appid; ?>">
+                <?php
+            ?>
 
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-            <link rel="stylesheet" href="css/main.20160322.css">
+            <link rel="stylesheet" href="<?php echo App::APP_URL; ?>css/main.20160628.css">
     
-            <script src="js/vendor/modernizr-respond-1.4.2.min.js"></script>
+            <script src="<?php echo App::APP_URL; ?>js/vendor/modernizr-respond-1.4.2.min.js"></script>
             <?php
             // biblioteka Adobe Edge tylko na niektórych stronach
             //if (App::currentPage() == 'index') {
                 ?>
-                <script src="//animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js"></script>
+                <script src="https://animate.adobe.com/runtime/6.0.0/edge.6.0.0.min.js"></script>
                 <?php
             //}
             ?>
@@ -68,11 +92,11 @@ class Tpl {
             <!-- End Facebook Pixel Code -->
 
             <!-- Google Tag Manager -->
-            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH6V2V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TH6V2V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-TH6V2V');</script>
             <!-- End Google Tag Manager -->
         <?php
@@ -308,23 +332,23 @@ class Tpl {
     {
         ?>
 
-        <script src="//secure-ds.serving-sys.com/BurstingRes/CustomScripts/mmConversionTagV3.js"></script>
+        <script src="https://secure-ds.serving-sys.com/BurstingRes/CustomScripts/mmConversionTagV3.js"></script>
        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?php echo App::APP_URL; ?>js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.20160412.js"></script>
+        <script src="<?php echo App::APP_URL; ?>js/plugins.js"></script>
+        <script src="<?php echo App::APP_URL; ?>js/main.20160628.js"></script>
         
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-69104129-1', 'auto');
             ga('send', 'pageview');

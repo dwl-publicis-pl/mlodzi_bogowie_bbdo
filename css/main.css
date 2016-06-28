@@ -2491,6 +2491,26 @@ color: #cd0e0c;
     margin-top: 40px;
 }
 
+.btn-quiz-share {
+    background: url("../img/quiz/btn-share-quiz.png") no-repeat;
+    background-size: 100% 100%;
+    border: 0;
+    color: #d10e00;
+    font-family: 'pru_sans_ot2_bold', sans-serif;
+    font-size: 15px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.btn-quiz-share img {
+    margin: 0 7px;
+    vertical-align: -3px;
+}
+
+.quiz-btn-share-box {
+    text-align: left;
+}
+
 .animation-pulse {
     -webkit-animation: pulse 2s infinite;
     -o-animation: pulse 2s infinite;
