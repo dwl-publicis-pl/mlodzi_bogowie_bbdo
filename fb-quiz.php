@@ -11,36 +11,42 @@ $og_image = null;
 switch ($result_param) {
     case 10:
         $og_image = 'share-czlowiek-rozsadek.jpg';
+        $meta_desc = 'Zrobiłem test na Młodego Boga, jestem Człowiekiem Rozsądkiem, a Ty? Sprawdź, jak wypadasz w konfrontacji ze swoją przyszłością i jak Prudential może Ci pomóc.';
 
         break;
 
     case 11:
         $og_image = 'share-permanentny-inwigilator.jpg';
+        $meta_desc = 'Zrobiłem test na Młodego Boga, jestem Permanentnym Inwigilatorem, a Ty? Sprawdź, jak wypadasz w konfrontacji ze swoją przyszłością i jak Prudential może Ci pomóc.';
 
         break;
 
     case 12:
-        $og_image = 'share-troche-bog-troche-niebog.jpg';
+        $og_image = 'share-troche-bog-troche-nie-bog.jpg';
+        $meta_desc = 'Zrobiłem test na Młodego Boga, jestem Trochę Bóg, Trochę nie-Bóg, a Ty? Sprawdź, jak wypadasz w konfrontacji ze swoją przyszłością i jak Prudential może Ci pomóc.';
 
         break;
 
     case 13:
         $og_image = 'share-prokrastynator-amator.jpg';
+        $meta_desc = 'Zrobiłem test na Młodego Boga, jestem Prokrastynatorem Amatorem, a Ty? Sprawdź, jak wypadasz w konfrontacji ze swoją przyszłością i jak Prudential może Ci pomóc.';
 
         break;
 
     case 14:
         $og_image = 'share-bog-mlodych-bogow.jpg';
+        $meta_desc = 'Zrobiłem test na Młodego Boga, jestem Bogiem Młodych Bogów, a Ty? Sprawdź, jak wypadasz w konfrontacji ze swoją przyszłością i jak Prudential może Ci pomóc.';
 
         break;
 
     default:
         $og_image = 'share-quiz.jpg';
+        $meta_desc = 'Młodzi Bogowie, rozwiążcie test! Sprawdź jaki Młody Bóg kryje się w Tobie i jaka może być Twoja przyszła emerytura. Zobacz w jaki sposób lepsza emerytura jest możliwa dzięki polisie Prudential.';
 }
 
 Tpl::htmlHead(null, [
     'title' => 'Test Młodego Boga',
-    'desc' => 'Młodzi Bogowie, rozwiążcie test! Sprawdź jaki Młody Bóg kryje się w Tobie i jaka może być Twoja przyszła emerytura. Zobacz w jaki sposób lepsza emerytura jest możliwa dzięki polisie Prudential.',
+    'desc' => $meta_desc,
     'og:url' => $fb_app_url,
     'og:app_id' => '1736737319898953',
     'og:image' => App::APP_URL . 'img/quiz/share/' . $og_image
