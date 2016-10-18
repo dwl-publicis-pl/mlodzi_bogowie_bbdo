@@ -33,7 +33,7 @@ class Tpl {
         }
 
         if (empty($options['og:url'])) {
-            $og_url = App::APP_URL;
+            $og_url = App::APP_URL . App::currentPage();
         } else {
             $og_url = $options['og:url'];
 }
