@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | O przyszłości dziecka mogę pomyśleć jak będzie większe.',
-    'desc' => 'Start w dorosłość to szok dla dziecka, rodziców i domowego budżetu.'
+    'desc' => 'Start w dorosłość to szok dla dziecka, rodziców i domowego budżetu.',
+    'og:image' => App::APP_URL . 'img/social/mit8_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

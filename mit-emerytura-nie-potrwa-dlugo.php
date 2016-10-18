@@ -4,7 +4,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Emerytura nie potrwa długo.',
-    'desc' => 'Żyjemy coraz dłużej. Już dziś na emeryturze Polacy żyją około 19 lat. Zacznij oszczędzać na przyszłe dni.'
+    'desc' => 'Żyjemy coraz dłużej. Już dziś na emeryturze Polacy żyją około 19 lat. Zacznij oszczędzać na przyszłe dni.',
+    'og:image' => App::APP_URL . 'img/social/mit3_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

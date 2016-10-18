@@ -48,7 +48,7 @@ Tpl::htmlHead(null, [
     'title' => 'Test Młodego Boga',
     'desc' => $meta_desc,
     'og:url' => $fb_app_url,
-    'og:app_id' => '1736737319898953',
+    'og:app_id' => '1736737319898953',//166463837102316
     'og:image' => App::APP_URL . 'img/quiz/share/' . $og_image
 ]);
 ?>

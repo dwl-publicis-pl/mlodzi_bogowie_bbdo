@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Dziecko, jak dorośnie, od razu utrzyma się samo.',
-    'desc' => 'Dorosłe dziecko jeszcze przez kilka lat po osiągnięciu pełnoletniości będzie korzystać z pomocy rodziców, zwłaszcza w czasie studiów. Praca dorywcza, często na ułamek etatu, nie zawsze pozwala na pełne usamodzielnie się.'
+    'desc' => 'Dorosłe dziecko jeszcze przez kilka lat po osiągnięciu pełnoletniości będzie korzystać z pomocy rodziców, zwłaszcza w czasie studiów. Praca dorywcza, często na ułamek etatu, nie zawsze pozwala na pełne usamodzielnie się.',
+    'og:image' => App::APP_URL . 'img/social/mit7_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

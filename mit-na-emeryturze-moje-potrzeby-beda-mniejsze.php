@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Na emeryturze moje potrzeby będą mniejsze.',
-    'desc' => 'Nawet jeśli przyszłość zweryfikuje nasze potrzeby, nie znaczy to, że na emeryturze będziemy potrzebować mniej środków do życia.'
+    'desc' => 'Nawet jeśli przyszłość zweryfikuje nasze potrzeby, nie znaczy to, że na emeryturze będziemy potrzebować mniej środków do życia.',
+    'og:image' => App::APP_URL . 'img/social/mit4_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

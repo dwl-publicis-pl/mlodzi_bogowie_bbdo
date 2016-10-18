@@ -4,7 +4,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | O emeryturze mogę pomyśleć później.',
-    'desc' => 'Każdy krok przybliża nas do emerytury. Lepiej zacząć oszczędzać już dziś, by małymi krokami uzbierać na godne życie na emeryturze.'
+    'desc' => 'Każdy krok przybliża nas do emerytury. Lepiej zacząć oszczędzać już dziś, by małymi krokami uzbierać na godne życie na emeryturze.',
+    'og:image' => App::APP_URL . 'img/social/mit2_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

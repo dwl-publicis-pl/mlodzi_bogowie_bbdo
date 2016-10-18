@@ -4,7 +4,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Nie stać mnie na oszczędzanie.',
-    'desc' => 'A jednak odkładając codziennie drobne kwoty możemy dojść do dużych oszczędności. Pieniądze zaoszczędzone dzisiaj mogą zarabiać na Twoją przyszłość i długoterminowe cele.'
+    'desc' => 'A jednak odkładając codziennie drobne kwoty możemy dojść do dużych oszczędności. Pieniądze zaoszczędzone dzisiaj mogą zarabiać na Twoją przyszłość i długoterminowe cele.',
+    'og:image' => App::APP_URL . 'img/social/mit5_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

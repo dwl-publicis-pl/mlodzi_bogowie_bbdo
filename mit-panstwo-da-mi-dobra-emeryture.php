@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Państwo da mi dobrą emeryturę.',
-    'desc' => 'Emerytura to 1/3 ostatniej pensji pod warunkiem odprowadzania składek na ubezpieczenie społeczne i zdrowotne. Warto zacząć oszczędzać na emeryturę.'
+    'desc' => 'Emerytura to 1/3 ostatniej pensji pod warunkiem odprowadzania składek na ubezpieczenie społeczne i zdrowotne. Warto zacząć oszczędzać na emeryturę.',
+    'og:image' => App::APP_URL . 'img/social/mit1_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Zawsze będę zdrowy tak jak dziś',
-    'desc' => 'Wiecznie młodym można być, ale niestety tylko duchem. Dbając o siebie i swoją kondycję zmniejszamy ryzyko pojawienia się problemów ze zdrowiem, ale nie mamy wpływu na wszystko. Warto byc przygotowanym, wykupić ubezpieczenie.'
+    'desc' => 'Wiecznie młodym można być, ale niestety tylko duchem. Dbając o siebie i swoją kondycję zmniejszamy ryzyko pojawienia się problemów ze zdrowiem, ale nie mamy wpływu na wszystko. Warto byc przygotowanym, wykupić ubezpieczenie.',
+    'og:image' => App::APP_URL . 'img/social/mit9_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

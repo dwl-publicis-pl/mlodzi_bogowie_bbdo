@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Ubezpieczenie będzie stratą pieniedzy.',
-    'desc' => 'Jeśli nic Ci się nie stanie – premiopolisa pozwoli Ci zaoszczędzić środki na przyszłość. Jeśli się stanie – premiopolisa zadziała jak klasyczne ubezpieczenie na życie.'
+    'desc' => 'Jeśli nic Ci się nie stanie – premiopolisa pozwoli Ci zaoszczędzić środki na przyszłość. Jeśli się stanie – premiopolisa zadziała jak klasyczne ubezpieczenie na życie.',
+    'og:image' => App::APP_URL . 'img/social/mit6_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>

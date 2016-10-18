@@ -5,7 +5,8 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Złe rzeczy przydarzają się innym.',
-    'desc' => 'Nie warto się skupiać na nieszczęściach na co dzień, ale warto być na nie przygotowanym, wykupując odpowiednie ubezpieczenie. Poważny wypadek czy choroba może znacznie utrudnić życie, również w wymiarze finansowym.'
+    'desc' => 'Nie warto się skupiać na nieszczęściach na co dzień, ale warto być na nie przygotowanym, wykupując odpowiednie ubezpieczenie. Poważny wypadek czy choroba może znacznie utrudnić życie, również w wymiarze finansowym.',
+    'og:image' => App::APP_URL . 'img/social/mit10_1200x630.jpg'
 ]);
 Tpl::nav();
 ?>
