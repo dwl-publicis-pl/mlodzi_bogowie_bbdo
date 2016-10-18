@@ -56,10 +56,11 @@ class Tpl {
             <meta property="og:description" content="<?php echo $desc; ?>">
             <meta property="og:image" content="<?php echo $og_image; ?>">
             <?php
-            if (!empty($og_appid)) {}
+            if (!empty($og_appid)) {
                 ?>
                 <meta property="fb:app_id" content="<?php echo $og_appid; ?>">
                 <?php
+            }
             ?>
 
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
