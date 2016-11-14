@@ -65,7 +65,7 @@ class Tpl {
 
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
-            <link rel="stylesheet" href="<?php echo App::APP_URL; ?>css/main.20160628.css">
+            <link rel="stylesheet" href="<?php echo App::APP_URL; ?>css/main.20161114.css">
     
             <script src="<?php echo App::APP_URL; ?>js/vendor/modernizr-respond-1.4.2.min.js"></script>
             <?php
@@ -342,6 +342,18 @@ class Tpl {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
+        <?php
+        // obsługa landing page's dla prerolli 2016-11
+        // automatyczne dostosowanie wysokości iframe do jego zawartości
+        if (App::currentPage() == 'preroll-zakonczenie') {
+            ?>
+            <script src="<?php echo App::APP_URL; ?>js/vendor/iframeResizer.min.js"></script>
+            <script>
+                iFrameResize({}, '#iframe-camino-1');
+            </script>
+            <?php
+        }
+        ?>
         <script src="<?php echo App::APP_URL; ?>js/plugins.js"></script>
         <script src="<?php echo App::APP_URL; ?>js/main.20160628.js"></script>
         

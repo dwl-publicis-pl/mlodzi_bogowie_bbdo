@@ -571,6 +571,23 @@ h1.h1-mod-1 {
     text-transform: none;
 }
 
+h1.h1-mod-2 {
+    font-family: 'pru_sans_ot2_bold', sans-serif;
+    font-size: 2.429rem;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    text-transform: none;
+}
+
+h1.h1-mod-2 em {
+    font-family: 'pru_sans_ot2book', sans-serif;
+    font-style: normal;
+}
+
+h1.h1-mod-2 p {
+    font-size: 1.286rem;
+}
+
 header h1 span {
   display: inline-block;
   position: relative;  
@@ -1879,7 +1896,7 @@ color: #cd0e0c;
 }
 
 .btn-cloud {
-        padding: 7px 14px;
+    padding: 7px 14px;
     font-size: 0.8em;
     margin-top: 5px;
 }
@@ -2527,6 +2544,18 @@ color: #cd0e0c;
 }
 /**
  * quiz end
+ */
+
+/**
+ * landing pages dla prerolli CAMINO
+ */
+.iframe-camino {
+    border: 0;
+    min-height: 100px;
+    width: 100%;
+}
+/**
+ * landing pages dla prerolli CAMINO END
  */
 
 /**
