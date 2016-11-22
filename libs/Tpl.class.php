@@ -196,12 +196,12 @@ class Tpl {
                                       <div class="col-sm-6 col-sm-offset-1">
                                           <div class="solution solution-1 clearfix">
                                               <a href="przyszlosc-dziecka"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
-                                              <span class="menu-span">Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
+                                              <span class="menu-span">Ubezpieczenie oszczędnościowe Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
                                           </div>
 
                                           <div class="solution solution-2 clearfix">
                                               <a href="emerytura-bez-obaw"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
-                                              <span class="menu-span">Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
+                                              <span class="menu-span">Ubezpieczenie oszczędnościowe Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
                                           </div>
 
                                           <div class="solution solution-3 clearfix">

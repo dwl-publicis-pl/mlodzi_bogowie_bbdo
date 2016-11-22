@@ -5,7 +5,7 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Mit | Ubezpieczenie będzie stratą pieniedzy.',
-    'desc' => 'Jeśli nic Ci się nie stanie – premiopolisa pozwoli Ci zaoszczędzić środki na przyszłość. Jeśli się stanie – premiopolisa zadziała jak klasyczne ubezpieczenie na życie.',
+    'desc' => 'Jeśli nic Ci się nie stanie – ubezpieczenie oszczędnościowe pozwoli Ci zaoszczędzić środki na przyszłość. Jeśli się stanie – ubezpieczenie oszczędnościowe zadziała jak klasyczne ubezpieczenie na życie.',
     'og:image' => App::APP_URL . 'img/social/mit6_1200x630.jpg'
 ]);
 Tpl::nav();
@@ -49,7 +49,7 @@ Tpl::nav();
                     No tak, przecież Tobie nic się nie stanie, prawda?... Tylko że my pomyśleliśmy również o&nbsp;sytuacji, że może jednak...
                 </div>
                 <div>
-                    Premiopolisa to ubezpieczenie na życie i dożycie. To oznacza, że w przypadku śmierci osoby ubezpieczonej
+                    Ubezpieczenie oszczędnościowe to ubezpieczenie na życie i&nbsp;dożycie. To oznacza, że w&nbsp;przypadku śmierci osoby ubezpieczonej
                     wyznaczone przez nią osoby otrzymają pieniądze, które pozwolą im żyć dalej na zbliżonym poziomie, spłacić kredyt mieszkaniowy itp.
                     Ale <strong>nawet jeśli żadna tragedia ubezpieczonemu się nie przydarzy, to na koniec okresu umowy również wypłacimy mu pieniądze!</strong>
                 </div>

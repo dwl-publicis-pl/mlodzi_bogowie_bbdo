@@ -3,7 +3,7 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Dzieci młodych bogów',
-    'desc' => 'Premiopolisa Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.'
+    'desc' => 'Ubezpieczenie oszczędnościowe Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.'
 ]);
 Tpl::nav();
 ?>
@@ -38,11 +38,11 @@ Tpl::nav();
     <header class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <h1 class="h1-mod-1">
-                Premiopolisa <strong>Start w Życie</strong> to gwarancja, że niezależnie od tego, co przyniesie przyszłość,
+                Ubezpieczenie oszczędnościowe <strong>Start w Życie</strong> to gwarancja, że niezależnie od tego, co przyniesie przyszłość,
                 Twoje dziecko otrzyma wsparcie finansowe. Pieniądze na studia, pierwszy samochód czy wkład
                 na mieszkanie – potrzeb z pewnością nie zabraknie.<br>
                 <br><br>
-                Czym jest Premiopolisa?
+                Czym jest ubezpieczenie oszczędnościowe?
             </h1>
         </div>
 
@@ -80,7 +80,7 @@ Tpl::nav();
 
     <header class="row border-top">
         <h1>
-            Co zyskam z Premiopolisą <strong>Start w Życie?</strong>
+            Co zyskam z ubezpieczeniem oszczędnościowym <strong>Start w Życie?</strong>
         </h1>
 
         <hr>

@@ -3,7 +3,7 @@ require_once('libs/App.class.php');
 
 Tpl::htmlHead(null, [
     'title' => 'Prudential | Młody bóg na emeryturze',
-    'desc' => 'Premiopolisa Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.'
+    'desc' => 'Ubezpieczenie oszczędnościowe Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.'
 ]);
 Tpl::nav();
 ?>
@@ -37,10 +37,10 @@ Tpl::nav();
     <header class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <h1 class="h1-mod-1">
-                Premiopolisa Emerytura bez Obaw <strong>pozwoli Ci zgromadzić kapitał</strong>, by na przyszłej emeryturze
+                Ubezpieczenie oszczędnościowe Emerytura bez Obaw <strong>pozwoli Ci zgromadzić kapitał</strong>, by na przyszłej emeryturze
                 móc utrzymać standard życia na obecnym poziomie i&nbsp;realizować swoje marzenia.<br>
                 <br><br>
-                Czym jest Premiopolisa?
+                Czym jest ubezpieczenie oszczędnościowe?
             </h1>
         </div>
 
@@ -79,7 +79,7 @@ Tpl::nav();
 
     <header class="row border-top">
         <h1>
-            Co zyskam z Premiopolisą Emerytura bez obaw?
+            Co zyskam z ubezpieczeniem oszczędnościowym Emerytura bez obaw?
         </h1>
 
         <hr>
