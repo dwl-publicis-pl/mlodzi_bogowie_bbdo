@@ -64,38 +64,49 @@ if (isset($_GET['s']) && $_GET['s'] == 'nie') { // user wybrał "nie"
 
 <div class="container-fluid">
     <header class="row">
-        <h1 class="h1-mod-2">
-            <?php
-            switch($submission_status) {
-                case 'option_false':
-                    ?>
+        <?php
+        switch($submission_status) {
+            case 'option_false':
+                ?>
 
+                <h1 class="h1-mod-2">
                     Nie chcesz pomóc Młodemu Bogowi.<br>
-                    <em>No cóż, każdy dba o&nbsp;siebie.</em>
+                    <em>Cóż, każdy dba o siebie.</em>
+                </h1>
 
-                    <?php
-                    break;
+                <p>
+                    Już teraz zadbaj o własną przyszłość.<br>
+                    Nie czekaj i umów się z Konsultantem Prudential<br>
+                    na niezobowiązujące spotkanie.<br>
+                    Im wcześniej zaczniesz oszczędzać na emeryturę<br>
+                    tym mniej będzie Cię to kosztowało.<br>
+                    Wypełnij formularz, odezwiemy się wkrótce!
+                </p>
 
-                default:
-                    ?>
+                <?php
+                break;
 
-                    Pomogłeś Młodemu Bogowi zająć się emeryturą.<br>
-                    <em>To super mega miło z&nbsp;Twojej strony!</em>
+            default:
+                ?>
 
-                    <?php
-                    break;
-            }
-            ?>
-        </h1>
+                <h1 class="h1-mod-2">
+                    Pomogłeś Młodemu Bogowi.<br>
+                    <em>Dzięki Tobie zacznie oszczędzać na emeryturę.</em>
+                </h1>
 
-        <p>
-            Zajmij się zatem własną przyszłością.<br>
-            Umów się z&nbsp;konsultantem Prudentialu.<br>
-            Razem znajdziecie Twój sposób na odkładanie.<br>
-            Im szybciej zaczniesz, tym mniej będziesz poświęcał,<br>
-            żeby zebrać zaplanowaną kwotę.<br>
-            Wypełnij formularz, odezwiemy się wkrótce!
-        </p>
+                <p>
+                    Teraz Twoja kolej.<br>
+                    Nie czekaj i umów się z Konsultantem Prudential<br>
+                    na niezobowiązujące spotkanie.<br>
+                    Im wcześniej zaczniesz oszczędzać na emeryturę<br>
+                    tym mniej będzie Cię to kosztowało.<br>
+                    Wypełnij formularz, odezwiemy się wkrótce!
+                </p>
+
+                <?php
+                break;
+        }
+        ?>
     </header>
 
     <div class="row">
