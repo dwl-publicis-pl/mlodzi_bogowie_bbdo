@@ -32,28 +32,7 @@ $('[data-trigger]').on('click', function(e) {
     switch ($(this).data().trigger)
     {
         case 'startTopVideo':
-            $('#intro-placeholder').addClass('intro-placeholder-hidden');
-            $('#jumbotron-video').addClass('jumbotron-video-full');
-
-            /*$('html,body').animate({
-             scrollTop: $('#jumbotron-video').offset().top
-             }, 600);*/
-
-            var v = $('#jumbotron-video').find('video')[0];
-
-            v.play();
-            $('#jumbotron-video video').prop('controls', true);
-
-            if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
-                ga('send', 'event', 'video', 'Film na głównej');
-            }
-
-            v.onended = function(e) {
-                $(this).load();
-                $('#jumbotron-video video').prop('controls', false);
-                $('#intro-placeholder').removeClass('intro-placeholder-hidden');
-                $('#jumbotron-video').removeClass('jumbotron-video-full');
-            };
+            startTopVideo();
 
             break;
 
@@ -75,6 +54,47 @@ $('[data-trigger]').on('click', function(e) {
             break;
     }
 });
+
+
+function startTopVideo()
+{
+    $('#intro-placeholder').addClass('intro-placeholder-hidden');
+    $('#jumbotron-video').addClass('jumbotron-video-full');
+
+    /*$('html,body').animate({
+     scrollTop: $('#jumbotron-video').offset().top
+     }, 600);*/
+
+    var v = $('#jumbotron-video').find('video')[0];
+
+    v.play();
+    $('#jumbotron-video video').prop('controls', true);
+
+    if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
+        ga('send', 'event', 'video', 'Film na głównej');
+    }
+
+    v.onended = function(e) {
+        $(this).load();
+        $('#jumbotron-video video').prop('controls', false);
+        $('#intro-placeholder').removeClass('intro-placeholder-hidden');
+        $('#jumbotron-video').removeClass('jumbotron-video-full');
+    };
+
+    return true;
+}
+
+$(document).ready(function() {
+    // jest zawsze jedno wideo tego typu na stronie
+    var video_autostart_element = $('.js-autostart-delayed');
+
+    if (video_autostart_element.length) {
+        setTimeout(function() {
+            startTopVideo();
+        }, 2000);
+    }
+});
+
 
 
 /**

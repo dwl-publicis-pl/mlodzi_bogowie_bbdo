@@ -10,6 +10,34 @@ $submission_status = 'option_true'; // defaultowo "tak"
 if (isset($_GET['s']) && $_GET['s'] == 'nie') { // user wybrał "nie"
     $submission_status = 'option_false';
 }
+
+$file_video_yes = null;
+$file_video_no = null;
+$file_video_yes_placeholder = null;
+$file_video_no_placeholder = null;
+
+if (!isset($_GET['f'])) { // który film wyświetlić
+    $_GET['f'] = null;
+}
+
+switch ($_GET['f']) {
+    case 'p':
+        $file_video_yes = 'video/preroll/Prudential_Preroll_puenta_TAK_Pilka_25s_BIG';
+        $file_video_no = 'video/preroll/Prudential_Preroll_puenta_NIE_Pilka_25s_BIG';
+        $file_video_yes_placeholder = 'video/preroll/video-placeholder-pilka.jpg';
+        $file_video_no_placeholder = 'video/preroll/video-placeholder-pilka.jpg';
+
+        break;
+
+    case 'k':
+    default:
+        $file_video_yes = 'video/preroll/Prudential_Preroll_puenta_TAK_Kosiarka_25s_BIG'; // without extension
+        $file_video_no = 'video/preroll/Prudential_Preroll_puenta_NIE_Kosiarka_25s_BIG'; // without extension
+        $file_video_yes_placeholder = 'video/preroll/video-placeholder-kosiarka.jpg';
+        $file_video_no_placeholder = 'video/preroll/video-placeholder-kosiarka.jpg';
+
+        break;
+}
 ?>
 
 <div class="jumbotron border-bottom-rsg" id="jumbotron-video">
@@ -38,10 +66,10 @@ if (isset($_GET['s']) && $_GET['s'] == 'nie') { // user wybrał "nie"
         case 'option_false':
             ?>
 
-            <video poster="img/placeholder-video-nie-serio.jpg" preload>
-                <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
-                <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+            <video poster="<?php echo $file_video_no_placeholder; ?>" preload class="js-autostart-delayed">
+                <source src="<?php echo $file_video_no; ?>.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="<?php echo $file_video_no; ?>.webm" type='video/webm; codecs="vp8, vorbis"'>
+                <source src="<?php echo $file_video_no; ?>.ogv"  type='video/ogg; codecs="theora, vorbis"'>
             </video>
 
             <?php
@@ -50,10 +78,10 @@ if (isset($_GET['s']) && $_GET['s'] == 'nie') { // user wybrał "nie"
         default:
             ?>
 
-            <video poster="img/placeholder-video-super-ekstra.jpg" preload>
-                <source src="video/prudential-mlodzi-bogowie.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="video/prudential-mlodzi-bogowie.webm" type='video/webm; codecs="vp8, vorbis"'>
-                <source src="video/prudential-mlodzi-bogowie.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+            <video poster="<?php echo $file_video_yes_placeholder; ?>" preload class="js-autostart-delayed">
+                <source src="<?php echo $file_video_yes; ?>.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="<?php echo $file_video_yes; ?>.webm" type='video/webm; codecs="vp8, vorbis"'>
+                <source src="<?php echo $file_video_yes; ?>.ogv"  type='video/ogg; codecs="theora, vorbis"'>
             </video>
 
             <?php

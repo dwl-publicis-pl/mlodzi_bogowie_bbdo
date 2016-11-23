@@ -355,7 +355,7 @@ class Tpl {
         }
         ?>
         <script src="<?php echo App::APP_URL; ?>js/plugins.js"></script>
-        <script src="<?php echo App::APP_URL; ?>js/main.20160628.js"></script>
+        <script src="<?php echo App::APP_URL; ?>js/main.20161123.js"></script>
         
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
