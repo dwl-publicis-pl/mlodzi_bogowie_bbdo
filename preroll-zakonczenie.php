@@ -15,6 +15,7 @@ $file_video_yes = null;
 $file_video_no = null;
 $file_video_yes_placeholder = null;
 $file_video_no_placeholder = null;
+$placeholder_video_class = null;
 
 if (!isset($_GET['f'])) { // który film wyświetlić
     $_GET['f'] = null;
@@ -26,6 +27,7 @@ switch ($_GET['f']) {
         $file_video_no = 'video/preroll/Prudential_Preroll_puenta_NIE_Pilka_25s_BIG';
         $file_video_yes_placeholder = 'video/preroll/video-placeholder-pilka.jpg';
         $file_video_no_placeholder = 'video/preroll/video-placeholder-pilka.jpg';
+        $placeholder_video_class = 'video-placeholder-pilka';
 
         break;
 
@@ -35,6 +37,7 @@ switch ($_GET['f']) {
         $file_video_no = 'video/preroll/Prudential_Preroll_puenta_NIE_Kosiarka_25s_BIG'; // without extension
         $file_video_yes_placeholder = 'video/preroll/video-placeholder-kosiarka.jpg';
         $file_video_no_placeholder = 'video/preroll/video-placeholder-kosiarka.jpg';
+        $placeholder_video_class = 'video-placeholder-kosiarka';
 
         break;
 }
@@ -43,7 +46,7 @@ switch ($_GET['f']) {
 <div class="jumbotron border-bottom-rsg" id="jumbotron-video">
     <div id="intro-placeholder">
         <?php
-        switch($submission_status) {
+        /*switch($submission_status) {
             case 'option_false':
                 ?>
                 <img src="img/txt-serio-nie.png" alt="Nie?! Serio?! No weź! Mógłbyś wybrać lepiej." class="img-responsive">
@@ -55,7 +58,7 @@ switch ($_GET['f']) {
                 <img src="img/txt-super-mega-extra-fajnisty.png" alt="Super mega ekstra fajnisty i najlepszy możliwy wybór!" class="img-responsive">
                 <?php
                 break;
-        }
+        }*/
         ?>
 
         <button class="btn btn-link btn-video" data-trigger="startTopVideo"><img src="img/btn-play.png" alt="Start"></button>
@@ -66,10 +69,10 @@ switch ($_GET['f']) {
         case 'option_false':
             ?>
 
-            <video poster="<?php echo $file_video_no_placeholder; ?>" preload class="js-autostart-delayed">
-                <source src="<?php echo $file_video_no; ?>.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="<?php echo $file_video_no; ?>.webm" type='video/webm; codecs="vp8, vorbis"'>
-                <source src="<?php echo $file_video_no; ?>.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+            <video poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" preload class="js-autostart-delayed <?php echo $placeholder_video_class; ?>">
+                <source src="<?php echo $file_video_no; ?>.mp4?v2"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="<?php echo $file_video_no; ?>.webm?v2" type='video/webm; codecs="vp8, vorbis"'>
+                <source src="<?php echo $file_video_no; ?>.ogv?v2"  type='video/ogg; codecs="theora, vorbis"'>
             </video>
 
             <?php
@@ -78,7 +81,7 @@ switch ($_GET['f']) {
         default:
             ?>
 
-            <video poster="<?php echo $file_video_yes_placeholder; ?>" preload class="js-autostart-delayed">
+            <video poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" preload class="js-autostart-delayed <?php echo $placeholder_video_class; ?>">
                 <source src="<?php echo $file_video_yes; ?>.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
                 <source src="<?php echo $file_video_yes; ?>.webm" type='video/webm; codecs="vp8, vorbis"'>
                 <source src="<?php echo $file_video_yes; ?>.ogv"  type='video/ogg; codecs="theora, vorbis"'>

@@ -267,6 +267,19 @@ ul.menu-col a:hover, .nav .open > a {
     margin: 0 auto;
 }
 
+.video-placeholder-kosiarka,
+.video-placeholder-pilka {
+    background: transparent url('../video/preroll/video-placeholder-pilka.jpg') no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.video-placeholder-kosiarka {
+    background-image: url('../video/preroll/video-placeholder-kosiarka.jpg');
+}
+
 /**
  * buttony
  */
