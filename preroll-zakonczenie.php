@@ -41,6 +41,162 @@ switch ($_GET['f']) {
 
         break;
 }
+
+switch ($submission_status) {
+    case 'option_false':
+        ?>
+
+        <!-- Google Code for Konwersja Nie Conversion Page -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1013748706;
+            var google_conversion_language = "en";
+            var google_conversion_format = "3";
+            var google_conversion_color = "ffffff";
+            var google_conversion_label = "PQHpCMaFrmwQ4qey4wM";
+            var google_remarketing_only = false;
+            /* ]]> */
+        </script>
+        <script src="https://www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1013748706/?label=PQHpCMaFrmwQ4qey4wM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+
+        <?php
+        switch ($_GET['f']) {
+            case 'p': // pilka
+                ?>
+
+                <!-- Adform Tracking Code BEGIN -->
+                <script type="text/javascript">
+                    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                    window._adftrack.push({
+                        pm: 530973,
+                        divider: encodeURIComponent('|'),
+                        pagename: encodeURIComponent('Pilka.NIE.LP')
+                    });
+                    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+                </script>
+                <noscript>
+                    <p style="margin:0;padding:0;border:0;">
+                        <img src="https://track.adform.net/Serving/TrackPoint/?pm=530973&ADFPageName=Pilka.NIE.LP&ADFdivider=|" width="1" height="1" alt="" />
+                    </p>
+                </noscript>
+                <!-- Adform Tracking Code END -->
+
+                <?php
+                break;
+
+            case 'k': // kosiarka
+            default:
+                ?>
+
+                <!-- Adform Tracking Code BEGIN -->
+                <script type="text/javascript">
+                    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                    window._adftrack.push({
+                        pm: 530973,
+                        divider: encodeURIComponent('|'),
+                        pagename: encodeURIComponent('Kosiarka.NIE.LP')
+                    });
+                    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+                </script>
+                <noscript>
+                    <p style="margin:0;padding:0;border:0;">
+                        <img src="https://track.adform.net/Serving/TrackPoint/?pm=530973&ADFPageName=Kosiarka.NIE.LP&ADFdivider=|" width="1" height="1" alt="" />
+                    </p>
+                </noscript>
+                <!-- Adform Tracking Code END -->
+
+                <?php
+
+            break;
+        }
+
+        break;
+
+    case 'option_true':
+        ?>
+
+        <!-- Google Code for Konwersja Tak Conversion Page -->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1013748706;
+            var google_conversion_language = "en";
+            var google_conversion_format = "3";
+            var google_conversion_color = "ffffff";
+            var google_conversion_label = "f4MFCN_EqWwQ4qey4wM";
+            var google_remarketing_only = false;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1013748706/?label=f4MFCN_EqWwQ4qey4wM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+
+        <?php
+        switch ($_GET['f']) {
+            case 'p': // pilka
+                ?>
+
+                <!-- Adform Tracking Code BEGIN -->
+                <script type="text/javascript">
+                    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                    window._adftrack.push({
+                        pm: 530973,
+                        divider: encodeURIComponent('|'),
+                        pagename: encodeURIComponent('Pilka.TAK.LP')
+                    });
+                    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+                </script>
+                <noscript>
+                    <p style="margin:0;padding:0;border:0;">
+                        <img src="https://track.adform.net/Serving/TrackPoint/?pm=530973&ADFPageName=Pilka.TAK.LP&ADFdivider=|" width="1" height="1" alt="" />
+                    </p>
+                </noscript>
+                <!-- Adform Tracking Code END -->
+
+                <?php
+                break;
+
+            case 'k': // kosiarka
+            default:
+                ?>
+
+                <!-- Adform Tracking Code BEGIN -->
+                <script type="text/javascript">
+                    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                    window._adftrack.push({
+                        pm: 530973,
+                        divider: encodeURIComponent('|'),
+                        pagename: encodeURIComponent('Kosiarka.TAK.LP')
+                    });
+                    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+                </script>
+                <noscript>
+                    <p style="margin:0;padding:0;border:0;">
+                        <img src="https://track.adform.net/Serving/TrackPoint/?pm=530973&ADFPageName=Kosiarka.TAK.LP&ADFdivider=|" width="1" height="1" alt="" />
+                    </p>
+                </noscript>
+                <!-- Adform Tracking Code END -->
+
+                <?php
+
+                break;
+        }
+
+        break;
+}
 ?>
 
 <div class="jumbotron border-bottom-rsg" id="jumbotron-video">
