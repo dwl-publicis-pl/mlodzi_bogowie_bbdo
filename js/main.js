@@ -67,14 +67,32 @@ function startTopVideo()
 
     var v = $('#jumbotron-video').find('video')[0];
 
+    v.addEventListener('pause', function(){
+        dataLayerAction('video', {'interakcja': 'pauza'});
+    });
+
     v.play();
+
+    //video started
+    dataLayerAction('video', {'interakcja': 'start'});
+
     $('#jumbotron-video video').prop('controls', true);
 
     if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
         ga('send', 'event', 'video', 'Film na głównej');
     }
 
+    $(v).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
+        var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
+        var event = state ? 'FullscreenOn' : 'FullscreenOff';
+
+        if (event == 'FullscreenOn') {
+            dataLayerAction('video', {'interakcja': 'fullscreen'});
+        }
+    });
+
     v.onended = function(e) {
+        dataLayerAction('video', {'interakcja': 'koniec'});
         $(this).load();
         $('#jumbotron-video video').prop('controls', false);
         $('#intro-placeholder').removeClass('intro-placeholder-hidden');
@@ -83,6 +101,63 @@ function startTopVideo()
 
     return true;
 }
+
+
+function dataLayerAction(event, params, strona)
+{
+    if (typeof(strona) === 'undefined') {
+        strona = window.location.href;
+    }
+
+    if (typeof(params) === 'undefined') {
+        params = {};
+    }
+
+    var settings = {
+        'event': event,
+        'strona': strona
+    };
+
+    $.extend(settings, params);
+
+    dataLayer.push(settings);
+
+    return true;
+}
+
+
+function trackGTMLinks()
+{
+    $('a[data-gtm-event]').click(function(e) {
+        e.preventDefault();
+
+        var gtm_category = $(this).data('gtm-category');
+        var gtm_event = $(this).data('gtm-event');
+        var gtm_title = $(this).data('gtm-title');
+        var href = $(this).attr('href');
+
+        if (gtm_category) {
+            dataLayerAction(gtm_event, {
+                'kategoria': gtm_category,
+                'tytul': gtm_title,
+                'stronaDocelowa': href
+            });
+        } else {
+            dataLayerAction(gtm_event, {
+                'tytul': gtm_title,
+                'stronaDocelowa': href
+            });
+        }
+
+        setTimeout(function() {
+            window.location = href;
+            console.log('...');
+        }, 50);
+    });
+}
+
+trackGTMLinks();
+
 
 $(document).ready(function() {
     // jest zawsze jedno wideo tego typu na stronie
@@ -144,6 +219,11 @@ var quiz = (function() {
         listenQuizShare();
         currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         onWindowResize();
+
+        dataLayerAction('quiz', {
+            'status': 'start',
+            'stronaDocelowa' : window.location.href + '#'
+        });
 
         $(btnNextSelector).prop('disabled', true);
 
@@ -273,6 +353,11 @@ var quiz = (function() {
             $(rootSelector).cycle('goto', calculatedResultSlide);
         } else {
             $(rootSelector).cycle('next');
+
+            dataLayerAction('quiz', {
+                'status': $(clickedElement).data('question-validate'), // question ID
+                'stronaDocelowa' : window.location.href + '#'
+            });
         }
     };
 
@@ -282,17 +367,30 @@ var quiz = (function() {
             pointsSum = pointsSum + questionsAndAnswers[index];
         }
 
+        var resultGTM;
+
         if (pointsSum < 11) {
             calculatedResultSlide = 10;
+            resultGTM = '1/5';
         } else if (pointsSum < 16) {
             calculatedResultSlide = 11;
+            resultGTM = '2/5';
         } else if (pointsSum < 26) {
             calculatedResultSlide = 12;
+            resultGTM = '1/5';
         } else if (pointsSum < 36) {
             calculatedResultSlide = 13;
+            resultGTM = '4/5';
         } else {
             calculatedResultSlide = 14;
+            resultGTM = '5/5';
         }
+
+        dataLayerAction('koniec', {
+            'status': 'koniec',
+            'stronaDocelowa' : window.location.href + '#',
+            'wynikTestu': resultGTM
+        });
 
         // GA event
         ga('send', 'event', 'Quiz', 'Koniec', 'wynik', pointsSum);

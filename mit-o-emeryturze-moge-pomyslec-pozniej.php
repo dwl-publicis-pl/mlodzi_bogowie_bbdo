@@ -25,12 +25,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2251754560 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-o-emeryturze-moge-pomyslec-pozniej-mobile.jpg" alt="Mit. O emeryturze mogę pomyśleć później." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-left">
+    <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-emerytura-nie-potrwa-dlugo" class="btn btn-right">
+    <a href="mit-emerytura-nie-potrwa-dlugo" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-emerytura-nie-potrwa-dlugo', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -197,7 +197,7 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-panstwo-da-mi-dobra-emeryture">
+                <a href="mit-panstwo-da-mi-dobra-emeryture"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-1-wide.jpg" alt="Mit. Państwo da mi dobrą emeryturę" class="img-responsive full-width" />
                 </a>
             </figure>
@@ -205,7 +205,7 @@ Tpl::nav();
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-emerytura-nie-potrwa-dlugo">
+                <a href="mit-emerytura-nie-potrwa-dlugo"<?php echo Tpl::getGTMLinkData('mit-emerytura-nie-potrwa-dlugo', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-3-wide.jpg" alt="Mit. Emerytura nie potrwa długo" class="img-responsive full-width" />
                 </a>
             </figure>

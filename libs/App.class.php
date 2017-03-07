@@ -1,7 +1,7 @@
 <?php
 class App
 {
-    const APP_URL = 'https://mlodzibogowie.pl/';
+    const APP_URL = 'https://localhost/mlodzibogowie.pl/';
     const APP_NAME = 'Czy jesteś młodym bogiem?';
     const APP_DESC = 'Obalamy finansowe mity młodych bogów! Kim są młodzi bogowie? Być może Ty jesteś jednym z nich. Sprawdź!';
     const CONTACT_EMAIL_CC = null;

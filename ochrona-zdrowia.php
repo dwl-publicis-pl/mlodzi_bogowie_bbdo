@@ -23,12 +23,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2150870897 full-width hidden-xs hidden-sm"></div>
     <img src="img/produkty/ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="emerytura-bez-obaw" class="btn btn-left">
+    <a href="emerytura-bez-obaw" class="btn btn-left"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>produkt
     </a>
 
-    <a href="przyszlosc-dziecka" class="btn btn-right">
+    <a href="przyszlosc-dziecka" class="btn btn-right"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>produkt
     </a>
@@ -38,10 +38,10 @@ Tpl::nav();
     <header class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
             <h1 class="h1-mod-1">
-                Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, <strong>mogą się przydarzyć każdemu z nas</strong>, a&nbsp;tym samym wyłączyć nas z&nbsp;dotychczasowego życia.
+                Trudne sytuacje życiowe, jak poważne zachorowanie czy poważny uszczerbek na zdrowiu, <strong>mogą się przydarzyć każdemu z&nbsp;nas</strong>, a&nbsp;tym samym wyłączyć nas z&nbsp;dotychczasowego życia.
                 Najważniejsze jest wtedy szybkie i&nbsp;sprawne dostosowanie siebie i&nbsp;rodziny do nowej sytuacji.<br>
                 <br><br>
-                W Prudentialu wiemy o tym i dlatego oferujemy Ci:
+                W Prudentialu wiemy o&nbsp;tym i&nbsp;dlatego oferujemy Ci:
             </h1>
         </div>
 
@@ -177,12 +177,12 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                        <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
+                        <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
                     </figure>
                 </div>
             </div>

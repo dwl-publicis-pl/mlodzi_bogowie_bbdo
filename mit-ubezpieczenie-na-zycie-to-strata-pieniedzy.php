@@ -26,12 +26,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2331680804 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-ubezpieczenie-to-strata-pieniedzy-mobile.jpg" alt="Mit. Ubezpieczenie na życie to strata pieniedzy" class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-nie-stac-mnie-na-oszczedzanie" class="btn btn-left">
+    <a href="mit-nie-stac-mnie-na-oszczedzanie" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-nie-stac-mnie-na-oszczedzanie', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-right">
+    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-nie-stac-mnie-na-oszczedzanie', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -237,7 +237,7 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-nie-stac-mnie-na-oszczedzanie">
+                <a href="mit-nie-stac-mnie-na-oszczedzanie"<?php echo Tpl::getGTMLinkData('mit-nie-stac-mnie-na-oszczedzanie', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-5-wide.jpg" alt="Mit. Nie stać mnie na oszczędzanie" class="img-responsive full-width" />
                 </a>
             </figure>
@@ -245,7 +245,7 @@ Tpl::nav();
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
+                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"<?php echo Tpl::getGTMLinkData('mit-nie-stac-mnie-na-oszczedzanie', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-7-wide.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive full-width" />
                 </a>
             </figure>

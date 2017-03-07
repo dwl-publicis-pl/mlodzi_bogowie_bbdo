@@ -19,7 +19,8 @@ RewriteEngine on
 #RewriteCond %{REMOTE_ADDR} !=79.191.184.209
 #RewriteRule ^(.*)$ http://prudential.pl/ [R=302,L]ő
 
-RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} !^mlodzibogowie\.pl [NC]
 RewriteRule ^(.*)$ https://mlodzibogowie.pl/$1 [R=301,L]
 
 

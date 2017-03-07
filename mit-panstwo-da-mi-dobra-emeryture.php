@@ -26,12 +26,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2158215072 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-panstwo-da-mi-dobra-emeryture-mobile.jpg" alt="Mit. Państwo da mi dobrą emryturę." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="btn btn-left">
+    <a href="mit-zle-rzeczy-przydarzaja-sie-innym" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-zle-rzeczy-przydarzaja-sie-innym', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-right">
+    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -458,7 +458,7 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-zle-rzeczy-przydarzaja-sie-innym">
+                <a href="mit-zle-rzeczy-przydarzaja-sie-innym"<?php echo Tpl::getGTMLinkData('mit-zle-rzeczy-przydarzaja-sie-innym', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-10-wide.jpg" alt="Mit. Złe rzeczy przydarzają się innym" class="img-responsive full-width" />
                 </a>
             </figure>
@@ -466,7 +466,7 @@ Tpl::nav();
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
+                <a href="mit-o-emeryturze-moge-pomyslec-pozniej"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-2-wide.jpg" alt="Mit. O emeryturze mogę pomyśleć później" class="img-responsive full-width" />
                 </a>
             </figure>

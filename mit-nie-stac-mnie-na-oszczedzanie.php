@@ -25,12 +25,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2329430560 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-nie-stac-mnie-na-oszczedzanie-mobile.jpg" alt="Mit. Nie stać mnie na oszczędzanie." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-left">
+    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-right">
+    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-ubezpieczenie-na-zycie-to-strata-pieniedzy', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -291,16 +291,16 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">
-                    <img src="img/mity/mit-4-wide.jpg" alt="Mit. Na emeryturze moje potrzeby będą mniejsze" class="img-responsive full-width" />
+                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-4-wide.jpg" alt="Mit. Na emeryturze moje potrzeby będą mniejsze" class="img-responsive full-width">
                 </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">
-                    <img src="img/mity/mit-6-wide.jpg" alt="Mit. Ubezpieczenie na życie to strata pieniędzy" class="img-responsive full-width" />
+                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"<?php echo Tpl::getGTMLinkData('mit-ubezpieczenie-na-zycie-to-strata-pieniedzy', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-6-wide.jpg" alt="Mit. Ubezpieczenie na życie to strata pieniędzy" class="img-responsive full-width">
                 </a>
             </figure>
         </div>

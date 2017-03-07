@@ -25,12 +25,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2325718050 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-emerytura-nie-potrwa-dlugo-mobile.jpg" alt="Mit. Emerytura nie potrwa długo." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-left">
+    <a href="mit-o-emeryturze-moge-pomyslec-pozniej" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-right">
+    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -109,7 +109,7 @@ Tpl::nav();
 
                             <p>
                                 Według naszych badań<sup><a href="#przypisy">2</a></sup> prawie co czwarty z nas ma wśród swoich bliskich kogoś, kto przeżył
-                                co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i nie dożyjemy emerytury?
+                                co najmniej 90 lat. Dlaczego więc wydaje nam się, że my będziemy żyć znacznie krócej i&nbsp;nie dożyjemy emerytury?
                             </p>
                         </div>
                     </div>
@@ -158,16 +158,16 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">
-                    <img src="img/mity/mit-2-wide.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive full-width" />
+                <a href="mit-o-emeryturze-moge-pomyslec-pozniej"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-2-wide.jpg" alt="O emeryturze mogę pomyśleć później" class="img-responsive full-width">
                 </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">
-                    <img src="img/mity/mit-4-wide.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive full-width" />
+                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-4-wide.jpg" alt="Na emeryturze moje potrzeby będą mniejsze" class="img-responsive full-width">
                 </a>
             </figure>
         </div>

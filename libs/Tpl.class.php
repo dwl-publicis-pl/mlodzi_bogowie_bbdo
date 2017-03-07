@@ -145,23 +145,23 @@ class Tpl {
                                       <div class="col-sm-4">
                                           <ul class="menu-col">
                                               <li>
-                                                <a href="mit-panstwo-da-mi-dobra-emeryture">MIT #1
+                                                <a href="mit-panstwo-da-mi-dobra-emeryture"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?>>MIT #1
                                                 <span class="menu-span">Państwo da mi dobrą emeryturę</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-o-emeryturze-moge-pomyslec-pozniej">MIT #2
+                                                <a href="mit-o-emeryturze-moge-pomyslec-pozniej"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?>>MIT #2
                                                 <span class="menu-span">O emeryturze mogę pomyśleć później</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-emerytura-nie-potrwa-dlugo">MIT #3
+                                                <a href="mit-emerytura-nie-potrwa-dlugo"<?php echo Tpl::getGTMLinkData('mit-emerytura-nie-potrwa-dlugo', 'kafelki', 'mity'); ?>>MIT #3
                                                 <span class="menu-span">Emerytura nie potrwa długo</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze">MIT #4
+                                                <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?>>MIT #4
                                                 <span class="menu-span">Na emeryturze moje potrzeby będą mniejsze</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-nie-stac-mnie-na-oszczedzanie">MIT #5
+                                                <a href="mit-nie-stac-mnie-na-oszczedzanie"<?php echo Tpl::getGTMLinkData('mit-nie-stac-mnie-na-oszczedzanie', 'kafelki', 'mity'); ?>>MIT #5
                                                 <span class="menu-span">Nie stać mnie na oszczędzanie</span></a>
                                               </li>
                                           </ul>
@@ -169,23 +169,23 @@ class Tpl {
                                       <div class="col-sm-5">
                                           <ul class="menu-col">
                                               <li>
-                                                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">MIT #6
+                                                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"<?php echo Tpl::getGTMLinkData('mit-ubezpieczenie-na-zycie-to-strata-pieniedzy', 'kafelki', 'mity'); ?>>MIT #6
                                                 <span class="menu-span">Ubezpieczenie na życie to strata pieniędzy</span></a>
                                               </li>
                                               <li>
-                                                  <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">MIT #7
+                                                  <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo"<?php echo Tpl::getGTMLinkData('mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo', 'kafelki', 'mity'); ?>>MIT #7
                                                       <span class="menu-span">Dziecko, jak dorośnie, od razu utrzyma się samo</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">MIT #8
+                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>MIT #8
                                                 <span class="menu-span">O przyszłości dziecka mogę pomyśleć, jak będzie większe</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">MIT #9
+                                                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"<?php echo Tpl::getGTMLinkData('mit-zawsze-bede-zdrowy-tak-jak-dzis', 'kafelki', 'mity'); ?>>MIT #9
                                                 <span class="menu-span">Zawsze będę zdrowy tak jak dziś</span></a>
                                               </li>
                                               <li>
-                                                <a href="mit-zle-rzeczy-przydarzaja-sie-innym">MIT #10
+                                                <a href="mit-zle-rzeczy-przydarzaja-sie-innym"<?php echo Tpl::getGTMLinkData('mit-zle-rzeczy-przydarzaja-sie-innym', 'kafelki', 'mity'); ?>>MIT #10
                                                 <span class="menu-span">Złe rzeczy przydarzają się innym</span></a>
                                               </li>
                                           </ul>
@@ -197,21 +197,21 @@ class Tpl {
 
                               <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Nasze rozwiązania <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                  <li class="menu-nasze-rozwiazania">
+                                  <li class="menu-nasze-rozwiazania js-track-gtm-links">
                                     <div class="row">
                                       <div class="col-sm-6 col-sm-offset-1">
                                           <div class="solution solution-1 clearfix">
-                                              <a href="przyszlosc-dziecka"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
+                                              <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
                                               <span class="menu-span">Ubezpieczenie oszczędnościowe Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
                                           </div>
 
                                           <div class="solution solution-2 clearfix">
-                                              <a href="emerytura-bez-obaw"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
+                                              <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
                                               <span class="menu-span">Ubezpieczenie oszczędnościowe Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
                                           </div>
 
                                           <div class="solution solution-3 clearfix">
-                                              <a href="ochrona-zdrowia"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
+                                              <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
                                               <span class="menu-span">Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</span></a>
                                           </div>
                                       </div>
@@ -276,7 +276,7 @@ class Tpl {
     }
 
 
-    public function products()
+    public static function products()
     {
         ?>
 
@@ -291,17 +291,17 @@ class Tpl {
         <div class="row row-padded row-margins row-products">
             <div class="col-xs-12 col-md-4">
                 <figure>
-                    <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
+                    <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
                 </figure>
             </div>
             <div class="col-xs-12 col-md-4">
                 <figure>
-                    <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                    <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
                 </figure>
             </div>
             <div class="col-xs-12 col-md-4">
                 <figure>
-                    <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
+                    <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-ochrona-zdrowia.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
                 </figure>
             </div>
         </div>
@@ -376,6 +376,7 @@ class Tpl {
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-69104129-1', 'auto');
+            ga('set', 'transport', 'beacon');
             ga('send', 'pageview');
         </script>
         
@@ -383,5 +384,45 @@ class Tpl {
         </html>
         
         <?php
+    }
+
+
+    public static function getLinkTitle($href)
+    {
+        $descs = [
+            'ochrona-zdrowia' => 'Ochrona zdrowia',
+            'przyszlosc-dziecka' => 'Przyszłość dziecka',
+            'emerytura bez obaw' => 'Emerytura bez obaw',
+            'mit-panstwo-da-mi-dobra-emeryture' => 'Mit Państwo da mi dobrą emeryturę',
+            'mit-zle-rzeczy-przydarzaja-sie-innym' => 'Mit Złe rzeczy przydarzają się innym',
+            'mit-zawsze-bede-zdrowy-tak-jak-dzis' => 'Mit Zawsze będę zdrowy tak jak dziś',
+            'mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze' => 'Mit O przyszłości dziecka mogę pomyśleć, jak będzie większe',
+            'mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo' => 'Mit Dziecko, jak dorośnie, utrzyma się samo',
+            'mit-ubezpieczenie-na-zycie-to-strata-pieniedzy' => 'Mit Ubezpieczenie na życie to strata pieniędzy',
+            'mit-nie-stac-mnie-na-oszczedzanie' => 'Mit Nie stać mnie na oszczędzanie',
+            'mit-na-emeryturze-moje-potrzeby-beda-mniejsze' => 'Mit Na emeryturze moje potrzeby będą mniejsze',
+            'mit-emerytura-nie-potrwa-dlugo' => 'Mit Emerytura nie potrwa długo',
+            'mit-o-emeryturze-moge-pomyslec-pozniej' => 'Mit O emeryturze mogę pomyśleć później'
+        ];
+
+        if (isset($descs[$href])) {
+            return $descs[$href];
+        }
+
+        return false;
+    }
+
+
+    public static function getGTMLinkData($href, $event, $category = null)
+    {
+        $html = ' data-gtm-event="' . htmlspecialchars($event, ENT_QUOTES) . '"';
+
+        if (!empty($category)) {
+            $html .= ' data-gtm-category="' . htmlspecialchars($category, ENT_QUOTES) . '"';
+        }
+
+        $html .= ' data-gtm-title="' . self::getLinkTitle($href) . '"';
+
+        return $html;
     }
 }

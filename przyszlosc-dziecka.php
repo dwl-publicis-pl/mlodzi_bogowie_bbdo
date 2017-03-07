@@ -23,12 +23,12 @@ Tpl::nav();
     
     <img src="img/produkty/przyszlosc-dziecka.jpg" alt="Przyszłość dziecka" class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="emerytura-bez-obaw" class="btn btn-right">
+    <a href="emerytura-bez-obaw" class="btn btn-right"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Poprzedni<br>produkt
     </a>
 
-    <a href="ochrona-zdrowia" class="btn btn-left">
+    <a href="ochrona-zdrowia" class="btn btn-left"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Następny<br>produkt
     </a>
@@ -188,7 +188,7 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-4 col-md-height col-md-middle">
                         <p class="text-center"><strong>Policz, ile potrzebujesz, by ułatwić dziecku start w&nbsp;dorosłe życie</strong></p>
 
-                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo#kalkulator" class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
+                        <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo#kalkulator"<?php echo Tpl::getGTMLinkData('mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo', 'kafelki', 'rozwiazania'); ?> class="btn btn-primary btn-gray center-block">Kosztowna dorosłość</a>
                     </div>
                     <div class="hidden-xs hidden-sm col-md-3 col-md-height"></div>
                 </div>
@@ -211,12 +211,12 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="emerytura-bez-obaw"><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
+                        <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-emerytura-bez-obaw-wide.jpg" alt="Emerytura bez obaw" class="img-responsive full-width"></a>
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
+                        <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
                     </figure>
                 </div>
             </div>

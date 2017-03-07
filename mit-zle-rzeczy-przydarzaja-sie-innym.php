@@ -26,12 +26,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2340133538 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-zle-rzeczy-przydarzaja-sie-innym-mobile.jpg" alt="Mit. Złe rzeczy przydarzają się innym." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-left">
+    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-zawsze-bede-zdrowy-tak-jak-dzis', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-right">
+    <a href="mit-panstwo-da-mi-dobra-emeryture" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -183,7 +183,7 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">
+                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"<?php echo Tpl::getGTMLinkData('mit-zawsze-bede-zdrowy-tak-jak-dzis', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-9-wide.jpg" alt="Mit. Zawsze będę zdrowy tak jak dziś" class="img-responsive full-width" />
                 </a>
             </figure>
@@ -191,7 +191,7 @@ Tpl::nav();
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-panstwo-da-mi-dobra-emeryture">
+                <a href="mit-panstwo-da-mi-dobra-emeryture"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-1-wide.jpg" alt="Mit. Państwo da i dobrą emeryturę" class="img-responsive full-width" />
                 </a>
             </figure>

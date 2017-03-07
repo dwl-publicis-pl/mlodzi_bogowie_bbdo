@@ -26,12 +26,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2335674786 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo-mobile.jpg" alt="Mit. Dziecko, jak dorośnie, od razu utrzyma się samo." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-left">
+    <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-ubezpieczenie-na-zycie-to-strata-pieniedzy', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-right">
+    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -526,7 +526,7 @@ Tpl::nav();
                                         <div class="cloud-container">
                                             <div class="">
                                                 <p style="margin: 0 auto!important;float: none;color: #fff;font-weight: 400;cursor:default">Sprawdź, ile należy odkładać miesięcznie, by zgromadzić wyliczoną kwotę.</p>
-                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-primary btn-white btn-cta">
+                                                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-primary btn-white btn-cta"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>
                                                     <span class="btn-cloud-result-fix">IM PÓŹNIEJ,<br>TYM TRUDNIEJ</span>
                                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                                 </a>
@@ -785,7 +785,7 @@ Tpl::nav();
                         <div class="cloud7-step">
                             <div class="col-xs-12 col-md-12 text-center">
                                 <h2 style="color: #fff;font-weight:900">Sprawdź, ile należy odkładać miesięcznie, by zgromadzić wyliczoną kwotę.</h2>
-                                    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-primary btn-white btn-cta">
+                                    <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-primary btn-white btn-cta"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>
                                         <span class="btn-cloud-result-fix">IM PÓŹNIEJ,<br>TYM TRUDNIEJ</span>
                                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                     </a>
@@ -832,7 +832,7 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy">
+                <a href="mit-ubezpieczenie-na-zycie-to-strata-pieniedzy"<?php echo Tpl::getGTMLinkData('mit-ubezpieczenie-na-zycie-to-strata-pieniedzy', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-6-wide.jpg" alt="Mit. Ubezpieczenie na życie to strata pieniędzy" class="img-responsive full-width" />
                 </a>
             </figure>
@@ -840,7 +840,7 @@ Tpl::nav();
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze">
+                <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>
                     <img src="img/mity/mit-8-wide.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe" class="img-responsive full-width" />
                 </a>
             </figure>

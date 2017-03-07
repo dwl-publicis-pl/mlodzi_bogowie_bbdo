@@ -25,12 +25,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2333302564 full-width hidden-xs hidden-sm"></div>
     <img src="img/mity/mit-przyszlosc-dziecka-mobile.jpg" alt="Mit. O przyszłości dziecka mogę pomyśleć jak będzie większe." class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="btn btn-left">
+    <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo" class="btn btn-left"<?php echo Tpl::getGTMLinkData('mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>mit
     </a>
 
-    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-right">
+    <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis" class="btn btn-right"<?php echo Tpl::getGTMLinkData('mit-zawsze-bede-zdrowy-tak-jak-dzis', 'kafelki', 'mity'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>mit
     </a>
@@ -114,7 +114,8 @@ Tpl::nav();
                         <div class="col-md-9">
                             <div class="start_save_up_value_container">
                             	<span class="start_save_up_value">3</span> 
-                            	<span class="Start_save_up_label">miesiące</div>
+                                <span class="Start_save_up_label">miesiące</span>
+                            </div>
                             <input name="start_save_up" type="range" min="0" max="16" step="1" class="form-control" id="f-msc-ss" value="0" autocomplete="off">
                         </div>
                     </div>
@@ -374,16 +375,16 @@ Tpl::nav();
     <div class="row myths-multibox">
         <div class="col-md-6">
             <figure>
-                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo">
-                    <img src="img/mity/mit-7-wide.jpg" alt="Mit. Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive full-width" />
+                <a href="mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo"<?php echo Tpl::getGTMLinkData('mit-dziecko-jak-dorosnie-od-razu-utrzyma-sie-samo', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-7-wide.jpg" alt="Mit. Dziecko jak dorośnie, od razu utrzyma się samo" class="img-responsive full-width">
                 </a>
             </figure>
         </div>
 
         <div class="col-md-6">
             <figure>
-                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis">
-                    <img src="img/mity/mit-9-wide.jpg" alt="Mit. Zawsze będę zdrowy tak jak dziś" class="img-responsive full-width" />
+                <a href="mit-zawsze-bede-zdrowy-tak-jak-dzis"<?php echo Tpl::getGTMLinkData('mit-zawsze-bede-zdrowy-tak-jak-dzis', 'kafelki', 'mity'); ?>>
+                    <img src="img/mity/mit-9-wide.jpg" alt="Mit. Zawsze będę zdrowy tak jak dziś" class="img-responsive full-width">
                 </a>
             </figure>
         </div>

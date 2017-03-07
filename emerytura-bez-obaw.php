@@ -22,12 +22,12 @@ Tpl::nav();
     <div id="Stage" class="EDGE-2150321662 full-width hidden-xs hidden-sm"></div>
     <img src="img/produkty/emerytura-bez-obaw.jpg" alt="Emerytura bez obaw" class="img-responsive full-width visible-xs visible-sm">
 
-    <a href="przyszlosc-dziecka" class="btn btn-left">
+    <a href="przyszlosc-dziecka" class="btn btn-left"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-left.png" alt="">
         Poprzedni<br>produkt
     </a>
 
-    <a href="ochrona-zdrowia" class="btn btn-right">
+    <a href="ochrona-zdrowia" class="btn btn-right"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>>
         <img src="img/icon-arrow-right.png" alt="">
         Następny<br>produkt
     </a>
@@ -188,7 +188,7 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Sprawdź, na co będzie Cię stać na emeryturze</strong></p>
 
-                        <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Chwila prawdy</a>
+                        <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block visible-xs visible-sm">Chwila prawdy</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
@@ -198,7 +198,7 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Oblicz, ile miesięcznie powinieneś odkładać, aby zrealizować swój plan</strong></p>
 
-                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Im wcześniej, tym lepiej</a>
+                        <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block visible-xs visible-sm">Im wcześniej, tym lepiej</a>
                     </div>
 
                     <div class="col-xs-12 col-md-1 col-md-height">
@@ -208,22 +208,22 @@ Tpl::nav();
                     <div class="col-xs-12 col-md-3 col-md-height col-md-top">
                         <p class="text-center"><strong>Przekonaj się, jak bardzo odwlekanie decyzji o&nbsp;oszczędzaniu działa na Twoją niekorzyść</strong></p>
 
-                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator" class="btn btn-primary btn-gray center-block visible-xs visible-sm">Projekt Emerytura</a>
+                        <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block visible-xs visible-sm">Projekt Emerytura</a>
                     </div>
                 </div>
             </div>
 
             <div class="row hidden-xs hidden-sm">
                 <div class="col-md-3 col-md-offset-1">
-                    <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator" class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
+                    <a href="mit-panstwo-da-mi-dobra-emeryture#kalkulator"<?php echo Tpl::getGTMLinkData('mit-panstwo-da-mi-dobra-emeryture', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block">Chwila prawdy</a>
                 </div>
 
                 <div class="col-md-3 col-md-offset-1">
-                    <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator" class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
+                    <a href="mit-o-emeryturze-moge-pomyslec-pozniej#kalkulator"<?php echo Tpl::getGTMLinkData('mit-o-emeryturze-moge-pomyslec-pozniej', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block">Im wcześniej, tym lepiej</a>
                 </div>
 
                 <div class="col-md-3 col-md-offset-1">
-                    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator" class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
+                    <a href="mit-na-emeryturze-moje-potrzeby-beda-mniejsze#kalkulator"<?php echo Tpl::getGTMLinkData('mit-na-emeryturze-moje-potrzeby-beda-mniejsze', 'kafelki', 'mity'); ?> class="btn btn-primary btn-gray center-block">Projekt Emerytura</a>
                 </div>
             </div>
         </div>
@@ -244,12 +244,12 @@ Tpl::nav();
                 <div class="col-md-6 bg-border-top bg-border-top-2"></div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="przyszlosc-dziecka"><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
+                        <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-przyszlosc-dziecka-wide.jpg" alt="Przyszłość dziecka" class="img-responsive full-width"></a>
                     </figure>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <a href="ochrona-zdrowia"><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
+                        <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>><img src="img/produkty/produkt-ochrona-zdrowia-wide.jpg" alt="Ochrona zdrowia" class="img-responsive full-width"></a>
                     </figure>
                 </div>
             </div>
