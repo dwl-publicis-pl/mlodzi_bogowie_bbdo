@@ -599,6 +599,11 @@ var monthlySavingsCalculator = (function() {
         setFace();
         proceedMonthlySavings();
 
+        dataLayerAction('kalkulator', {
+            'tytulTestu': 'Im wcześniej tym lepiej',
+            'wynik': monthlySaveUp
+        });
+
         return true;
     };
 
@@ -625,20 +630,6 @@ monthlySavingsCalculator.init();
 /**
  * kalkulator 1 END
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -765,6 +756,11 @@ var monthlyOutcomeCalculator = (function() {
         setFace();
         proceedMonthlySavings();
 
+        dataLayerAction('kalkulator', {
+            'tytulTestu': 'Im później, tym trudniej',
+            'wynik': monthlySaveUp
+        });
+
         return true;
     };
 
@@ -791,34 +787,6 @@ monthlyOutcomeCalculator.init();
 /**
  * kalkulator 1.5 END
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -1108,15 +1076,28 @@ var retirementNecessitiesCalculator = (function() {
         isValidGroupsList();
         getEarnings();
         calculateRetirementValue();
-        solveFinalTxt();
+        var final_txt_id = solveFinalTxt();
 
         if (isError()) {
             return false;
-        } else {
-            return true;
         }
+
+        var gtm_txt = $('[' + dataTxtResultSelectorName + '=' + final_txt_id + ']').find('.calc-headline-header').text() + ' (suma mies. wyd.: ' + necessitiesSum + ')';
+        gtm_txt = gtm_txt.replace(/\s\s+/g, ' ');
+
+        dataLayerAction('kalkulator', {
+            'tytulTestu':'Projekt Emerytura',
+            'wynik': gtm_txt
+        });
+
+        return true;
     };
 
+
+    /**
+     *
+     * @returns {*}
+     */
     var solveFinalTxt = function() {
         percentRetirementToNecessities = retirementValue / necessitiesSum * 100;
 
@@ -1133,8 +1114,9 @@ var retirementNecessitiesCalculator = (function() {
         selectedFinalTextElement = $('[' + dataTxtResultSelectorName + '=' + select + ']');
         selectedFinalTextElement.addClass('active');
 
-        return true;
+        return select;
     };
+
 
     var getEarnings = function() {
         var earningsInput = parseInt(earningsElement.val());
@@ -1156,6 +1138,7 @@ var retirementNecessitiesCalculator = (function() {
             return true;
         }
     };
+
 
     var isValidGroupsList = function() {
         if (groupsList.length != checkedGroupsList.length) {
@@ -1422,187 +1405,6 @@ retirementNecessitiesCalculator.init();
 
 
 /**
- * kalkulator 4 (mit 7) // będzie do usunięcia po zrobieniu kalkulatora #mit8 
- */
-var necessitiesCalculator = (function() {
-    var rootElement = '#nCalc';
-    var necessitiesSum = 0;
-    var btnSelector = '.calc-2-element';
-    var clickedElement,
-        clickedGroup,
-        errorMsg = [];
-    var htmlSumElement = $('#calc-4-sum');
-    var groupsList = [];
-    var checkedGroupsList = [];
-    var coinsInContainer = 13, // max and full stack of coins
-        coinImgSrc = 'img/coin.png',
-        minCoinTranslate = -17,
-        maxCoinTranslate = 17,
-        coinsSpeed = 0.821, // [s]
-        coinEdgeHeight = 16,
-        coinsElement = $('#calc-4-coins');
-    var coinsAmount = 0;
-
-
-    var init = function() {
-        if ($(rootElement).length == 0) {
-            return false;
-        }
-
-        collectListOfGroups();
-
-        $(btnSelector).on('click', function(event) {
-            clickedElement = $(this);
-            clickedGroup = parseInt(clickedElement.data().group);
-
-            if (clickedElement.attr('data-selected') == 'true') {
-                clearGroupSelect();
-            } else {
-                clearGroupSelect();
-                addToSum();
-                setAsSelected();
-            }
-
-            renderHTML();
-        });
-
-        return true;
-    };
-
-    var collectListOfGroups = function() {
-        var group;
-
-        $(rootElement + ' [data-group]').each(function() {
-            group = parseInt($(this).data().group);
-
-            if (groupsList.indexOf(group) === -1) {
-                groupsList.push(group);
-            }
-        });
-
-        return true;
-    };
-
-
-    var clearGroupSelect = function() {
-        var search = $(rootElement).find('[data-group="' + clickedGroup + '"][data-selected="true"]');
-
-        if (search) {
-            $.each(search, function(i, found) {
-                $(found).attr('data-selected', 'false');
-
-                necessitiesSum = necessitiesSum - Math.max(0, parseInt($(found).data().value));
-            });
-        }
-
-        var toRemove = checkedGroupsList.indexOf(clickedGroup);
-
-        if (toRemove > -1) {
-            checkedGroupsList.splice(toRemove, 1);
-        }
-
-        return true;
-    };
-
-    var setAsSelected = function() {
-        clickedElement.attr('data-selected', 'true');
-        checkedGroupsList.push(clickedGroup);
-
-        return true;
-    };
-
-    var addToSum = function() {
-        var value = clickedElement.data().value;
-        value = Math.max(0, parseInt(value));
-        necessitiesSum = necessitiesSum + value;
-
-        return true;
-    };
-
-    var numberStep = function(now, tween) {
-        var target = $(tween.elem),
-            rounded_now = Math.round(now);
-
-        target.prop('number', rounded_now).text(rounded_now.format(0, 3, ' '));
-    };
-
-    var renderHTML = function() {
-        if (isError()) {
-            return false;
-        }
-
-        htmlSumElement.stop().animateNumber(
-            {
-                number: necessitiesSum,
-                easing: 'easeInQuad',
-                numberStep: numberStep
-            },
-            800
-        );
-
-        var coinsNum = coinsElement.find('> img');
-
-        if (coinsNum.length == 0) {
-            coinsElement.animate({height: (coinEdgeHeight * coinsInContainer * 2.01) + 'px'}, 500);
-
-            var randomHorzTransform;
-            var i = 0;
-
-            for (i = 0; i < coinsInContainer; i++) {
-                randomHorzTransform = Math.floor(Math.random() * (maxCoinTranslate - minCoinTranslate + 1)) + minCoinTranslate;
-                $(coinsElement).append('<img src="' + coinImgSrc + '" alt="" style="opacity: 0; bottom: ' + Math.pow(i * 4, 2) + 'px; -webkit-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -moz-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -ms-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); -o-transform: translateX(calc(' + randomHorzTransform + 'px - 50%)); transform: translateX(calc(' + randomHorzTransform + 'px - 50%));">');
-            }
-
-            var n = 0;
-
-            $(coinsElement).children('img').each(function () {
-                TweenLite.to(this, coinsSpeed, {
-                    delay: (0.1 * n),
-                    opacity: 1,
-                    bottom: (n * coinEdgeHeight),
-                    ease: Power2.easeOut
-                });
-                n++;
-            });
-        }
-
-        return true;
-    };
-
-    var addError = function(msg) {
-        errorMsg.push(msg);
-
-        return true;
-    };
-
-    var isError = function() {
-        if (errorMsg.length > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    };
-
-    var printErrors = function() {
-        alert(errorMsg.join("\n"));
-        errorMsg = []; //cleaning
-
-        return true;
-    };
-
-    return {
-        init: init,
-        isError: isError
-    };
-})();
-
-necessitiesCalculator.init();
-/**
- * kalkulator 4 END
- */
-
-
-/**
  * kalkulator 5 (mit 8)
  */
 var necessitiesCalculator = (function() {
@@ -1634,17 +1436,22 @@ var necessitiesCalculator = (function() {
 
         $( ".btn-cloud" ).click(function(event) {
             event.preventDefault();
-            return false;
-            $(this).remove();
-        });
-        $( ".btn-cloud" ).click(function(event) {
-            $(this).parent().parent().parent().parent().parent().parent().hide().next().show();
+
+            var target = $(this).parent().parent().parent().parent().parent().parent().hide().next();
+            target.show();
+
             if ($('.cloud7-step').is(':visible')) {
                 $('.cloud-result-col, .coins-stack').addClass('active-step-7');
                 var link_saving = $('.btn-cta').attr('href');
                 $('.btn-cta').attr('href', link_saving + "#" + money_sum_for_another_calc );
+            }
 
-            } 
+            if (target.data('last') == 1) {
+                dataLayerAction('kalkulator', {
+                    'tytulTestu': 'Kosztowna dorosłość',
+                    'wynik': money_sum_for_another_calc
+                });
+            }
         });
 
 
@@ -1846,8 +1653,8 @@ var necessitiesCalculator = (function() {
         $( ".calc-2-element-mobile" ).click(function(event) {
             event.preventDefault();
             return false;
-            $(this).remove();
         });
+
         $( "button.next-step" ).click(function(event) {
             $('button.next-step').prop('disabled', true);
             $(this).parent().parent().parent().hide().next().show();
@@ -1857,7 +1664,12 @@ var necessitiesCalculator = (function() {
 
                 $('#nCalcmobile .guy-container').css('background','#7AA8B5');
                 $('.cloud-result-col, .coins-stack').addClass('active-step-7');
-            } 
+
+                dataLayerAction('kalkulator', {
+                    'tytulTestu': 'Kosztowna dorosłość',
+                    'wynik': money_sum_for_another_calc
+                });
+            }
         });
 
         $(btnSelector).on('click', function(event) {

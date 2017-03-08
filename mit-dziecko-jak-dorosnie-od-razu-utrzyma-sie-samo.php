@@ -500,7 +500,7 @@ Tpl::nav();
                                 </div>
                             </div>
                         </div>
-                        <div class="cloud7-step">
+                        <div class="cloud7-step" data-last="1">
                             <div class="guy-block guy-progress-bar">
                                 <img src="img/calc-progress-7.png" alt="" class="img-responsive">
                             </div>
@@ -782,7 +782,7 @@ Tpl::nav();
                             </div>
                         </div>
 
-                        <div class="cloud7-step">
+                        <div class="cloud7-step" data-last="1">
                             <div class="col-xs-12 col-md-12 text-center">
                                 <h2 style="color: #fff;font-weight:900">Sprawdź, ile należy odkładać miesięcznie, by zgromadzić wyliczoną kwotę.</h2>
                                     <a href="mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze" class="btn btn-primary btn-white btn-cta"<?php echo Tpl::getGTMLinkData('mit-o-przyszlosci-dziecka-moge-pomyslec-jak-bedzie-wieksze', 'kafelki', 'mity'); ?>>
@@ -797,11 +797,6 @@ Tpl::nav();
                             <div class="col-sm-12 col-xs-12 img-responsive" style="">
                                 <img src="img/myth8-guy-7-mobile.png" class="img-responsive center-block" alt="">
                             </div>
-                            <!-- <div class="col-sm-12 col-xs-12" style="background: #cd0e0c;text-align: center;">
-                                <a href="#" class="btn btn-primary btn-white btn-cloud-result" style="border: 0;padding:20px; margin-top: 10px; 0;">
-                                    <span class="btn-cloud-result-fix">Zadbaj o jego przyszłość już teraz!<br>ZAPLANUJ DZIECKU START</span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                </a>
-                            </div> -->
                         </div>
                         
                     </div>
