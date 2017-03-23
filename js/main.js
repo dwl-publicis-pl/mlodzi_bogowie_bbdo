@@ -388,7 +388,7 @@ var quiz = (function() {
             resultGTM = '5/5';
         }
 
-        dataLayerAction('koniec', {
+        dataLayerAction('quiz', {
             'status': 'koniec',
             'stronaDocelowa' : window.location.href + '#',
             'wynikTestu': resultGTM
