@@ -201,17 +201,17 @@ class Tpl {
                                     <div class="row">
                                       <div class="col-sm-6 col-sm-offset-1">
                                           <div class="solution solution-1 clearfix">
-                                              <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
+                                              <a href="przyszlosc-dziecka"<?php echo Tpl::getGTMLinkData('przyszlosc-dziecka', 'kafelki', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Przyszłość dziecka
                                               <span class="menu-span">Ubezpieczenie oszczędnościowe Start w Życie to gwarancja, że niezależnie od tego, co przyniesie przyszłość, Twoje dziecko otrzyma wsparcie finansowe.</span></a>
                                           </div>
 
                                           <div class="solution solution-2 clearfix">
-                                              <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
+                                              <a href="emerytura-bez-obaw"<?php echo Tpl::getGTMLinkData('emerytura-bez-obaw', 'kafelki', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Emerytura bez obaw
                                               <span class="menu-span">Ubezpieczenie oszczędnościowe Emerytura bez Obaw pozwoli Ci zgromadzić kapitał, by na przyszłej emeryturze móc utrzymać standard życia na obecnym poziomie i realizować swoje marzenia.</span></a>
                                           </div>
 
                                           <div class="solution solution-3 clearfix">
-                                              <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
+                                              <a href="ochrona-zdrowia"<?php echo Tpl::getGTMLinkData('ochrona-zdrowia', 'kafelki', 'rozwiazania'); ?>><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Ochrona zdrowia
                                               <span class="menu-span">Zapewnimy Ci dodatkową kompleksową ochronę ubezpieczeniową na wypadek kilkudziesięciu poważnych chorób i uszczerbków na zdrowiu.</span></a>
                                           </div>
                                       </div>
@@ -392,7 +392,7 @@ class Tpl {
         $descs = [
             'ochrona-zdrowia' => 'Ochrona zdrowia',
             'przyszlosc-dziecka' => 'Przyszłość dziecka',
-            'emerytura bez obaw' => 'Emerytura bez obaw',
+            'emerytura-bez-obaw' => 'Emerytura bez obaw',
             'mit-panstwo-da-mi-dobra-emeryture' => 'Mit Państwo da mi dobrą emeryturę',
             'mit-zle-rzeczy-przydarzaja-sie-innym' => 'Mit Złe rzeczy przydarzają się innym',
             'mit-zawsze-bede-zdrowy-tak-jak-dzis' => 'Mit Zawsze będę zdrowy tak jak dziś',

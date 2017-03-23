@@ -78,9 +78,9 @@ function startTopVideo()
 
     $('#jumbotron-video video').prop('controls', true);
 
-    if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
+    /*if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
         ga('send', 'event', 'video', 'Film na głównej');
-    }
+    }*/
 
     $(v).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
         var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
