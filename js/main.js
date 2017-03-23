@@ -154,7 +154,6 @@ function trackGTMLinks()
 
         setTimeout(function() {
             window.location = href;
-            console.log('...');
         }, 50);
     });
 }
