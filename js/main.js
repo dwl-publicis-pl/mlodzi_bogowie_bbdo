@@ -122,6 +122,9 @@ function dataLayerAction(event, params, strona)
 
     dataLayer.push(settings);
 
+    // debug
+    console.log(settings);
+
     return true;
 }
 
