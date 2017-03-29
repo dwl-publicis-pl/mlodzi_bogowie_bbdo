@@ -282,9 +282,8 @@ var quiz = (function() {
             FB.ui({
                 method: 'share',
                 href: b_href,
-            }, function(response){
-                // GA event
-                ga('send', 'event', 'Quiz', 'Share result');
+            }, function(response) {
+
             });
         });
     };
@@ -394,9 +393,6 @@ var quiz = (function() {
             'wynikTestu': resultGTM
         });
 
-        // GA event
-        ga('send', 'event', 'Quiz', 'Koniec', 'wynik', pointsSum);
-
         return true;
     };
 
@@ -433,9 +429,6 @@ var quiz = (function() {
 
             });
         });
-
-        // GA event
-        ga('send', 'event', 'Quiz', 'Start');
     };
 
     var onWindowResize = function() {
