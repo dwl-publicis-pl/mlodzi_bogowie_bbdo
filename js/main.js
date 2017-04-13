@@ -1,6 +1,6 @@
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
@@ -77,10 +77,6 @@ function startTopVideo()
     dataLayerAction('video', {'interakcja': 'start'});
 
     $('#jumbotron-video video').prop('controls', true);
-
-    /*if (v.currentTime == 0) { // nie wysyłać zdarzenia po wznowieniu po pauzie
-        ga('send', 'event', 'video', 'Film na głównej');
-    }*/
 
     $(v).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e) {
         var state = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
@@ -1422,7 +1418,6 @@ var necessitiesCalculator = (function() {
     var coinsAmount = 0;
 
     var init = function() {
-
         if ($(rootElement).length == 0) {
             return false;
         }
@@ -1450,11 +1445,7 @@ var necessitiesCalculator = (function() {
         });
 
 
-
         $(btnSelector).on('click', function(event) {
-
-            
-
             clickedElement = $(this).not(".btn-cloud");
             clickedElement.toggleClass('active');
             clickedElement.parent().parent().parent().find('div[data-selected="true"]').removeClass('active');
@@ -1462,8 +1453,6 @@ var necessitiesCalculator = (function() {
 
             if (clickedElement.attr('data-selected') == 'true') {
                 clearGroupSelect();
-
-
             } else {
                 clearGroupSelect();
                 addToSum();
